@@ -21,13 +21,17 @@ namespace ENTITY
         public string correo_electronico { get; set; }
         public byte Foto { get; set; }
 
+        public char sexo { get; set; }
+
         //Consturctor para entrar a la clases
         public Datos_Personales()
         {
         }
 
+
+
         //Constructor para llenar los datos basicos
-        public Datos_Personales(string nombre_de_usuario, string contraseña, char cargo, string cedula, string primer_nombre, string segundo_nombre, string primer_apellido, string segundo_apellido, int telefono, string correo_electronico, byte foto)
+        public Datos_Personales(string nombre_de_usuario, string contraseña, char cargo, string cedula, string primer_nombre, string segundo_nombre, string primer_apellido, string segundo_apellido, int telefono, string correo_electronico, byte foto, char sexo)
         {
             this.nombre_de_usuario = nombre_de_usuario;
             this.contraseña = contraseña;
@@ -40,7 +44,9 @@ namespace ENTITY
             this.telefono = telefono;
             this.correo_electronico = correo_electronico;
             Foto = foto;
+            this.sexo = sexo;
         }
+
 
 
     }

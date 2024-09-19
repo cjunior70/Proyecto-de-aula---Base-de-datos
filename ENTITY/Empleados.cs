@@ -25,7 +25,7 @@ namespace ENTITY
         }
 
         //Construtor para los datos personales de los empleados
-        public Empleados(string nombre_de_usuario, string contraseña, char cargo, string cedula, string primer_nombre, string segundo_nombre, string primer_apellido, string segundo_apellido, int telefono, string correo_electronico, byte foto) : base(nombre_de_usuario, contraseña, cargo, cedula, primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, telefono, correo_electronico, foto)
+        public Empleados(string nombre_de_usuario, string contraseña, char cargo, string cedula, string primer_nombre, string segundo_nombre, string primer_apellido, string segundo_apellido, int telefono, string correo_electronico, byte foto, char sexo) : base(nombre_de_usuario, contraseña, cargo, cedula, primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, telefono, correo_electronico, foto, sexo)
         {
         }
 
@@ -39,6 +39,6 @@ namespace ENTITY
             this.estado = estado;
         }
 
-
+       
     }
 }
