@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace ENTITY
 {
-    public class Usuario
+    public class Usuario: Datos_Personales
+
     {
 
         //Lista de empresas del usuario
