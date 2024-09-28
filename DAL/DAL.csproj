@@ -80,6 +80,7 @@
   <ItemGroup>
     <Compile Include="Funciones del usuario.cs" />
     <Compile Include="Conexion General.cs" />
+    <Compile Include="Funciones_del_cliente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

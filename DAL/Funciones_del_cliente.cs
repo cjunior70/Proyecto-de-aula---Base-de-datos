@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ENTITY;
+using Oracle.ManagedDataAccess.Client;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -9,9 +11,8 @@ using Oracle.ManagedDataAccess.Client;
 
 namespace DAL
 {
-    public class Funciones_del_usuario
+    public class Funciones_del_cliente
     {
-
         //Variables para poder uso globar
         private OracleConnection ora;
 
@@ -25,20 +26,20 @@ namespace DAL
             this.ora = new OracleConnection(conexion);
         }
 
-        //Funcion para poder regirtar un usuario
-        public Boolean Ingresar_Un_Usuario(Datos_login Conexion_del_Usuario, Usuario datos_del_usuario)
+        //Funcion para poder regirtar un cliente
+        public Boolean Ingresar_Un_Cliente(Datos_login Conexion_del_cliente, Cliente datos_del_cliente)
         {
 
             try
             {
 
-                conexion(Conexion_del_Usuario);
+                conexion(Conexion_del_cliente);
 
                 //Abirir conexion
                 ora.Open();
 
 
-                Enviar_Datos(datos_del_usuario);
+                Enviar_Datos(datos_del_cliente);
 
 
                 //Cerrar conexion
@@ -56,23 +57,23 @@ namespace DAL
 
         }
 
-        //Funcion privada para registrar los datos del nuevo usuario
-        private void Enviar_Datos(Usuario datos_usuario)
+        //Funcion privada para registrar los datos del nuevo cliente
+        private void Enviar_Datos(Cliente datos_del_cliente)
         {
             //Intancia para poder entrar a la funcion
-            using (OracleCommand cmd = new OracleCommand("PK_INGRESAR_UN_USUARIO", ora))
+            using (OracleCommand cmd = new OracleCommand("PK_INGRESAR_UN_CLIENTE", ora))
             {
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
-                cmd.Parameters.Add("p_cedula", OracleDbType.Varchar2).Value = datos_usuario.cedula;
-                cmd.Parameters.Add("p_primer_nombre", OracleDbType.Varchar2).Value = datos_usuario.Primer_nombre;
-                cmd.Parameters.Add("p.segundo_nombre", OracleDbType.Varchar2).Value = datos_usuario.Segundo_nombre;
-                cmd.Parameters.Add("p.primer_apellido", OracleDbType.Varchar2).Value = datos_usuario.Primer_apellido;
-                cmd.Parameters.Add("p.segundo_apellido", OracleDbType.Varchar2).Value = datos_usuario.Segundo_apellido;
-                cmd.Parameters.Add("p.telefono", OracleDbType.Varchar2).Value = datos_usuario.telefono;
-                cmd.Parameters.Add("p.correo", OracleDbType.Varchar2).Value = datos_usuario.correo_electronico;
-                cmd.Parameters.Add("p.foto", OracleDbType.Blob).Value = datos_usuario.Foto;
-                cmd.Parameters.Add("p.sexo", OracleDbType.Char).Value = datos_usuario.sexo;
+                cmd.Parameters.Add("p_cedula", OracleDbType.Varchar2).Value = datos_del_cliente.cedula;
+                cmd.Parameters.Add("p_primer_nombre", OracleDbType.Varchar2).Value = datos_del_cliente.Primer_nombre;
+                cmd.Parameters.Add("p.segundo_nombre", OracleDbType.Varchar2).Value = datos_del_cliente.Segundo_nombre;
+                cmd.Parameters.Add("p.primer_apellido", OracleDbType.Varchar2).Value = datos_del_cliente.Primer_apellido;
+                cmd.Parameters.Add("p.segundo_apellido", OracleDbType.Varchar2).Value = datos_del_cliente.Segundo_apellido;
+                cmd.Parameters.Add("p.telefono", OracleDbType.Varchar2).Value = datos_del_cliente.telefono;
+                cmd.Parameters.Add("p.correo", OracleDbType.Varchar2).Value = datos_del_cliente.correo_electronico;
+                cmd.Parameters.Add("p.foto", OracleDbType.Blob).Value = datos_del_cliente.Foto;
+                cmd.Parameters.Add("p.sexo", OracleDbType.Char).Value = datos_del_cliente.sexo;
 
                 cmd.ExecuteNonQuery();
             }
@@ -80,14 +81,14 @@ namespace DAL
         }
 
         //Variable para poder guarda el listado de los usuarios guardados
-        DataTable Tabla_Usuarios = new DataTable();
+        DataTable Tabla_Clientes = new DataTable();
         //Funcion para poder traer todos los usuarios existentes
-        public DataTable Consultar_Usuarios(Datos_login Conexion_del_Usuario)
+        public DataTable Consultar_Usuarios(Datos_login Conexion_del_Cliente)
         {
 
             try
             {
-                conexion(Conexion_del_Usuario);
+                conexion(Conexion_del_Cliente);
 
                 ora.Open();
 
@@ -95,7 +96,7 @@ namespace DAL
 
                 ora.Close();
 
-                return Tabla_Usuarios;
+                return Tabla_Clientes;
 
             }
             catch (Exception)
@@ -110,30 +111,29 @@ namespace DAL
 
         private void traer_datos()
         {
-            OracleCommand comando = new OracleCommand("PK_MOSTRAR_TODOS_LOS_USUARIOS", ora);
+            OracleCommand comando = new OracleCommand("PK_MOSTRAR_TODOS_LOS_CLIENTE", ora);
             comando.CommandType = System.Data.CommandType.StoredProcedure;
             comando.Parameters.Add("registro", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
 
             OracleDataAdapter adaptador = new OracleDataAdapter();
             adaptador.SelectCommand = comando;
-            adaptador.Fill(Tabla_Usuarios);
+            adaptador.Fill(Tabla_Clientes);
         }
 
-        
 
-        //Funcion para poder modificar los datos de un usuario
-        public Boolean Modificar_datos_del_usuario(Datos_login Conexion_del_Usuario, Usuario datos_nuevo_del_usuario)
+        //Funcion para poder modificar los datos de un cliente
+        public Boolean Modificar_datos_del_cliente(Datos_login Conexion_del_Cliente, Usuario datos_nuevo_del_Cliente)
         {
             try
             {
                 //Funcion para hacer la conexion con la base de datos
-                conexion(Conexion_del_Usuario);
+                conexion(Conexion_del_Cliente);
 
                 //Abrir la conexion con la base
                 ora.Open();
 
                 //Funcion para enviar los datos nuevos a la base
-                Enviar_actualizacion(datos_nuevo_del_usuario);
+                Enviar_actualizacion(datos_nuevo_del_Cliente);
 
                 //Cerrar la conexion con la base
                 ora.Close();
@@ -147,41 +147,41 @@ namespace DAL
             }
         }
         //Funcion privada para buscar en la base de datos al usuario y actualizar sus datos
-        private void Enviar_actualizacion(Usuario datos_nuevos_del_usuario)
+        private void Enviar_actualizacion(Usuario datos_nuevos_del_Cliente)
         {
 
             //Comando para poder busacar el procedimiento en la base de datod y enviar los datos
             OracleCommand comando = new OracleCommand("PK_ACTUALIZAR_DATOS_DE_UN_USUARIO", ora);
             comando.CommandType = System.Data.CommandType.StoredProcedure;
 
-            comando.Parameters.Add("p_codigo", OracleDbType.Int64).Value = datos_nuevos_del_usuario.codigo;
-            comando.Parameters.Add("p_cedula", OracleDbType.Varchar2).Value = datos_nuevos_del_usuario.cedula;
-            comando.Parameters.Add("p_primer_nombre", OracleDbType.Varchar2).Value = datos_nuevos_del_usuario.Primer_nombre;
-            comando.Parameters.Add("p_segundo_nombre", OracleDbType.Varchar2).Value = datos_nuevos_del_usuario.Segundo_nombre;
-            comando.Parameters.Add("p_primer_apellido", OracleDbType.Varchar2).Value = datos_nuevos_del_usuario.Primer_apellido;
-            comando.Parameters.Add("p_segundo_apellido", OracleDbType.Varchar2).Value = datos_nuevos_del_usuario.Segundo_apellido;
-            comando.Parameters.Add("p_telefono", OracleDbType.Varchar2).Value = datos_nuevos_del_usuario.telefono;
-            comando.Parameters.Add("p_correo", OracleDbType.Varchar2).Value = datos_nuevos_del_usuario.correo_electronico;
-            comando.Parameters.Add("p_foto", OracleDbType.Blob).Value = datos_nuevos_del_usuario.Foto;
-            comando.Parameters.Add("p_sexo", OracleDbType.Varchar2).Value = datos_nuevos_del_usuario.sexo;
+            comando.Parameters.Add("p_codigo", OracleDbType.Int64).Value = datos_nuevos_del_Cliente.codigo;
+            comando.Parameters.Add("p_cedula", OracleDbType.Varchar2).Value = datos_nuevos_del_Cliente.cedula;
+            comando.Parameters.Add("p_primer_nombre", OracleDbType.Varchar2).Value = datos_nuevos_del_Cliente.Primer_nombre;
+            comando.Parameters.Add("p_segundo_nombre", OracleDbType.Varchar2).Value = datos_nuevos_del_Cliente.Segundo_nombre;
+            comando.Parameters.Add("p_primer_apellido", OracleDbType.Varchar2).Value = datos_nuevos_del_Cliente.Primer_apellido;
+            comando.Parameters.Add("p_segundo_apellido", OracleDbType.Varchar2).Value = datos_nuevos_del_Cliente.Segundo_apellido;
+            comando.Parameters.Add("p_telefono", OracleDbType.Varchar2).Value = datos_nuevos_del_Cliente.telefono;
+            comando.Parameters.Add("p_correo", OracleDbType.Varchar2).Value = datos_nuevos_del_Cliente.correo_electronico;
+            comando.Parameters.Add("p_foto", OracleDbType.Blob).Value = datos_nuevos_del_Cliente.Foto;
+            comando.Parameters.Add("p_sexo", OracleDbType.Varchar2).Value = datos_nuevos_del_Cliente.sexo;
 
             comando.ExecuteNonQuery();
 
         }
 
         //Funcion para poder borrar un usuario
-        public Boolean borrar_un_usuario(Datos_login Conexion_del_Usuario, Usuario datos_del_usuario)
+        public Boolean borrar_un_cliente(Datos_login Conexion_del_Cliente, Usuario datos_del_cliente)
         {
             try
             {
 
-                conexion(Conexion_del_Usuario);
+                conexion(Conexion_del_Cliente);
 
                 //Abirir conexion
                 ora.Open();
 
 
-                buscar_y_borrar_un_usuario(datos_del_usuario);
+                buscar_y_borrar_un_cliente(datos_del_cliente);
 
 
                 //Cerrar conexion
@@ -198,13 +198,13 @@ namespace DAL
             }
         }
 
-        private void buscar_y_borrar_un_usuario(Usuario datos_del_usuario_a_eliminar)
+        private void buscar_y_borrar_un_cliente(Usuario datos_del_cliente_a_eliminar)
         {
             //Comando para poder busacar el procedimiento en la base de datos y enviar los datos
-            OracleCommand comando = new OracleCommand("PK_ELIMINAR_UN_USUARIO", ora);
+            OracleCommand comando = new OracleCommand("PK_ELIMINAR_UN_CLIENTE", ora);
             comando.CommandType = System.Data.CommandType.StoredProcedure;
 
-            comando.Parameters.Add("p_codigo", OracleDbType.Varchar2).Value = datos_del_usuario_a_eliminar.cedula;
+            comando.Parameters.Add("p_codigo", OracleDbType.Varchar2).Value = datos_del_cliente_a_eliminar.cedula;
 
             comando.ExecuteNonQuery();
         }
@@ -212,17 +212,17 @@ namespace DAL
         //Variable para traer los datos de un solo administrador
         DataTable Usuario = new DataTable();
         //Funcion para poder traer todos los usuario existentes
-        public DataTable Consultar_Un_usuario(Datos_login Conexion_del_Usuario, Usuario datos_del_usuario)
+        public DataTable Consultar_Un_Cliente(Datos_login Conexion_del_Cliente, Usuario datos_del_cliente)
         {
 
             try
             {
-                conexion(Conexion_del_Usuario);
+                conexion(Conexion_del_Cliente);
 
                 //Abir conexion
                 ora.Open();
 
-                traer_datos_de_un_administrador(datos_del_usuario);
+                traer_datos_de_un_cliente(datos_del_cliente);
 
                 //Cerrar conexion
                 ora.Close();
@@ -241,9 +241,9 @@ namespace DAL
         }
 
         //Funcion privada para buscar en la base de dato al administrador
-        private void traer_datos_de_un_administrador(Usuario datos_del_usuario)
+        private void traer_datos_de_un_cliente(Usuario datos_del_usuario)
         {
-            OracleCommand comando = new OracleCommand("PK_BUSCAR_UN_SERVICIO", ora);
+            OracleCommand comando = new OracleCommand("PK_BUSCAR_UN_CLIENTE", ora);
             comando.CommandType = System.Data.CommandType.StoredProcedure;
 
 
