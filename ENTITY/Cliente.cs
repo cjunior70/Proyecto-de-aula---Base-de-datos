@@ -17,9 +17,8 @@ namespace ENTITY
         {
         }
 
-
         //Construtor para los datos personales de los clientes
-        public Cliente(string nombre_de_usuario, string contraseña, char cargo, string cedula, string primer_nombre, string segundo_nombre, string primer_apellido, string segundo_apellido, int telefono, string correo_electronico, byte foto, char sexo) : base(nombre_de_usuario, contraseña, cargo, cedula, primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, telefono, correo_electronico, foto, sexo)
+        public Cliente(int codigo, string cedula, string primer_nombre, string segundo_nombre, string primer_apellido, string segundo_apellido, string telefono, string correo_electronico, byte foto, char sexo) : base(codigo, cedula, primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, telefono, correo_electronico, foto, sexo)
         {
         }
 

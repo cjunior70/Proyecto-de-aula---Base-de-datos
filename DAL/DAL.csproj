@@ -78,7 +78,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Agregar un usuario.cs" />
+    <Compile Include="Funciones del usuario.cs" />
     <Compile Include="Conexion General.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
