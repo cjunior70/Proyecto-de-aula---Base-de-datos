@@ -78,6 +78,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Funciones del empleado.cs" />
     <Compile Include="Funciones del usuario.cs" />
     <Compile Include="Conexion General.cs" />
     <Compile Include="Funciones_del_cliente.cs" />

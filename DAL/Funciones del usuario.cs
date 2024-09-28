@@ -204,7 +204,7 @@ namespace DAL
             OracleCommand comando = new OracleCommand("PK_ELIMINAR_UN_USUARIO", ora);
             comando.CommandType = System.Data.CommandType.StoredProcedure;
 
-            comando.Parameters.Add("p_codigo", OracleDbType.Varchar2).Value = datos_del_usuario_a_eliminar.cedula;
+            comando.Parameters.Add("p_codigo", OracleDbType.Varchar2).Value = datos_del_usuario_a_eliminar.codigo;
 
             comando.ExecuteNonQuery();
         }
@@ -243,11 +243,11 @@ namespace DAL
         //Funcion privada para buscar en la base de dato al administrador
         private void traer_datos_de_un_administrador(Usuario datos_del_usuario)
         {
-            OracleCommand comando = new OracleCommand("PK_BUSCAR_UN_SERVICIO", ora);
+            OracleCommand comando = new OracleCommand("PK_BUSCAR_UN_USUARIO", ora);
             comando.CommandType = System.Data.CommandType.StoredProcedure;
 
 
-            comando.Parameters.Add("p_codigo", OracleDbType.Varchar2).Value = datos_del_usuario.cedula;
+            comando.Parameters.Add("p_codigo", OracleDbType.Varchar2).Value = datos_del_usuario.codigo;
             comando.Parameters.Add("p_registro", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
 
             OracleDataAdapter adaptador = new OracleDataAdapter();

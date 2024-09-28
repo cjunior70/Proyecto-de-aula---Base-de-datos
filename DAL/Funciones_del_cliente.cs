@@ -151,7 +151,7 @@ namespace DAL
         {
 
             //Comando para poder busacar el procedimiento en la base de datod y enviar los datos
-            OracleCommand comando = new OracleCommand("PK_ACTUALIZAR_DATOS_DE_UN_USUARIO", ora);
+            OracleCommand comando = new OracleCommand("PK_ACTUALIZAR_DATOS_DE_UN_CLIENTE", ora);
             comando.CommandType = System.Data.CommandType.StoredProcedure;
 
             comando.Parameters.Add("p_codigo", OracleDbType.Int64).Value = datos_nuevos_del_Cliente.codigo;
@@ -204,7 +204,7 @@ namespace DAL
             OracleCommand comando = new OracleCommand("PK_ELIMINAR_UN_CLIENTE", ora);
             comando.CommandType = System.Data.CommandType.StoredProcedure;
 
-            comando.Parameters.Add("p_codigo", OracleDbType.Varchar2).Value = datos_del_cliente_a_eliminar.cedula;
+            comando.Parameters.Add("p_codigo", OracleDbType.Varchar2).Value = datos_del_cliente_a_eliminar.codigo;
 
             comando.ExecuteNonQuery();
         }
@@ -247,7 +247,7 @@ namespace DAL
             comando.CommandType = System.Data.CommandType.StoredProcedure;
 
 
-            comando.Parameters.Add("p_codigo", OracleDbType.Varchar2).Value = datos_del_usuario.cedula;
+            comando.Parameters.Add("p_codigo", OracleDbType.Varchar2).Value = datos_del_usuario.codigo;
             comando.Parameters.Add("p_registro", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
 
             OracleDataAdapter adaptador = new OracleDataAdapter();
