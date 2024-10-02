@@ -1,15 +1,15 @@
-﻿using ENTITY;
-using Oracle.ManagedDataAccess.Client;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ENTITY;
+using Oracle.ManagedDataAccess.Client;
 
 namespace DAL
 {
-    public class Funcion_de_los_servicios
+    public class Funciones_de_la_reservacion
     {
 
         //Variables para poder uso globar
@@ -25,8 +25,8 @@ namespace DAL
             this.ora = new OracleConnection(conexion);
         }
 
-        //Funcion para poder regirtar un servicio
-        public Boolean Ingresar_Un_Servicio(Datos_login Conexion_del_usuario, Servicios datos_de_un_servicio)
+        //Funcion para poder regirtar una reservacion
+        public Boolean Ingresar_Una_reservacion(Datos_login Conexion_del_usuario, Reservacion datos_de_una_reservacion)
         {
 
             try
@@ -38,7 +38,7 @@ namespace DAL
                 ora.Open();
 
 
-                Enviar_Datos(datos_de_un_servicio);
+                Enviar_Datos(datos_de_una_reservacion);
 
 
                 //Cerrar conexion
@@ -56,19 +56,19 @@ namespace DAL
 
         }
 
-        //Funcion privada para registrar los datos de un servicio
-        private void Enviar_Datos(Servicios datos_de_servicio)
+        //Funcion privada para registrar los datos de una reservacion
+        private void Enviar_Datos(Reservacion datos_de_la_reservacion)
         {
             //Intancia para poder entrar a la funcion
-            using (OracleCommand cmd = new OracleCommand("PK_INGRESAR_UN_SERVICIO", ora))
+            using (OracleCommand cmd = new OracleCommand("PK_INGRESAR_UNA_RESERVACION", ora))
             {
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
-                cmd.Parameters.Add("p_nombre", OracleDbType.Varchar2).Value = datos_de_servicio.nombre_del_servicio;
-                cmd.Parameters.Add("p_precio", OracleDbType.Int16).Value = datos_de_servicio.precio;
+                cmd.Parameters.Add("p_nombre", OracleDbType.Varchar2).Value = datos_de_la_reservacion.nombre_del_servicio;
+                cmd.Parameters.Add("p_precio", OracleDbType.Int16).Value = datos_de_la_reservacion.precio;
 
                 //El tiempo toca descomponarlo en string para poder guardarlo como se debe
-                cmd.Parameters.Add("p_tiempo", OracleDbType.Varchar2).Value = datos_de_servicio.tiempo_promedio;
+                cmd.Parameters.Add("p_tiempo", OracleDbType.Varchar2).Value = datos_de_la_reservacion.tiempo_promedio;
 
                 cmd.ExecuteNonQuery();
             }
@@ -244,6 +244,7 @@ namespace DAL
             adaptador.SelectCommand = comando;
             adaptador.Fill(Servicio);
         }
+
 
 
     }

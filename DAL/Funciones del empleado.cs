@@ -28,7 +28,7 @@ namespace DAL
         }
 
         //Funcion para poder regirtar un empleado
-        public Boolean Ingresar_Un_Usuario(Datos_login Conexion_del_usuario, Empleados datos_del_empleado, Empresa datos_de_la_empresa)
+        public Boolean Ingresar_Un_Empleado(Datos_login Conexion_del_usuario, Empleados datos_del_empleado, Empresa datos_de_la_empresa)
         {
 
             try
