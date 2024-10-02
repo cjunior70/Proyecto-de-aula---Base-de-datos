@@ -78,8 +78,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Funcion de los servicios.cs" />
+    <Compile Include="Funciones de Empresa.cs" />
+    <Compile Include="Funciones de la reservacion.cs" />
+    <Compile Include="Funciones de la ubicacion.cs" />
+    <Compile Include="Funciones del empleado.cs" />
     <Compile Include="Funciones del usuario.cs" />
     <Compile Include="Conexion General.cs" />
+    <Compile Include="Funciones para agregar servicio a una reservacion.cs" />
+    <Compile Include="Funciones para agregar un empleado a una reservacion.cs" />
+    <Compile Include="Funciones para agregar un servicio a una empresa .cs" />
+    <Compile Include="Funciones para ingresar un servicio a un empleado .cs" />
+    <Compile Include="Funciones_del_cliente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -44,10 +44,14 @@
     <Compile Include="Cliente.cs" />
     <Compile Include="Datos Personales.cs" />
     <Compile Include="Datos_login.cs" />
+    <Compile Include="Empleados de una reservacion.cs" />
     <Compile Include="Empleados.cs" />
     <Compile Include="Empresa.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reservacion.cs" />
+    <Compile Include="Servicio de un empleado.cs" />
+    <Compile Include="Servicio de una Empresa.cs" />
+    <Compile Include="Servicio de una reservacion.cs" />
     <Compile Include="Servicios.cs" />
     <Compile Include="Ubicacion.cs" />
     <Compile Include="Usuario.cs" />
