@@ -96,7 +96,7 @@
             this.TboxContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TboxContraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.TboxContraseña.Location = new System.Drawing.Point(639, 288);
-            this.TboxContraseña.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.TboxContraseña.Margin = new System.Windows.Forms.Padding(5);
             this.TboxContraseña.Multiline = false;
             this.TboxContraseña.Name = "TboxContraseña";
             this.TboxContraseña.Padding = new System.Windows.Forms.Padding(11, 7, 11, 7);
@@ -118,7 +118,7 @@
             this.TboxUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TboxUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.TboxUsuario.Location = new System.Drawing.Point(639, 193);
-            this.TboxUsuario.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.TboxUsuario.Margin = new System.Windows.Forms.Padding(5);
             this.TboxUsuario.Multiline = false;
             this.TboxUsuario.Name = "TboxUsuario";
             this.TboxUsuario.Padding = new System.Windows.Forms.Padding(11, 7, 11, 7);
@@ -186,6 +186,7 @@
             this.lbRegistrarme.Size = new System.Drawing.Size(191, 44);
             this.lbRegistrarme.TabIndex = 4;
             this.lbRegistrarme.Text = "Registrarme";
+            this.lbRegistrarme.Click += new System.EventHandler(this.lbRegistrarme_Click);
             // 
             // fileSystemWatcher1
             // 
