@@ -50,10 +50,10 @@
             this.panel1.BackColor = System.Drawing.Color.DarkBlue;
             this.panel1.Controls.Add(this.lbContactos);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(708, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(944, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(274, 553);
+            this.panel1.Size = new System.Drawing.Size(365, 681);
             this.panel1.TabIndex = 0;
             // 
             // lbContactos
@@ -61,8 +61,7 @@
             this.lbContactos.AutoSize = true;
             this.lbContactos.Font = new System.Drawing.Font("Heebo", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbContactos.ForeColor = System.Drawing.SystemColors.Control;
-            this.lbContactos.Location = new System.Drawing.Point(61, 500);
-            this.lbContactos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbContactos.Location = new System.Drawing.Point(81, 615);
             this.lbContactos.Name = "lbContactos";
             this.lbContactos.Size = new System.Drawing.Size(162, 44);
             this.lbContactos.TabIndex = 3;
@@ -81,10 +80,10 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.lbEntrar);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(45, 48);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Location = new System.Drawing.Point(60, 59);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(788, 424);
+            this.panel2.Size = new System.Drawing.Size(1051, 522);
             this.panel2.TabIndex = 1;
             // 
             // TboxContraseña
@@ -96,14 +95,15 @@
             this.TboxContraseña.BorderSize = 2;
             this.TboxContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TboxContraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.TboxContraseña.Location = new System.Drawing.Point(479, 234);
+            this.TboxContraseña.Location = new System.Drawing.Point(639, 288);
+            this.TboxContraseña.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.TboxContraseña.Multiline = false;
             this.TboxContraseña.Name = "TboxContraseña";
-            this.TboxContraseña.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.TboxContraseña.Padding = new System.Windows.Forms.Padding(11, 7, 11, 7);
             this.TboxContraseña.PasswordChar = true;
             this.TboxContraseña.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.TboxContraseña.PlaceholderText = "";
-            this.TboxContraseña.Size = new System.Drawing.Size(243, 33);
+            this.TboxContraseña.Size = new System.Drawing.Size(324, 35);
             this.TboxContraseña.TabIndex = 7;
             this.TboxContraseña.Texts = "";
             this.TboxContraseña.UnderlinedStyle = false;
@@ -117,14 +117,15 @@
             this.TboxUsuario.BorderSize = 2;
             this.TboxUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TboxUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.TboxUsuario.Location = new System.Drawing.Point(479, 161);
+            this.TboxUsuario.Location = new System.Drawing.Point(639, 193);
+            this.TboxUsuario.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.TboxUsuario.Multiline = false;
             this.TboxUsuario.Name = "TboxUsuario";
-            this.TboxUsuario.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.TboxUsuario.Padding = new System.Windows.Forms.Padding(11, 7, 11, 7);
             this.TboxUsuario.PasswordChar = true;
             this.TboxUsuario.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.TboxUsuario.PlaceholderText = "";
-            this.TboxUsuario.Size = new System.Drawing.Size(243, 33);
+            this.TboxUsuario.Size = new System.Drawing.Size(324, 35);
             this.TboxUsuario.TabIndex = 6;
             this.TboxUsuario.Texts = "";
             this.TboxUsuario.UnderlinedStyle = false;
@@ -135,8 +136,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(118, 221);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(132, 268);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(200, 46);
             this.label3.TabIndex = 5;
@@ -147,8 +147,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(118, 148);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(157, 182);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(144, 46);
             this.label1.TabIndex = 3;
@@ -159,8 +158,7 @@
             this.lbEntrar.AutoSize = true;
             this.lbEntrar.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
             this.lbEntrar.ForeColor = System.Drawing.SystemColors.Control;
-            this.lbEntrar.Location = new System.Drawing.Point(335, 344);
-            this.lbEntrar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbEntrar.Location = new System.Drawing.Point(447, 423);
             this.lbEntrar.Name = "lbEntrar";
             this.lbEntrar.Size = new System.Drawing.Size(118, 46);
             this.lbEntrar.TabIndex = 2;
@@ -172,8 +170,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 50F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(28, 20);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(37, 25);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(214, 112);
             this.label2.TabIndex = 1;
@@ -184,8 +181,7 @@
             this.lbRegistrarme.AutoSize = true;
             this.lbRegistrarme.Font = new System.Drawing.Font("Heebo", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbRegistrarme.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbRegistrarme.Location = new System.Drawing.Point(316, 500);
-            this.lbRegistrarme.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbRegistrarme.Location = new System.Drawing.Point(421, 615);
             this.lbRegistrarme.Name = "lbRegistrarme";
             this.lbRegistrarme.Size = new System.Drawing.Size(191, 44);
             this.lbRegistrarme.TabIndex = 4;
@@ -198,13 +194,13 @@
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(982, 553);
+            this.ClientSize = new System.Drawing.Size(1309, 681);
             this.Controls.Add(this.lbRegistrarme);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Login";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
