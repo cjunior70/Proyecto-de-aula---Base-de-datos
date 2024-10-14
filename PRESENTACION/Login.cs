@@ -43,6 +43,7 @@ namespace PRESENTACION
         private void lbRegistrarme_Click(object sender, EventArgs e)
         {
             RegistrarCliente frm = new RegistrarCliente();
+            frm.Show();
         }
     }
 }
