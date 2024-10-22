@@ -9,29 +9,27 @@ namespace ENTITY
     public class Datos_Personales
     {
         //Datos basicos 
-        public string nombre_de_usuario { get; set; }
-        public string contraseña { get; set; }
-        public char cargo { get; set; }
+        public int codigo { get; set; }
         public string cedula { get; set; }
         public string Primer_nombre { get; set; }
         public string Segundo_nombre { get; set; }
         public string Primer_apellido { get; set; }
         public string Segundo_apellido { get; set; }
-        public int telefono { get; set; }
+        public string telefono { get; set; }
         public string correo_electronico { get; set; }
         public byte Foto { get; set; }
+        public char sexo { get; set; }
 
         //Consturctor para entrar a la clases
         public Datos_Personales()
         {
         }
 
+
         //Constructor para llenar los datos basicos
-        public Datos_Personales(string nombre_de_usuario, string contraseña, char cargo, string cedula, string primer_nombre, string segundo_nombre, string primer_apellido, string segundo_apellido, int telefono, string correo_electronico, byte foto)
+        public Datos_Personales(int codigo, string cedula, string primer_nombre, string segundo_nombre, string primer_apellido, string segundo_apellido, string telefono, string correo_electronico, byte foto, char sexo)
         {
-            this.nombre_de_usuario = nombre_de_usuario;
-            this.contraseña = contraseña;
-            this.cargo = cargo;
+            this.codigo = codigo;
             this.cedula = cedula;
             Primer_nombre = primer_nombre;
             Segundo_nombre = segundo_nombre;
@@ -40,8 +38,7 @@ namespace ENTITY
             this.telefono = telefono;
             this.correo_electronico = correo_electronico;
             Foto = foto;
+            this.sexo = sexo;
         }
-
-
     }
 }
