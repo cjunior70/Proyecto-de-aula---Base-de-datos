@@ -18,7 +18,7 @@ namespace ENTITY
         public List<Servicios> lista_de_servicios = new List<Servicios>();
 
         //Datos de la empresa
-        public string codigo { get; set; }
+        public int codigo { get; set; }
         public string nombre_de_la_empresa { get; set; }
         public string descripcion_de_la_empresa { get; set; }
         public int extrellas { get; set; }
@@ -35,8 +35,8 @@ namespace ENTITY
         {
         }
 
-        //Construtor de los
-        public Empresa(Usuario usuario, Ubicacion ubicaion, List<Empleados> lista_de_empleados, List<Servicios> lista_de_servicios, string codigo, string nombre_de_la_empresa, string descripcion_de_la_empresa, int extrellas, string whatsapp, string correo, string instagram, string facebook, string descripcion_de_la_localizacion, byte imagen_miniatura, byte imagen_general)
+        //Construtor de los datos de la empresa
+        public Empresa(Usuario usuario, Ubicacion ubicaion, List<Empleados> lista_de_empleados, List<Servicios> lista_de_servicios, int codigo, string nombre_de_la_empresa, string descripcion_de_la_empresa, int extrellas, string whatsapp, string correo, string instagram, string facebook, string descripcion_de_la_localizacion, byte imagen_miniatura, byte imagen_general)
         {
             this.usuario = usuario;
             this.ubicaion = ubicaion;
