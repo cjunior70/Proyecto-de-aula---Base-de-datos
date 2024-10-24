@@ -64,11 +64,11 @@ namespace DAL
             {
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
-                cmd.Parameters.Add("p_nombre", OracleDbType.Varchar2).Value = datos_de_la_reservacion.nombre_del_servicio;
-                cmd.Parameters.Add("p_precio", OracleDbType.Int16).Value = datos_de_la_reservacion.precio;
+              //  cmd.Parameters.Add("p_nombre", OracleDbType.Varchar2).Value = datos_de_la_reservacion.nombre_del_servicio;
+               // cmd.Parameters.Add("p_precio", OracleDbType.Int16).Value = datos_de_la_reservacion.precio;
 
                 //El tiempo toca descomponarlo en string para poder guardarlo como se debe
-                cmd.Parameters.Add("p_tiempo", OracleDbType.Varchar2).Value = datos_de_la_reservacion.tiempo_promedio;
+                //cmd.Parameters.Add("p_tiempo", OracleDbType.Varchar2).Value = datos_de_la_reservacion.tiempo_promedio;
 
                 cmd.ExecuteNonQuery();
             }

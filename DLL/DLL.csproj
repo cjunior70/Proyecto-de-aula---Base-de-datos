@@ -41,7 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Funciones de las empresas.cs" />
+    <Compile Include="Funciones de las reservaciones.cs" />
+    <Compile Include="Funciones de las ubicaciones.cs" />
+    <Compile Include="Funciones de los empleados.cs" />
+    <Compile Include="Funciones de los servicio de un empleado.cs" />
+    <Compile Include="Funciones de los servicios de las reservaciones o una reservacion.cs" />
+    <Compile Include="Funciones de los servicios de una empresa.cs" />
+    <Compile Include="Funciones de los servicios.cs" />
+    <Compile Include="Funciones de los usuarios.cs" />
+    <Compile Include="Funciones del cliente.cs" />
+    <Compile Include="Funciones del Empleados de una reservacion o varias.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
