@@ -12,6 +12,7 @@ namespace ENTITY
         //Lista de empresas del usuario
         public List<Empresa> lista_de_empresas = new List<Empresa>();
 
+
         //Constructor para acceso a la clase
         public Usuario()
         {
