@@ -7,7 +7,7 @@ using DAL;
 
 namespace DLL
 {
-    public class Funciones_de_los_usuarios
+    public class logica_de_los_usuarios
     {
     }
 }

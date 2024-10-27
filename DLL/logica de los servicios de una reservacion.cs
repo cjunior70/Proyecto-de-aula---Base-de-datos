@@ -7,7 +7,7 @@ using DAL;
 
 namespace DLL
 {
-    public class Funciones_de_los_servicios_de_las_reservaciones_o_una_reservacion
+    public class logica_De_los_servicios_de_una_reservacion
     {
     }
 }
