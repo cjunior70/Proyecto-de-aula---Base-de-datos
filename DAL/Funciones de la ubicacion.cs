@@ -6,9 +6,6 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ENTITY;
-using Oracle.ManagedDataAccess.Client;
-
 namespace DAL
 {
     public class Funciones_de_la_ubicacion
@@ -200,7 +197,7 @@ namespace DAL
         //Variable para traer los datos de una sola ubicacion
         DataTable Usuario = new DataTable();
         //Funcion para poder traer todos las ubicaciones existentes
-        public DataTable Consultar_Un_Empleado(Datos_login Conexion_del_Usuario, Ubicacion datos_de_la_ubicacion)
+        public DataTable Consultar_Una_Ubicacion(Datos_login Conexion_del_Usuario, Ubicacion datos_de_la_ubicacion)
         {
 
             try
