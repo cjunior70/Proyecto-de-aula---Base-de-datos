@@ -1,13 +1,76 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAL;
+using ENTITY;
 
 namespace DLL
 {
     public class logica_de_las_ubicaciones
     {
+
+        //Conexion general par el ingreso y registro de las personas nuevas
+        Datos_login datos_de_conexion = new Datos_login();
+
+        Funciones_de_la_ubicacion funciones_De_La_Ubicacion = new Funciones_de_la_ubicacion();
+
+        //Funcion para registar la ubicacion de una empresa
+        public Boolean registrar_una_ubicacion(Ubicacion datos_de_la_ubicacion)
+        {
+            Boolean confirmacion;
+
+            confirmacion = funciones_De_La_Ubicacion.Ingresar_Una_Ubicacion(datos_de_conexion, datos_de_la_ubicacion);
+
+            return confirmacion;
+
+        }
+
+        //Funcion para consultar todas las ubicaciones
+        public DataTable consultar_todas_las_ubicaciones()
+        {
+            DataTable datos;
+
+            datos = funciones_De_La_Ubicacion.Consultar_Todas_las_ubicaciones(datos_de_conexion );
+
+            return datos;
+
+        }
+
+        //Funcion para actualizar una ubicacion
+        public Boolean actualizar_ubicacion(Ubicacion datos_nuevos_de_la_ubicacion)
+        {
+            Boolean confirmacion;
+
+            confirmacion = funciones_De_La_Ubicacion.Modificar_datos_una_ubicacion(datos_de_conexion, datos_nuevos_de_la_ubicacion);
+
+            return confirmacion;
+
+        }
+
+        //Funcion para borrar una ubicacion
+        public Boolean borrar_una_ubicacion(Ubicacion datos_de_la_ubicacion)
+        {
+            Boolean confirmacion;
+
+            confirmacion = funciones_De_La_Ubicacion.borrar_una_ubicacion(datos_de_conexion, datos_de_la_ubicacion);
+
+            return confirmacion;
+        }
+
+        //Funcion para buscar una ubicacion
+        public DataTable buscar_una_ubicacion(Ubicacion datos_de_la_ubicasion)
+        {
+            DataTable ubicaicon;
+
+            ubicaicon = funciones_De_La_Ubicacion.Consultar_Una_Ubicacion(datos_de_conexion, datos_de_la_ubicasion);
+
+            return ubicaicon;
+
+        }
+
+
     }
 }

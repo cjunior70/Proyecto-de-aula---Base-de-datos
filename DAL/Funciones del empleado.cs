@@ -6,8 +6,6 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ENTITY;
-using Oracle.ManagedDataAccess.Client;
 
 namespace DAL
 {
@@ -28,7 +26,7 @@ namespace DAL
         }
 
         //Funcion para poder regirtar un empleado
-        public Boolean Ingresar_Un_Empleado(Datos_login Conexion_del_usuario, Empleados datos_del_empleado, Empresa datos_de_la_empresa)
+        public Boolean Ingresar_Un_Empleado(Datos_login Conexion_del_usuario, Empleados datos_del_empleado)
         {
 
             try
@@ -40,7 +38,7 @@ namespace DAL
                 ora.Open();
 
 
-                Enviar_Datos(datos_del_empleado, datos_de_la_empresa);
+                Enviar_Datos(datos_del_empleado);
 
 
                 //Cerrar conexion
@@ -59,7 +57,7 @@ namespace DAL
         }
 
         //Funcion privada para registrar los datos del nuevo empleado
-        private void Enviar_Datos(Empleados datos_empleado,Empresa datos_de_la_empresa)
+        private void Enviar_Datos(Empleados datos_empleado)
         {
             //Intancia para poder entrar a la funcion
             using (OracleCommand cmd = new OracleCommand("PK_INGRESAR_UN_EMPLEADO", ora))
@@ -79,7 +77,7 @@ namespace DAL
                 cmd.Parameters.Add("p_fecha_final", OracleDbType.Date).Value = datos_empleado.fecha_de_final;
                 cmd.Parameters.Add("p_estado", OracleDbType.Varchar2).Value = datos_empleado.estado;
                 cmd.Parameters.Add("p_cargo", OracleDbType.Varchar2).Value = datos_empleado.cargo;
-                cmd.Parameters.Add("p_Codigo_empresa", OracleDbType.Varchar2).Value = datos_de_la_empresa.codigo;
+                cmd.Parameters.Add("p_Codigo_empresa", OracleDbType.Varchar2).Value = datos_empleado.codigo_empresa;
                 cmd.Parameters.Add("p.sexo", OracleDbType.Char).Value = datos_empleado.sexo;
 
                 cmd.ExecuteNonQuery();
@@ -130,7 +128,7 @@ namespace DAL
 
 
         //Funcion para poder modificar los datos de un usuario
-        public Boolean Modificar_datos_del_usuario(Datos_login Conexion_del_Usuario, Empleados datos_nuevo_del_empleado, Empresa datos_de_la_empresa)
+        public Boolean Modificar_datos_del_empleado(Datos_login Conexion_del_Usuario, Empleados datos_nuevo_del_empleado)
         {
             try
             {
@@ -141,7 +139,7 @@ namespace DAL
                 ora.Open();
 
                 //Funcion para enviar los datos nuevos a la base
-                Enviar_actualizacion(datos_nuevo_del_empleado,datos_de_la_empresa);
+                Enviar_actualizacion(datos_nuevo_del_empleado);
 
                 //Cerrar la conexion con la base
                 ora.Close();
@@ -155,7 +153,7 @@ namespace DAL
             }
         }
         //Funcion privada para buscar en la base de datos al usuario y actualizar sus datos
-        private void Enviar_actualizacion(Empleados datos_nuevos_del_empleado, Empresa datos_de_la_empresa)
+        private void Enviar_actualizacion(Empleados datos_nuevos_del_empleado)
         {
 
             //Comando para poder busacar el procedimiento en la base de datod y enviar los datos
@@ -176,7 +174,7 @@ namespace DAL
             comando.Parameters.Add("p_fecha_final", OracleDbType.Date).Value = datos_nuevos_del_empleado.fecha_de_final;
             comando.Parameters.Add("p_estado", OracleDbType.Varchar2).Value = datos_nuevos_del_empleado.estado;
             comando.Parameters.Add("p_cargo", OracleDbType.Varchar2).Value = datos_nuevos_del_empleado.cargo;
-            comando.Parameters.Add("p_Codigo_empresa", OracleDbType.Varchar2).Value = datos_de_la_empresa.codigo;
+            comando.Parameters.Add("p_Codigo_empresa", OracleDbType.Varchar2).Value = datos_nuevos_del_empleado.codigo_empresa;
             comando.Parameters.Add("p.sexo", OracleDbType.Char).Value = datos_nuevos_del_empleado.sexo;
 
             comando.ExecuteNonQuery();

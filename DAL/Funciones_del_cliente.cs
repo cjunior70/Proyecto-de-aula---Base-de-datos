@@ -81,7 +81,7 @@ namespace DAL
         //Variable para poder guarda el listado de los usuarios guardados
         DataTable Tabla_Clientes = new DataTable();
         //Funcion para poder traer todos los usuarios existentes
-        public DataTable Consultar_Usuarios(Datos_login Conexion_del_Cliente)
+        public DataTable Consultar_Clientes(Datos_login Conexion_del_Cliente)
         {
 
             try
@@ -120,7 +120,7 @@ namespace DAL
 
 
         //Funcion para poder modificar los datos de un cliente
-        public Boolean Modificar_datos_del_cliente(Datos_login Conexion_del_Cliente, Usuario datos_nuevo_del_Cliente)
+        public Boolean Modificar_datos_del_cliente(Datos_login Conexion_del_Cliente, Cliente datos_nuevo_del_Cliente)
         {
             try
             {
@@ -145,7 +145,7 @@ namespace DAL
             }
         }
         //Funcion privada para buscar en la base de datos al usuario y actualizar sus datos
-        private void Enviar_actualizacion(Usuario datos_nuevos_del_Cliente)
+        private void Enviar_actualizacion(Cliente datos_nuevos_del_Cliente)
         {
 
             //Comando para poder busacar el procedimiento en la base de datod y enviar los datos
@@ -168,7 +168,7 @@ namespace DAL
         }
 
         //Funcion para poder borrar un usuario
-        public Boolean borrar_un_cliente(Datos_login Conexion_del_Cliente, Usuario datos_del_cliente)
+        public Boolean borrar_un_cliente(Datos_login Conexion_del_Cliente, Cliente datos_del_cliente)
         {
             try
             {
@@ -196,7 +196,7 @@ namespace DAL
             }
         }
 
-        private void buscar_y_borrar_un_cliente(Usuario datos_del_cliente_a_eliminar)
+        private void buscar_y_borrar_un_cliente(Cliente datos_del_cliente_a_eliminar)
         {
             //Comando para poder busacar el procedimiento en la base de datos y enviar los datos
             OracleCommand comando = new OracleCommand("PK_ELIMINAR_UN_CLIENTE", ora);
@@ -210,7 +210,7 @@ namespace DAL
         //Variable para traer los datos de un solo administrador
         DataTable Usuario = new DataTable();
         //Funcion para poder traer todos los usuario existentes
-        public DataTable Consultar_Un_Cliente(Datos_login Conexion_del_Cliente, Usuario datos_del_cliente)
+        public DataTable Consultar_Un_Cliente(Datos_login Conexion_del_Cliente, Cliente datos_del_cliente)
         {
 
             try
@@ -239,7 +239,7 @@ namespace DAL
         }
 
         //Funcion privada para buscar en la base de dato al administrador
-        private void traer_datos_de_un_cliente(Usuario datos_del_usuario)
+        private void traer_datos_de_un_cliente(Cliente datos_del_usuario)
         {
             OracleCommand comando = new OracleCommand("PK_BUSCAR_UN_CLIENTE", ora);
             comando.CommandType = System.Data.CommandType.StoredProcedure;

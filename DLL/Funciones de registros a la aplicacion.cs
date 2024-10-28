@@ -37,7 +37,7 @@ namespace DLL
             //Variabale para la confirmacion de ninguno error ajeno
             Boolean confirmacion;
 
-            confirmacion = funciones_Del_Cliente.Ingresar_Un_Cliente(datos_de_conexion,datos_de_cliente):
+            confirmacion = funciones_Del_Cliente.Ingresar_Un_Cliente(datos_de_conexion, datos_de_cliente);
 
             return confirmacion;
 

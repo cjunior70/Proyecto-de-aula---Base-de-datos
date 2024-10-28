@@ -78,7 +78,7 @@ namespace DAL
         //Variable para poder guarda el listado de los servicos
         DataTable Tabla_Servicios = new DataTable();
         //Funcion para poder traer todos los servicios existentes
-        public DataTable Consultar_Todas_los_servicios(Datos_login Conexion_del_Usuario)
+        public DataTable Consultar_Todas_las_reservaciones(Datos_login Conexion_del_Usuario)
         {
 
             try
