@@ -133,7 +133,7 @@
             this.LbEntrar.ForeColor = System.Drawing.SystemColors.Control;
             this.LbEntrar.Location = new System.Drawing.Point(347, 350);
             this.LbEntrar.Name = "LbEntrar";
-            this.LbEntrar.Size = new System.Drawing.Size(118, 46);
+            this.LbEntrar.Size = new System.Drawing.Size(115, 45);
             this.LbEntrar.TabIndex = 3;
             this.LbEntrar.Text = "Entrar";
             // 
@@ -182,6 +182,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
             this.Name = "Login";
+            this.ShowInTaskbar = false;
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
