@@ -118,7 +118,7 @@ namespace DAL
 
 
         //Funcion para poder modificar los datos de un servicio
-        public Boolean Modificar_datos_una_ubicacion(Datos_login Conexion_del_Usuario, Servicios datos_nuevo_de_un_servicio)
+        public Boolean Modificar_datos_una_reservacion(Datos_login Conexion_del_Usuario, Servicios datos_nuevo_de_un_servicio)
         {
             try
             {
@@ -160,7 +160,7 @@ namespace DAL
         }
 
         //Funcion para poder borrar un servicio
-        public Boolean borrar_un_servicio(Datos_login Conexion_del_Usuario, Servicios datos_de_un_servicio)
+        public Boolean borrar_una_reservacion(Datos_login Conexion_del_Usuario, Servicios datos_de_un_servicio)
         {
             try
             {
@@ -171,7 +171,7 @@ namespace DAL
                 ora.Open();
 
 
-                buscar_y_borrar_un_servicio(datos_de_un_servicio);
+                buscar_y_borrar_una_reservacion(datos_de_un_servicio);
 
 
                 //Cerrar conexion
@@ -188,7 +188,7 @@ namespace DAL
             }
         }
 
-        private void buscar_y_borrar_un_servicio(Servicios datos_de_la_ubicacion_a_eliminar)
+        private void buscar_y_borrar_una_reservacion(Servicios datos_de_la_ubicacion_a_eliminar)
         {
             //Comando para poder busacar el procedimiento en la base de datos y enviar los datos
             OracleCommand comando = new OracleCommand("PK_ELIMINAR_UN_SERVCIO", ora);
@@ -202,7 +202,7 @@ namespace DAL
         //Variable para traer los datos de un solo servicio
         DataTable Servicio = new DataTable();
         //Funcion para poder traer todos los servicios existentes
-        public DataTable Consultar_Un_Servicio(Datos_login Conexion_del_Usuario, Servicios datos_del_servicio)
+        public DataTable Consultar_Una_Reservacion(Datos_login Conexion_del_Usuario, Servicios datos_del_servicio)
         {
 
             try
@@ -212,7 +212,7 @@ namespace DAL
                 //Abir conexion
                 ora.Open();
 
-                traer_datos_de_un_servicio(datos_del_servicio);
+                traer_datos_de_una_Reservacion(datos_del_servicio);
 
                 //Cerrar conexion
                 ora.Close();
@@ -231,7 +231,7 @@ namespace DAL
         }
 
         //Funcion privada para buscar en la base de dato a un empleado
-        private void traer_datos_de_un_servicio(Servicios datos_del_servicio)
+        private void traer_datos_de_una_Reservacion(Servicios datos_del_servicio)
         {
             OracleCommand comando = new OracleCommand("PK_BUSCAR_UN_SERVICIO", ora);
             comando.CommandType = System.Data.CommandType.StoredProcedure;
