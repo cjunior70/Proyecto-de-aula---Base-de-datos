@@ -52,6 +52,12 @@
     <Compile Include="Contactos.Designer.cs">
       <DependentUpon>Contactos.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegisCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisCliente.Designer.cs">
+      <DependentUpon>RegisCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegisUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RegisCliente.resx">
+      <DependentUpon>RegisCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RegisUsuario.resx">
       <DependentUpon>RegisUsuario.cs</DependentUpon>
     </EmbeddedResource>
