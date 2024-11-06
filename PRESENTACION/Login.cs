@@ -16,5 +16,28 @@ namespace PRESENTACION
         {
             InitializeComponent();
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbEntrarB_Click(object sender, EventArgs e)
+        {
+
+            if (this.txtUsuario.Text == "User" || this.txtContraseña.Text == "1234")
+            {
+                RegisCliente frm = new RegisCliente();
+                frm.Show();
+                this.Hide();
+            }
+            else
+            {
+
+                MessageBox.Show("Usuario invalido");
+
+            }
+
+        }
     }
 }
