@@ -202,7 +202,7 @@ namespace DAL
         //Variable para traer los datos de un solo servicio
         DataTable Servicio = new DataTable();
         //Funcion para poder traer todos los servicios existentes
-        public DataTable Consultar_Una_Reservacion(Datos_login Conexion_del_Usuario, Servicios datos_del_servicio)
+        public DataTable Consultar_Una_Reservacion(Datos_login Conexion_del_Usuario, Reservacion datos_del_servicio)
         {
 
             try
@@ -231,7 +231,7 @@ namespace DAL
         }
 
         //Funcion privada para buscar en la base de dato a un empleado
-        private void traer_datos_de_una_Reservacion(Servicios datos_del_servicio)
+        private void traer_datos_de_una_Reservacion(Reservacion datos_del_servicio)
         {
             OracleCommand comando = new OracleCommand("PK_BUSCAR_UN_SERVICIO", ora);
             comando.CommandType = System.Data.CommandType.StoredProcedure;

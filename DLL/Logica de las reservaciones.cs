@@ -34,7 +34,7 @@ namespace DLL
         {
             DataTable datos;
 
-            datos = funciones_De_La_Reservacio.Consultar_Un_Servicio(datos_de_conexion, datos_de_la_reservacion);
+            datos = funciones_De_La_Reservacio.Consultar_Una_Reservacion(datos_de_conexion, datos_de_la_reservacion);
 
             return datos;
 

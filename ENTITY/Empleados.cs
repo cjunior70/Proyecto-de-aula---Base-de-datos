@@ -32,7 +32,6 @@ namespace ENTITY
         {
             this.lista_de_clientes = lista_de_clientes;
             this.lista_de_servicios = lista_de_servicios;
-            this.codigo_empresa = codigo_empres;
             this.cupos_disponibles = cupos_disponibles;
             this.cargo = cargo;
             this.fecha_de_inicio = fecha_de_inicio;
