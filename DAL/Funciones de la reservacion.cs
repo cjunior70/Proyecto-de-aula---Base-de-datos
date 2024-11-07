@@ -118,7 +118,7 @@ namespace DAL
 
 
         //Funcion para poder modificar los datos de un servicio
-        public Boolean Modificar_datos_una_reservacion(Datos_login Conexion_del_Usuario, Servicios datos_nuevo_de_un_servicio)
+        public Boolean Modificar_datos_una_reservacion(Datos_login Conexion_del_Usuario, Reservacion datos_nuevo_de_una_reservacion)
         {
             try
             {
@@ -129,7 +129,7 @@ namespace DAL
                 ora.Open();
 
                 //Funcion para enviar los datos nuevos a la base
-                Enviar_actualizacion(datos_nuevo_de_un_servicio);
+                Enviar_actualizacion(datos_nuevo_de_una_reservacion);
 
                 //Cerrar la conexion con la base
                 ora.Close();
@@ -143,24 +143,24 @@ namespace DAL
             }
         }
         //Funcion privada para buscar en la base de datos un servicio y actualizar sus datos
-        private void Enviar_actualizacion(Servicios datos_del_servicio)
+        private void Enviar_actualizacion(Reservacion datos_de_la_reservacion)
         {
 
             //Comando para poder buscar el procedimiento en la base de datod y enviar los datos
             OracleCommand comando = new OracleCommand("PK_ACTUALIZAR_DATOS_DE_UN_SERVICIO", ora);
             comando.CommandType = System.Data.CommandType.StoredProcedure;
 
-            comando.Parameters.Add("p_codigo", OracleDbType.Int16).Value = datos_del_servicio.codigo;
-            comando.Parameters.Add("p_nombre", OracleDbType.Varchar2).Value = datos_del_servicio.nombre_del_servicio;
-            comando.Parameters.Add("p_precio", OracleDbType.Double).Value = datos_del_servicio.precio;
-            comando.Parameters.Add("p_tiempo", OracleDbType.Varchar2).Value = datos_del_servicio.tiempo_promedio;
+            comando.Parameters.Add("p_codigo", OracleDbType.Int16).Value = datos_de_la_reservacion.codigo;
+            //comando.Parameters.Add("p_nombre", OracleDbType.Varchar2).Value = datos_de_la_reservacion.nombre_del_servicio;
+            //comando.Parameters.Add("p_precio", OracleDbType.Double).Value = datos_de_la_reservacion.precio;
+            //comando.Parameters.Add("p_tiempo", OracleDbType.Varchar2).Value = datos_de_la_reservacion.tiempo_promedio;
 
             comando.ExecuteNonQuery();
 
         }
 
         //Funcion para poder borrar un servicio
-        public Boolean borrar_una_reservacion(Datos_login Conexion_del_Usuario, Servicios datos_de_un_servicio)
+        public Boolean borrar_una_reservacion(Datos_login Conexion_del_Usuario, Reservacion datos_de_la_reservacion)
         {
             try
             {
@@ -171,7 +171,7 @@ namespace DAL
                 ora.Open();
 
 
-                buscar_y_borrar_una_reservacion(datos_de_un_servicio);
+                buscar_y_borrar_una_reservacion(datos_de_la_reservacion);
 
 
                 //Cerrar conexion
@@ -188,7 +188,7 @@ namespace DAL
             }
         }
 
-        private void buscar_y_borrar_una_reservacion(Servicios datos_de_la_ubicacion_a_eliminar)
+        private void buscar_y_borrar_una_reservacion(Reservacion datos_de_la_ubicacion_a_eliminar)
         {
             //Comando para poder busacar el procedimiento en la base de datos y enviar los datos
             OracleCommand comando = new OracleCommand("PK_ELIMINAR_UN_SERVCIO", ora);
