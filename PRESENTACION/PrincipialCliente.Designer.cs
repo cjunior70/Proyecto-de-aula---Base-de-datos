@@ -1,6 +1,6 @@
 ﻿namespace PRESENTACION
 {
-    partial class Reservaciones
+    partial class PrincipialCliente
     {
         /// <summary>
         /// Required designer variable.
