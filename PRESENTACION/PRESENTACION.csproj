@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClienteReservacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClienteReservacion.Designer.cs">
+      <DependentUpon>ClienteReservacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Contactos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,21 @@
     <Compile Include="PrincipialCliente.Designer.cs">
       <DependentUpon>PrincipialCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="TrabajadorCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrabajadorCliente.Designer.cs">
+      <DependentUpon>TrabajadorCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrabajadorUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrabajadorUsuario.Designer.cs">
+      <DependentUpon>TrabajadorUsuario.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ClienteReservacion.resx">
+      <DependentUpon>ClienteReservacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Contactos.resx">
       <DependentUpon>Contactos.cs</DependentUpon>
     </EmbeddedResource>
@@ -120,6 +141,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PrincipialCliente.resx">
       <DependentUpon>PrincipialCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrabajadorCliente.resx">
+      <DependentUpon>TrabajadorCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrabajadorUsuario.resx">
+      <DependentUpon>TrabajadorUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -152,6 +179,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Captura de pantalla 2024-11-02 105041.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-regreso-50.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

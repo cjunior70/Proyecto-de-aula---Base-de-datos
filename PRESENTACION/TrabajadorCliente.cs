@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace PRESENTACION
 {
-    public partial class Contactos : Form
+    public partial class TrabajadorCliente : Form
     {
-        public Contactos()
+        public TrabajadorCliente()
         {
             InitializeComponent();
-        }
-
-        private void panel1_Click(object sender, EventArgs e)
-        {
-            Login FrmLog = new Login();
-            FrmLog.Show();
-            this.Hide();
         }
     }
 }

@@ -27,8 +27,8 @@ namespace PRESENTACION
 
             if (this.txtUsuario.Text == "User" || this.txtContraseña.Text == "1234")
             {
-                RegisCliente frm = new RegisCliente();
-                frm.Show();
+                RegisCliente frmR = new RegisCliente();
+                frmR.Show();
                 this.Hide();
             }
             else
@@ -38,6 +38,13 @@ namespace PRESENTACION
 
             }
 
+        }
+
+        private void lbContactos_Click(object sender, EventArgs e)
+        {
+             Contactos FrmC = new Contactos();
+            FrmC.Show();
+            this.Hide();
         }
     }
 }
