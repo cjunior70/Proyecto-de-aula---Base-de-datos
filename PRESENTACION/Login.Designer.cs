@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbContactos = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,9 +41,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.lbEntrarB = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,17 +65,17 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Registrarme";
             // 
-            // label4
+            // lbContactos
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(763, 493);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(121, 31);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Contactos";
+            this.lbContactos.AutoSize = true;
+            this.lbContactos.BackColor = System.Drawing.Color.Transparent;
+            this.lbContactos.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbContactos.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbContactos.Location = new System.Drawing.Point(763, 493);
+            this.lbContactos.Name = "lbContactos";
+            this.lbContactos.Size = new System.Drawing.Size(121, 31);
+            this.lbContactos.TabIndex = 7;
+            this.lbContactos.Text = "Contactos";
             // 
             // label1
             // 
@@ -175,17 +175,18 @@
             this.panel1.Size = new System.Drawing.Size(870, 432);
             this.panel1.TabIndex = 0;
             // 
-            // label6
+            // lbEntrarB
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(189, 186);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(97, 31);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Usuario";
+            this.lbEntrarB.AutoSize = true;
+            this.lbEntrarB.BackColor = System.Drawing.Color.Transparent;
+            this.lbEntrarB.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEntrarB.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbEntrarB.Location = new System.Drawing.Point(395, 350);
+            this.lbEntrarB.Name = "lbEntrarB";
+            this.lbEntrarB.Size = new System.Drawing.Size(115, 45);
+            this.lbEntrarB.TabIndex = 10;
+            this.lbEntrarB.Text = "Entrar";
+            this.lbEntrarB.Click += new System.EventHandler(this.lbEntrarB_Click);
             // 
             // label7
             // 
@@ -199,18 +200,17 @@
             this.label7.TabIndex = 9;
             this.label7.Text = "Contraseña";
             // 
-            // lbEntrarB
+            // label6
             // 
-            this.lbEntrarB.AutoSize = true;
-            this.lbEntrarB.BackColor = System.Drawing.Color.Transparent;
-            this.lbEntrarB.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEntrarB.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbEntrarB.Location = new System.Drawing.Point(395, 350);
-            this.lbEntrarB.Name = "lbEntrarB";
-            this.lbEntrarB.Size = new System.Drawing.Size(118, 46);
-            this.lbEntrarB.TabIndex = 10;
-            this.lbEntrarB.Text = "Entrar";
-            this.lbEntrarB.Click += new System.EventHandler(this.lbEntrarB_Click);
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label6.Location = new System.Drawing.Point(189, 186);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(97, 31);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Usuario";
             // 
             // Login
             // 
@@ -218,7 +218,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(982, 553);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lbContactos);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
             this.Name = "Login";
@@ -235,7 +235,7 @@
         #endregion
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbContactos;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
