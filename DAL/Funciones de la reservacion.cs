@@ -106,7 +106,7 @@ namespace DAL
 
         private void traer_datos()
         {
-            OracleCommand comando = new OracleCommand("PK_MOSTRAR_TODOS_LOS_SERVICIOS", ora);
+            OracleCommand comando = new OracleCommand("PK_MOSTRAR_TODOS_LAS_RESERVACIONES", ora);
             comando.CommandType = System.Data.CommandType.StoredProcedure;
             comando.Parameters.Add("registro", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
 
@@ -117,7 +117,7 @@ namespace DAL
 
 
 
-        //Funcion para poder modificar los datos de un servicio
+        //Funcion para poder modificar los datos de una reservacion
         public Boolean Modificar_datos_una_reservacion(Datos_login Conexion_del_Usuario, Reservacion datos_nuevo_de_una_reservacion)
         {
             try
@@ -147,7 +147,7 @@ namespace DAL
         {
 
             //Comando para poder buscar el procedimiento en la base de datod y enviar los datos
-            OracleCommand comando = new OracleCommand("PK_ACTUALIZAR_DATOS_DE_UN_SERVICIO", ora);
+            OracleCommand comando = new OracleCommand("PK_ACTUALIZAR_DATOS_DE_UNA_RESERVACION", ora);
             comando.CommandType = System.Data.CommandType.StoredProcedure;
 
             comando.Parameters.Add("p_codigo", OracleDbType.Int16).Value = datos_de_la_reservacion.codigo;
@@ -159,7 +159,7 @@ namespace DAL
 
         }
 
-        //Funcion para poder borrar un servicio
+        //Funcion para poder borrar una reservacion
         public Boolean borrar_una_reservacion(Datos_login Conexion_del_Usuario, Reservacion datos_de_la_reservacion)
         {
             try
@@ -191,7 +191,7 @@ namespace DAL
         private void buscar_y_borrar_una_reservacion(Reservacion datos_de_la_ubicacion_a_eliminar)
         {
             //Comando para poder busacar el procedimiento en la base de datos y enviar los datos
-            OracleCommand comando = new OracleCommand("PK_ELIMINAR_UN_SERVCIO", ora);
+            OracleCommand comando = new OracleCommand("PK_ELIMINAR_UNA_RESERVACION", ora);
             comando.CommandType = System.Data.CommandType.StoredProcedure;
 
             comando.Parameters.Add("p_codigo", OracleDbType.Varchar2).Value = datos_de_la_ubicacion_a_eliminar.codigo;
@@ -199,9 +199,9 @@ namespace DAL
             comando.ExecuteNonQuery();
         }
 
-        //Variable para traer los datos de un solo servicio
+        //Variable para traer los datos des una reservacion
         DataTable Servicio = new DataTable();
-        //Funcion para poder traer todos los servicios existentes
+        //Funcion para poder traer todos las reservaciones existentes
         public DataTable Consultar_Una_Reservacion(Datos_login Conexion_del_Usuario, Reservacion datos_del_servicio)
         {
 
@@ -230,10 +230,10 @@ namespace DAL
 
         }
 
-        //Funcion privada para buscar en la base de dato a un empleado
+        //Funcion privada para buscar en la base de dato a una reservacion
         private void traer_datos_de_una_Reservacion(Reservacion datos_del_servicio)
         {
-            OracleCommand comando = new OracleCommand("PK_BUSCAR_UN_SERVICIO", ora);
+            OracleCommand comando = new OracleCommand("PK_BUSCAR_UNA_RESERVACION", ora);
             comando.CommandType = System.Data.CommandType.StoredProcedure;
 
 

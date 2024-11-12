@@ -15,7 +15,7 @@ namespace DLL
         //Conexion general par el ingreso y registro de las personas nuevas
         Datos_login datos_de_conexion = new Datos_login();
 
-        Funciones_de_la_reservacion funciones_De_La_Reservacio = new Funciones_de_la_reservacion();
+        Funciones_de_la_reservacion funciones_De_La_Reservacion = new Funciones_de_la_reservacion();
 
         //Funcion para guardar una reservacion
         public Boolean registrar_una_reservacion(Reservacion datos_de_una_reservacion)
@@ -23,7 +23,7 @@ namespace DLL
             
             Boolean existencia;
 
-            existencia = funciones_De_La_Reservacio.Ingresar_Una_reservacion(datos_de_conexion, datos_de_una_reservacion);
+            existencia = funciones_De_La_Reservacion.Ingresar_Una_reservacion(datos_de_conexion, datos_de_una_reservacion);
 
             return existencia;
 
@@ -34,9 +34,43 @@ namespace DLL
         {
             DataTable datos;
 
-            datos = funciones_De_La_Reservacio.Consultar_Una_Reservacion(datos_de_conexion, datos_de_la_reservacion);
+            datos = funciones_De_La_Reservacion.Consultar_Una_Reservacion(datos_de_conexion, datos_de_la_reservacion);
 
             return datos;
+
+        }
+
+        //Funcion para actualizar una reservacion
+        public Boolean actualizar_reservacion(Reservacion datos_de_la_reservacion)
+        {
+
+            Boolean confirmacion;
+
+            confirmacion = funciones_De_La_Reservacion.Modificar_datos_una_reservacion(datos_de_conexion, datos_de_la_reservacion);
+
+            return confirmacion;
+
+        }
+
+        //Funcion para traer todas las reservaciones
+        public DataTable todas_las_reservaciones()
+        {
+            DataTable lista_de_reservaciones;
+
+            lista_de_reservaciones = funciones_De_La_Reservacion.Consultar_Todas_las_reservaciones(datos_de_conexion);
+
+            return lista_de_reservaciones;
+
+        }
+
+        //Funcion para eliminar una reservacion
+        public Boolean eliminar_reservacion(Reservacion datos_de_la_reservacion)
+        {
+            Boolean confirmacion;
+
+            confirmacion = funciones_De_La_Reservacion.borrar_una_reservacion(datos_de_conexion,datos_de_la_reservacion);
+
+            return confirmacion;
 
         }
 
