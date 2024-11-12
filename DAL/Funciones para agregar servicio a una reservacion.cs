@@ -197,7 +197,7 @@ namespace DAL
         //Variable para traer los servicios de una reservacion
         DataTable servicio_de_una_reservacion = new DataTable();
         //Funcion para poder traer todos los usuario existentes
-        public DataTable Consultar_Un_Servicio_de_un_Empleado(Datos_login Conexion_del_Cliente, Servicio_de_una_reservacion datos_del_servicio_de_una_reservacion)
+        public DataTable Consultar_Un_Servicio_de_una_reservacion(Datos_login Conexion_del_Cliente, Servicio_de_una_reservacion datos_del_servicio_de_una_reservacion)
         {
 
             try
