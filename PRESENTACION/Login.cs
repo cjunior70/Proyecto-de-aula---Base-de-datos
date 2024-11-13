@@ -40,6 +40,9 @@ namespace PRESENTACION
 
             if (confirmacion == true)
             {
+                RegisCliente frmR = new RegisCliente();
+                frmR.Show();
+                this.Hide();
                 MessageBox.Show("estoy dentro del sistema");
             }
             else
@@ -73,6 +76,13 @@ namespace PRESENTACION
 
                 this.Hide();
             }
+        }
+
+        private void lbContactos_Click(object sender, EventArgs e)
+        {
+             Contactos FrmC = new Contactos();
+            FrmC.Show();
+            this.Hide();
         }
     }
 }
