@@ -32,6 +32,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // label3
@@ -82,12 +83,23 @@
             this.label2.TabIndex = 22;
             this.label2.Text = "www.sitioincreible.mx";
             // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = global::PRESENTACION.Properties.Resources.icons8_regreso_50;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Location = new System.Drawing.Point(22, 483);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(49, 46);
+            this.panel1.TabIndex = 23;
+            this.panel1.Click += new System.EventHandler(this.panel1_Click);
+            // 
             // Contactos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MidnightBlue;
             this.ClientSize = new System.Drawing.Size(982, 553);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label10);
@@ -105,5 +117,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel1;
     }
 }
