@@ -46,11 +46,6 @@ namespace DLL
             //Variable para saber la existencia de alguien ya registrado
             DataTable existencia;
 
-            //Datos de conexion del usuario administrdor para poder ingresar los datos
-            datos_de_conexion.usuario = "admin";
-
-            datos_de_conexion.constraseña = "admin";
-
             existencia = funciones_Del_Cliente.Consultar_Un_Cliente(datos_de_conexion, datos_de_cliente);
 
             return existencia;

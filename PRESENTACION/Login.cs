@@ -79,5 +79,15 @@ namespace PRESENTACION
                 this.Hide();
             }
         }
+
+        private void btnContactos_Click(object sender, EventArgs e)
+        {
+            //Es para poder abiri la interfaz de contactos
+            Contactos contactos=new Contactos();
+            contactos.Show();
+
+            //Es para poder cerrar la interfaz actual
+            this.Hide();
+        }
     }
 }

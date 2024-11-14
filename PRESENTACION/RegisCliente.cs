@@ -63,7 +63,23 @@ namespace PRESENTACION
 
             confirmacion = logica_De_Los_Clientes.registro_de_cliente(datos_Personales);
 
-            MessageBox.Show("Estado :" + confirmacion);
+            if ( confirmacion == false )
+            {
+                MessageBox.Show("Lo siento, ha ocurrido un error");
+            }
+            else
+            {
+                MessageBox.Show("Datos Guardados Correctamente");
+                
+                //Logica para abiri la interfaz de login
+                Login login=new Login();
+                login.Show();
+
+                //Para ocultar la pestaña actual
+                this.Hide();
+
+
+            }
 
         }
 

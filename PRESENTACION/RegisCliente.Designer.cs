@@ -47,9 +47,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.picFotodePerfil = new System.Windows.Forms.PictureBox();
             this.Seleccionar = new System.Windows.Forms.OpenFileDialog();
             this.btnSeleccionar = new System.Windows.Forms.Button();
+            this.picFotodePerfil = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picFotodePerfil)).BeginInit();
             this.SuspendLayout();
@@ -276,15 +276,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Cedula";
             // 
-            // picFotodePerfil
-            // 
-            this.picFotodePerfil.Location = new System.Drawing.Point(506, 41);
-            this.picFotodePerfil.Name = "picFotodePerfil";
-            this.picFotodePerfil.Size = new System.Drawing.Size(218, 199);
-            this.picFotodePerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picFotodePerfil.TabIndex = 3;
-            this.picFotodePerfil.TabStop = false;
-            // 
             // Seleccionar
             // 
             this.Seleccionar.FileName = "ofdSeleccionar";
@@ -298,6 +289,18 @@
             this.btnSeleccionar.Text = "Seleccionar Imagen";
             this.btnSeleccionar.UseVisualStyleBackColor = true;
             this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
+            // 
+            // picFotodePerfil
+            // 
+            this.picFotodePerfil.BackColor = System.Drawing.Color.DarkBlue;
+            this.picFotodePerfil.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picFotodePerfil.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.picFotodePerfil.Location = new System.Drawing.Point(506, 41);
+            this.picFotodePerfil.Name = "picFotodePerfil";
+            this.picFotodePerfil.Size = new System.Drawing.Size(218, 199);
+            this.picFotodePerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picFotodePerfil.TabIndex = 3;
+            this.picFotodePerfil.TabStop = false;
             // 
             // RegisCliente
             // 

@@ -45,6 +45,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnContactos = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,7 +74,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(572, 401);
+            this.label4.Location = new System.Drawing.Point(577, 404);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(101, 25);
@@ -237,6 +238,15 @@
             this.label1.Size = new System.Drawing.Size(0, 25);
             this.label1.TabIndex = 0;
             // 
+            // btnContactos
+            // 
+            this.btnContactos.Location = new System.Drawing.Point(551, 396);
+            this.btnContactos.Name = "btnContactos";
+            this.btnContactos.Size = new System.Drawing.Size(150, 46);
+            this.btnContactos.TabIndex = 11;
+            this.btnContactos.UseVisualStyleBackColor = true;
+            this.btnContactos.Click += new System.EventHandler(this.btnContactos_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -244,6 +254,7 @@
             this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(736, 449);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.btnContactos);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnRegistrarme);
@@ -276,6 +287,7 @@
         private System.Windows.Forms.Label lbEntrarB;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnRegistrarme;
+        private System.Windows.Forms.Button btnContactos;
     }
 }
 
