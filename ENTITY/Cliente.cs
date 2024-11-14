@@ -17,17 +17,15 @@ namespace ENTITY
         {
         }
 
-        //Construtor para los datos personales de los clientes
-        public Cliente(int codigo, string cedula, string primer_nombre, string segundo_nombre, string primer_apellido, string segundo_apellido, string telefono, string correo_electronico, byte foto, char sexo) : base(codigo, cedula, primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, telefono, correo_electronico, foto, sexo)
-        {
-        }
-
         //Construtor para la lisata de reservaciones echas
         public Cliente(List<Reservacion> lista_de_resetvaciones)
         {
             this.lista_de_reservaciones = lista_de_resetvaciones;
         }
 
-        
+        //Construtor para los datos personales de los clientes
+        public Cliente(int codigo, string cedula, string primer_nombre, string segundo_nombre, string primer_apellido, string segundo_apellido, string telefono, string correo_electronico, byte[] foto, char sexo) : base(codigo, cedula, primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, telefono, correo_electronico, foto, sexo)
+        {
+        }
     }
 }

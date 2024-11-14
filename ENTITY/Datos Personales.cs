@@ -17,7 +17,7 @@ namespace ENTITY
         public string Segundo_apellido { get; set; }
         public string telefono { get; set; }
         public string correo_electronico { get; set; }
-        public byte Foto { get; set; }
+        public byte[] Foto { get; set; }
         public char sexo { get; set; }
 
         //Consturctor para entrar a la clases
@@ -25,9 +25,8 @@ namespace ENTITY
         {
         }
 
-
         //Constructor para llenar los datos basicos
-        public Datos_Personales(int codigo, string cedula, string primer_nombre, string segundo_nombre, string primer_apellido, string segundo_apellido, string telefono, string correo_electronico, byte foto, char sexo)
+        public Datos_Personales(int codigo, string cedula, string primer_nombre, string segundo_nombre, string primer_apellido, string segundo_apellido, string telefono, string correo_electronico, byte[] foto, char sexo)
         {
             this.codigo = codigo;
             this.cedula = cedula;

@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ENTITY;
 using DLL;
+using System.IO;
+using System.Drawing.Imaging;
 
 namespace PRESENTACION
 {
@@ -26,7 +28,15 @@ namespace PRESENTACION
 
         private void btRegistrar_Click(object sender, EventArgs e)
         {
+
             Cliente datos_Personales = new Cliente();
+
+
+            MemoryStream imagen=new MemoryStream();
+
+            picFotodePerfil.Image.Save(imagen, ImageFormat.Jpeg);
+            byte[] foto_De_perfil = imagen.ToArray();
+
 
             datos_Personales.cedula = txtCedulaU.Text;
             datos_Personales.Primer_nombre = txtPrNombreU.Text;
@@ -35,6 +45,7 @@ namespace PRESENTACION
             datos_Personales.Segundo_apellido = txtSgApellidoU.Text;
             datos_Personales.telefono = txtCelular.Text;
             datos_Personales.correo_electronico = txtCorreoElectronico.Text;
+            datos_Personales.Foto = foto_De_perfil;
 
             string generoSeleccionado = cbxGenero.SelectedItem?.ToString();
             if (generoSeleccionado != "Masculino")
@@ -58,6 +69,21 @@ namespace PRESENTACION
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnSeleccionar_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofdSeleccionar=new OpenFileDialog();
+
+            ofdSeleccionar.Filter = "Imagenes | *.jpg; *.png";
+            ofdSeleccionar.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            ofdSeleccionar.Title = "Seleccionar Imagen";
+
+            if(ofdSeleccionar.ShowDialog() == DialogResult.OK)
+            {
+                picFotodePerfil.Image = Image.FromFile(ofdSeleccionar.FileName);
+            }
 
         }
     }
