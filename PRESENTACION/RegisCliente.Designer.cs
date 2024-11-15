@@ -50,6 +50,7 @@
             this.Seleccionar = new System.Windows.Forms.OpenFileDialog();
             this.btnSeleccionar = new System.Windows.Forms.Button();
             this.picFotodePerfil = new System.Windows.Forms.PictureBox();
+            this.btnVolver = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picFotodePerfil)).BeginInit();
             this.SuspendLayout();
@@ -107,7 +108,7 @@
             // btRegistrar
             // 
             this.btRegistrar.Font = new System.Drawing.Font("Segoe UI", 18.2F, System.Drawing.FontStyle.Bold);
-            this.btRegistrar.Location = new System.Drawing.Point(514, 377);
+            this.btRegistrar.Location = new System.Drawing.Point(514, 336);
             this.btRegistrar.Margin = new System.Windows.Forms.Padding(2);
             this.btRegistrar.Name = "btRegistrar";
             this.btRegistrar.Size = new System.Drawing.Size(200, 41);
@@ -302,6 +303,16 @@
             this.picFotodePerfil.TabIndex = 3;
             this.picFotodePerfil.TabStop = false;
             // 
+            // btnVolver
+            // 
+            this.btnVolver.BackgroundImage = global::PRESENTACION.Properties.Resources.icons8_regreso_50;
+            this.btnVolver.Location = new System.Drawing.Point(659, 382);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(55, 55);
+            this.btnVolver.TabIndex = 25;
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
             // RegisCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -309,6 +320,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.DarkBlue;
             this.ClientSize = new System.Drawing.Size(736, 449);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.picFotodePerfil);
             this.Controls.Add(this.btRegistrar);
@@ -347,5 +359,6 @@
         private System.Windows.Forms.PictureBox picFotodePerfil;
         private System.Windows.Forms.OpenFileDialog Seleccionar;
         private System.Windows.Forms.Button btnSeleccionar;
+        private System.Windows.Forms.Button btnVolver;
     }
 }

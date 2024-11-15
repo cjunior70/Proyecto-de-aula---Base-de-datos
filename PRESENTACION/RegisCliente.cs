@@ -102,5 +102,17 @@ namespace PRESENTACION
             }
 
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            Login FrmLog = new Login();
+            FrmLog.Show();
+            this.Hide();
+        }
     }
 }
