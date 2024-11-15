@@ -34,6 +34,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MediumBlue;
             this.ClientSize = new System.Drawing.Size(982, 753);
             this.Name = "TrabajadorUsuario";
             this.Text = "TrabajadorUsuario";

@@ -246,14 +246,14 @@
             this.label1.TabIndex = 27;
             this.label1.Text = "Peluquerias";
             // 
-            // Reservaciones
+            // PrincipialCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(982, 553);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "Reservaciones";
+            this.Name = "PrincipialCliente";
             this.Text = "Reservaciones";
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
