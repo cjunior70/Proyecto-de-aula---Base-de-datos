@@ -22,28 +22,18 @@ namespace DLL
             //Llamada de la funcion del dal para ingresar a este los datos a la base
             Funciones_de_Empresa funciones_de_la_empresa = new Funciones_de_Empresa();
 
-            //Variable para saber la existencia de alguien ya registrado
-            DataTable existencia;
+            //Datos de conexion del usuario administrdor para poder ingresar los datos
+            datos_de_conexion.usuario = "admin";
 
+            datos_de_conexion.constraseña = "admin";
 
-            existencia = funciones_de_la_empresa.Consultar_Una_Empresa(datos_de_conexion, datos_de_la_empresa);
+            //Variabale para la confirmacion de ninguno error ajeno
+            Boolean confirmacion;
 
-            if (existencia == null)
-            {
+           confirmacion = funciones_de_la_empresa.Ingresar_Una_Empresa(datos_de_conexion, datos_de_la_empresa);
 
-                //Variabale para la confirmacion de ninguno error ajeno
-                Boolean confirmacion;
+           return confirmacion;
 
-                confirmacion = funciones_de_la_empresa.Ingresar_Una_Empresa(datos_de_conexion, datos_de_la_empresa);
-
-                return confirmacion;
-
-            }
-            else
-            {
-                //Ya existe un dato con esa informacion
-                return false;
-            }
 
         }
 
