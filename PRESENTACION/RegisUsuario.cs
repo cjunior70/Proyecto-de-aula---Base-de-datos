@@ -198,7 +198,10 @@ namespace PRESENTACION
 
         private void btGoogleMaps_Click(object sender, EventArgs e)
         {
+            Google_Maps googlemaps = new Google_Maps();
+            googlemaps.Show();
 
+            // Ocultar el formula
         }
     }
 }
