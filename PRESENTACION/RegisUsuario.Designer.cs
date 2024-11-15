@@ -60,6 +60,8 @@
             this.btnSeleccionarFotoNormal = new System.Windows.Forms.Button();
             this.btnSeleccionarFotodePerfil = new System.Windows.Forms.Button();
             this.ofdSeleccionar = new System.Windows.Forms.OpenFileDialog();
+            this.label14 = new System.Windows.Forms.Label();
+            this.cbxGenero = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picFotoMiniatura)).BeginInit();
@@ -139,6 +141,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel1.Controls.Add(this.label14);
+            this.panel1.Controls.Add(this.cbxGenero);
             this.panel1.Controls.Add(this.btnSeleccionarFotodePerfil);
             this.panel1.Controls.Add(this.picFotodePerfil);
             this.panel1.Controls.Add(this.lblFotodePerfil);
@@ -181,7 +185,7 @@
             // btGoogleMaps
             // 
             this.btGoogleMaps.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btGoogleMaps.Location = new System.Drawing.Point(104, 342);
+            this.btGoogleMaps.Location = new System.Drawing.Point(104, 319);
             this.btGoogleMaps.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btGoogleMaps.Name = "btGoogleMaps";
             this.btGoogleMaps.Size = new System.Drawing.Size(132, 28);
@@ -195,7 +199,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 15.2F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.SystemColors.Control;
-            this.label9.Location = new System.Drawing.Point(41, 295);
+            this.label9.Location = new System.Drawing.Point(41, 287);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(251, 30);
@@ -204,7 +208,7 @@
             // 
             // txtCelular
             // 
-            this.txtCelular.Location = new System.Drawing.Point(254, 262);
+            this.txtCelular.Location = new System.Drawing.Point(254, 231);
             this.txtCelular.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(176, 20);
@@ -212,7 +216,7 @@
             // 
             // txtCorreoElectronico
             // 
-            this.txtCorreoElectronico.Location = new System.Drawing.Point(254, 236);
+            this.txtCorreoElectronico.Location = new System.Drawing.Point(254, 205);
             this.txtCorreoElectronico.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCorreoElectronico.Name = "txtCorreoElectronico";
             this.txtCorreoElectronico.Size = new System.Drawing.Size(176, 20);
@@ -220,7 +224,7 @@
             // 
             // txtSgApellidoU
             // 
-            this.txtSgApellidoU.Location = new System.Drawing.Point(254, 208);
+            this.txtSgApellidoU.Location = new System.Drawing.Point(254, 177);
             this.txtSgApellidoU.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSgApellidoU.Name = "txtSgApellidoU";
             this.txtSgApellidoU.Size = new System.Drawing.Size(176, 20);
@@ -228,7 +232,7 @@
             // 
             // txtPrApellidoU
             // 
-            this.txtPrApellidoU.Location = new System.Drawing.Point(254, 181);
+            this.txtPrApellidoU.Location = new System.Drawing.Point(254, 150);
             this.txtPrApellidoU.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPrApellidoU.Name = "txtPrApellidoU";
             this.txtPrApellidoU.Size = new System.Drawing.Size(176, 20);
@@ -236,7 +240,7 @@
             // 
             // txtSgNombreU
             // 
-            this.txtSgNombreU.Location = new System.Drawing.Point(254, 154);
+            this.txtSgNombreU.Location = new System.Drawing.Point(254, 123);
             this.txtSgNombreU.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSgNombreU.Name = "txtSgNombreU";
             this.txtSgNombreU.Size = new System.Drawing.Size(176, 20);
@@ -248,7 +252,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.Control;
-            this.label8.Location = new System.Drawing.Point(42, 263);
+            this.label8.Location = new System.Drawing.Point(42, 232);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(56, 19);
@@ -261,7 +265,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.Control;
-            this.label7.Location = new System.Drawing.Point(42, 237);
+            this.label7.Location = new System.Drawing.Point(42, 206);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(135, 19);
@@ -274,7 +278,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(42, 210);
+            this.label6.Location = new System.Drawing.Point(42, 179);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(127, 19);
@@ -287,7 +291,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(42, 182);
+            this.label5.Location = new System.Drawing.Point(42, 151);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(114, 19);
@@ -300,7 +304,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(42, 155);
+            this.label4.Location = new System.Drawing.Point(42, 124);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(125, 19);
@@ -309,7 +313,7 @@
             // 
             // txtPrNombreU
             // 
-            this.txtPrNombreU.Location = new System.Drawing.Point(254, 126);
+            this.txtPrNombreU.Location = new System.Drawing.Point(254, 95);
             this.txtPrNombreU.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPrNombreU.Name = "txtPrNombreU";
             this.txtPrNombreU.Size = new System.Drawing.Size(176, 20);
@@ -317,7 +321,7 @@
             // 
             // txtCedulaU
             // 
-            this.txtCedulaU.Location = new System.Drawing.Point(254, 97);
+            this.txtCedulaU.Location = new System.Drawing.Point(254, 66);
             this.txtCedulaU.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCedulaU.Name = "txtCedulaU";
             this.txtCedulaU.Size = new System.Drawing.Size(176, 20);
@@ -329,7 +333,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 26F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(60, 30);
+            this.label3.Location = new System.Drawing.Point(64, 17);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(299, 47);
@@ -342,7 +346,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(42, 128);
+            this.label2.Location = new System.Drawing.Point(42, 97);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(112, 19);
@@ -355,7 +359,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(42, 98);
+            this.label1.Location = new System.Drawing.Point(42, 67);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 19);
@@ -442,6 +446,29 @@
             // 
             this.ofdSeleccionar.FileName = "openFileDialog1";
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.SystemColors.Control;
+            this.label14.Location = new System.Drawing.Point(42, 258);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(42, 19);
+            this.label14.TabIndex = 27;
+            this.label14.Text = "Sexo";
+            // 
+            // cbxGenero
+            // 
+            this.cbxGenero.FormattingEnabled = true;
+            this.cbxGenero.Items.AddRange(new object[] {
+            ""});
+            this.cbxGenero.Location = new System.Drawing.Point(253, 256);
+            this.cbxGenero.Name = "cbxGenero";
+            this.cbxGenero.Size = new System.Drawing.Size(177, 21);
+            this.cbxGenero.TabIndex = 26;
+            // 
             // RegisUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -497,5 +524,7 @@
         private System.Windows.Forms.PictureBox picFotodePerfil;
         private System.Windows.Forms.Label lblFotodePerfil;
         private System.Windows.Forms.OpenFileDialog ofdSeleccionar;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ComboBox cbxGenero;
     }
 }

@@ -21,28 +21,18 @@ namespace DLL
             //Llamada de la funcion del dal para ingresar a este los datos a la base
             Funciones_del_usuario funciones_Del_Usuario = new Funciones_del_usuario();
 
-            //Variable para saber la existencia de alguien ya registrado
-            DataTable existencia;
+            //Datos de conexion del usuario administrdor para poder ingresar los datos
+            datos_de_conexion.usuario = "admin";
 
-            existencia = funciones_Del_Usuario.Consultar_Un_usuario(datos_de_conexion, datos_de_usuario);
+            datos_de_conexion.constraseña = "admin";
 
-            //Si el datatable esta vacia entonces no hay registro guardado con esos datos
-            if (existencia == null)
-            {
+            //Variabale para la confirmacion de ninguno error ajeno
+            Boolean confirmacion;
 
-                //Variabale para la confirmacion de ninguno error ajeno
-                Boolean confirmacion;
+            confirmacion = funciones_Del_Usuario.Ingresar_Un_Usuario(datos_de_conexion, datos_de_usuario);
 
-                confirmacion = funciones_Del_Usuario.Ingresar_Un_Usuario(datos_de_conexion, datos_de_usuario);
+            return confirmacion;
 
-                return confirmacion;
-
-            }
-            else
-            {
-                //Ya existe un dato con esa informacion
-                return false;
-            }
 
         }
 
