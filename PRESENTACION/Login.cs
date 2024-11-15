@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DLL;
+using ENTITY;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,8 +27,22 @@ namespace PRESENTACION
         private void lbEntrarB_Click(object sender, EventArgs e)
         {
 
-            if (this.txtUsuario.Text == "User" || this.txtContraseña.Text == "12345")
+            //Entrada del sistema
+            Datos_login datos = new Datos_login();
+
+            datos.constraseña = txtContraseña.Text;
+            datos.usuario = txtUsuario.Text;
+
+            Boolean confirmacion;
+
+            Funcion_de_conexion funcion_De_Conexion = new Funcion_de_conexion();
+
+            confirmacion = funcion_De_Conexion.conexion(datos);
+
+            if (confirmacion == true)
             {
+                MessageBox.Show("Bienvenido");
+
                 RegisCliente frm = new RegisCliente();
                 frm.Show();
                 this.Hide();
@@ -34,10 +50,44 @@ namespace PRESENTACION
             else
             {
 
-                MessageBox.Show("Usuario invalido");
+                MessageBox.Show("Usuario invalido");
 
             }
 
+        }
+
+        private void btnRegistrarme_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("¿Tiene una empresa para registrar ?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.No)
+            {
+                // Lógica para la opción "No"
+                RegisCliente regisCliente = new RegisCliente();
+                regisCliente.Show();
+
+                // Ocultar el formulario actual
+                this.Hide();
+            }
+            else if (result == DialogResult.Yes)
+            {
+                // Lógica para la opción "Yes"
+                RegisUsuario regisUsuario = new RegisUsuario();
+                regisUsuario.Show();
+
+                // Ocultar el formulario actual
+                this.Hide();
+            }
+        }
+
+        private void btnContactos_Click(object sender, EventArgs e)
+        {
+            //Es para poder abiri la interfaz de contactos
+            Contactos contactos=new Contactos();
+            contactos.Show();
+
+            //Es para poder cerrar la interfaz actual
+            this.Hide();
         }
     }
 }

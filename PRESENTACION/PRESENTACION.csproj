@@ -33,6 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxMin, Version=5.14.5506.26196, Culture=neutral, PublicKeyToken=21ef50ce11b5d80f, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxMin.5.14.5506.26202\lib\net40\AjaxMin.dll</HintPath>
+    </Reference>
+    <Reference Include="Gmap.net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.Net.1.0.1\lib\Gmap.net.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -63,6 +69,12 @@
     </Compile>
     <Compile Include="EmpresaCliente.Designer.cs">
       <DependentUpon>EmpresaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Google Maps.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Google Maps.Designer.cs">
+      <DependentUpon>Google Maps.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -148,6 +160,7 @@
     <EmbeddedResource Include="TrabajadorUsuario.resx">
       <DependentUpon>TrabajadorUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
