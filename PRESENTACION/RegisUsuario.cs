@@ -16,5 +16,50 @@ namespace PRESENTACION
         {
             InitializeComponent();
         }
+
+        private void btnSeleccionarFotodePerfil_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofdseleccionar = new OpenFileDialog();
+            ofdSeleccionar.Filter = "Imagenes | *.jpg; *png";
+            ofdSeleccionar.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
+            ofdSeleccionar.Title = "Seleccionar Imagen";
+
+            if(ofdSeleccionar.ShowDialog() == DialogResult.OK)
+            {
+                picFotodePerfil.Image = Image.FromFile(ofdSeleccionar.FileName);
+            }
+
+        }
+
+        private void btnSeleccionarFotoMiniatura_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofdseleccionar = new OpenFileDialog();
+            ofdSeleccionar.Filter = "Imagenes | *.jpg; *png";
+            ofdSeleccionar.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
+            ofdSeleccionar.Title = "Seleccionar Imagen";
+
+            if (ofdSeleccionar.ShowDialog() == DialogResult.OK)
+            {
+                picFotoMiniatura.Image = Image.FromFile(ofdSeleccionar.FileName);
+            }
+        }
+
+        private void btnSeleccionarFotoNormal_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofdseleccionar = new OpenFileDialog();
+            ofdSeleccionar.Filter = "Imagenes | *.jpg; *png";
+            ofdSeleccionar.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
+            ofdSeleccionar.Title = "Seleccionar Imagen";
+
+            if (ofdSeleccionar.ShowDialog() == DialogResult.OK)
+            {
+                picFotoNormal.Image = Image.FromFile(ofdSeleccionar.FileName);
+            }
+        }
+
+        private void btRegistro_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
