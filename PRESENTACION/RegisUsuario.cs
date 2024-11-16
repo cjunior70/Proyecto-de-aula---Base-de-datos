@@ -35,6 +35,11 @@ namespace PRESENTACION
         //Datos de la ubicacion globales para usarlo para el registro de la empresa
         Ubicacion datos_de_la_ubicacion_globales =new Ubicacion();
 
+        public void guardar_datos_de_la_ubicacion(Ubicacion datos_de_la_ubicacion)
+        {
+            datos_de_la_ubicacion_globales = datos_de_la_ubicacion;
+        }
+
         private void btnSeleccionarFotodePerfil_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofdseleccionar = new OpenFileDialog();
@@ -83,9 +88,12 @@ namespace PRESENTACION
             //Codigo para guardar datos de la interfaz a variables
             guardar_datos_personales();
 
-            logica_de_los_usuarios logica_De_Los_Clientes = new logica_de_los_usuarios();
+             logica_de_los_usuarios logica_De_Los_Clientes = new logica_de_los_usuarios();
 
             confirmacion1 = logica_De_Los_Clientes.registro_de_un_usuario(datos_del_usuario_globales);
+
+            //Buscar codigo del usuario o el propietario de la empresa
+            
 
             //Codigo para guardar datos de la interfaz a variables
             guardar_datos_De_la_empresa();
@@ -97,6 +105,7 @@ namespace PRESENTACION
 
             if ( confirmacion2 == false)
             {
+
                 MessageBox.Show("Lo siento, ha ocurrido un error");
             }
             else
@@ -168,6 +177,7 @@ namespace PRESENTACION
 
             datos_de_la_empresa.nombre_de_la_empresa = txtNombredelaPeluqueria.Text;
             datos_de_la_empresa.descripcion_de_la_empresa = txtDescripcion.Text;
+            datos_de_la_empresa.extrellas = 1;
             datos_de_la_empresa.whatsapp = txtwhastsApp.Text;
             datos_de_la_empresa.correo = txtCorreoElectronicoDeLaEmpresa.Text;
             datos_de_la_empresa.instagram = txtInstagram.Text;
@@ -177,6 +187,8 @@ namespace PRESENTACION
             datos_de_la_empresa.imagen_general = Foto_General;
             datos_de_la_empresa.usuario = datos_del_usuario_globales;
             datos_de_la_empresa.ubicaion = datos_de_la_ubicacion_globales;
+
+            datos_de_la_empresa_globales = datos_de_la_empresa;
 
         }
     
@@ -201,7 +213,8 @@ namespace PRESENTACION
             Google_Maps googlemaps = new Google_Maps();
             googlemaps.Show();
 
-            // Ocultar el formula
+            // Ocultar el formulario actual
+            this.Hide();
         }
     }
 }
