@@ -20,6 +20,12 @@ namespace DLL
         //Funcion para registar la ubicacion de una empresa
         public Boolean registrar_una_ubicacion(Ubicacion datos_de_la_ubicacion)
         {
+
+            //Datos de conexion del usuario administrdor para poder ingresar los datos
+            datos_de_conexion.usuario = "admin";
+
+            datos_de_conexion.constraseña = "admin";
+
             Boolean confirmacion;
 
             confirmacion = funciones_De_La_Ubicacion.Ingresar_Una_Ubicacion(datos_de_conexion, datos_de_la_ubicacion);

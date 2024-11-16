@@ -63,8 +63,8 @@ namespace DAL
             {
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
-                cmd.Parameters.Add("p_lalitud", OracleDbType.Double).Value = datos_de_ubicacion.latitud;
-                cmd.Parameters.Add("p_longitud", OracleDbType.Double).Value = datos_de_ubicacion.longitud;
+                cmd.Parameters.Add("p_lalitud", OracleDbType.Varchar2).Value = datos_de_ubicacion.latitud;
+                cmd.Parameters.Add("p_longitud", OracleDbType.Varchar2).Value = datos_de_ubicacion.longitud;
 
                 cmd.ExecuteNonQuery();
             }
@@ -147,8 +147,8 @@ namespace DAL
             comando.CommandType = System.Data.CommandType.StoredProcedure;
 
             comando.Parameters.Add("p_codigo", OracleDbType.Int16).Value = datos_de_ubicacion.codigo;
-            comando.Parameters.Add("p_lalitud", OracleDbType.Double).Value = datos_de_ubicacion.latitud;
-            comando.Parameters.Add("p_longitud", OracleDbType.Double).Value = datos_de_ubicacion.longitud;
+            comando.Parameters.Add("p_lalitud", OracleDbType.Varchar2).Value = datos_de_ubicacion.latitud;
+            comando.Parameters.Add("p_longitud", OracleDbType.Varchar2).Value = datos_de_ubicacion.longitud;
 
             comando.ExecuteNonQuery();
 
