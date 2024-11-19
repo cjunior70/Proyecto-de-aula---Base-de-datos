@@ -10,7 +10,7 @@ namespace ENTITY
     {
 
         //Datos basicos de la ubicacion
-        public string codigo { get; set; }
+        public int codigo { get; set; }
         public string latitud { get; set; }
         public string longitud { get; set; }
 
@@ -19,12 +19,15 @@ namespace ENTITY
         {
         }
 
+
         //Constructor para los datos basicos
-        public Ubicacion(string codigo, string latitud, string longitud)
+        public Ubicacion(int codigo, string latitud, string longitud)
         {
             this.codigo = codigo;
             this.latitud = latitud;
             this.longitud = longitud;
         }
+
+
     }
 }

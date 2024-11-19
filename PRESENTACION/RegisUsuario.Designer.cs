@@ -29,13 +29,31 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtDescripiconDeLaUbicacionLocalemente = new System.Windows.Forms.TextBox();
+            this.lblDescripcionDeLaUbicacionLocalmente = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.txtFacebook = new System.Windows.Forms.TextBox();
+            this.txtInstagram = new System.Windows.Forms.TextBox();
+            this.txtwhastsApp = new System.Windows.Forms.TextBox();
+            this.txtCorreoElectronicoDeLaEmpresa = new System.Windows.Forms.TextBox();
+            this.lblFacebook = new System.Windows.Forms.Label();
+            this.lblInstagram = new System.Windows.Forms.Label();
+            this.lblCorreo_Electronico = new System.Windows.Forms.Label();
+            this.lblContactos = new System.Windows.Forms.Label();
+            this.lblWhassapt = new System.Windows.Forms.Label();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.lblNombreDeLaEmpresa = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.txtNombredelaPeluqueria = new System.Windows.Forms.TextBox();
             this.btnSeleccionarFotoNormal = new System.Windows.Forms.Button();
             this.btnSeleccionarFotoMiniatura = new System.Windows.Forms.Button();
             this.picFotoNormal = new System.Windows.Forms.PictureBox();
             this.picFotoMiniatura = new System.Windows.Forms.PictureBox();
+            this.btRegistro = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
+            this.btGoogleMaps = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
@@ -43,9 +61,6 @@
             this.btnSeleccionarFotodePerfil = new System.Windows.Forms.Button();
             this.picFotodePerfil = new System.Windows.Forms.PictureBox();
             this.lblFotodePerfil = new System.Windows.Forms.Label();
-            this.btRegistro = new System.Windows.Forms.Button();
-            this.btGoogleMaps = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
             this.txtCelular = new System.Windows.Forms.TextBox();
             this.txtCorreoElectronico = new System.Windows.Forms.TextBox();
             this.txtSgApellidoU = new System.Windows.Forms.TextBox();
@@ -62,27 +77,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.ofdSeleccionar = new System.Windows.Forms.OpenFileDialog();
-            this.label10 = new System.Windows.Forms.Label();
-            this.lblNombreDeLaEmpresa = new System.Windows.Forms.Label();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
-            this.lblContactos = new System.Windows.Forms.Label();
-            this.lblWhassapt = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.lblCorreo_Electronico = new System.Windows.Forms.Label();
-            this.lblInstagram = new System.Windows.Forms.Label();
-            this.lblFacebook = new System.Windows.Forms.Label();
-            this.txtCorreoElectronicoDeLaEmpresa = new System.Windows.Forms.TextBox();
-            this.txtwhastsApp = new System.Windows.Forms.TextBox();
-            this.txtInstagram = new System.Windows.Forms.TextBox();
-            this.txtFacebook = new System.Windows.Forms.TextBox();
-            this.lblDescripcionDeLaUbicacionLocalmente = new System.Windows.Forms.Label();
-            this.txtDescripiconDeLaUbicacionLocalemente = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picFotoNormal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFotoMiniatura)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picFotodePerfil)).BeginInit();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -110,6 +110,177 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(667, 467);
             this.panel2.TabIndex = 2;
+            // 
+            // txtDescripiconDeLaUbicacionLocalemente
+            // 
+            this.txtDescripiconDeLaUbicacionLocalemente.Location = new System.Drawing.Point(283, 388);
+            this.txtDescripiconDeLaUbicacionLocalemente.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDescripiconDeLaUbicacionLocalemente.Name = "txtDescripiconDeLaUbicacionLocalemente";
+            this.txtDescripiconDeLaUbicacionLocalemente.Size = new System.Drawing.Size(360, 20);
+            this.txtDescripiconDeLaUbicacionLocalemente.TabIndex = 35;
+            // 
+            // lblDescripcionDeLaUbicacionLocalmente
+            // 
+            this.lblDescripcionDeLaUbicacionLocalmente.AutoSize = true;
+            this.lblDescripcionDeLaUbicacionLocalmente.BackColor = System.Drawing.Color.Transparent;
+            this.lblDescripcionDeLaUbicacionLocalmente.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcionDeLaUbicacionLocalmente.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblDescripcionDeLaUbicacionLocalmente.Location = new System.Drawing.Point(279, 367);
+            this.lblDescripcionDeLaUbicacionLocalmente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDescripcionDeLaUbicacionLocalmente.Name = "lblDescripcionDeLaUbicacionLocalmente";
+            this.lblDescripcionDeLaUbicacionLocalmente.Size = new System.Drawing.Size(275, 19);
+            this.lblDescripcionDeLaUbicacionLocalmente.TabIndex = 34;
+            this.lblDescripcionDeLaUbicacionLocalmente.Text = "Descripcion de la Ubicacion Localmente";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel3.Controls.Add(this.txtFacebook);
+            this.panel3.Controls.Add(this.txtInstagram);
+            this.panel3.Controls.Add(this.txtwhastsApp);
+            this.panel3.Controls.Add(this.txtCorreoElectronicoDeLaEmpresa);
+            this.panel3.Controls.Add(this.lblFacebook);
+            this.panel3.Controls.Add(this.lblInstagram);
+            this.panel3.Controls.Add(this.lblCorreo_Electronico);
+            this.panel3.Controls.Add(this.lblContactos);
+            this.panel3.Controls.Add(this.lblWhassapt);
+            this.panel3.Location = new System.Drawing.Point(283, 154);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(367, 164);
+            this.panel3.TabIndex = 33;
+            // 
+            // txtFacebook
+            // 
+            this.txtFacebook.Location = new System.Drawing.Point(150, 133);
+            this.txtFacebook.Margin = new System.Windows.Forms.Padding(2);
+            this.txtFacebook.Name = "txtFacebook";
+            this.txtFacebook.Size = new System.Drawing.Size(209, 20);
+            this.txtFacebook.TabIndex = 38;
+            // 
+            // txtInstagram
+            // 
+            this.txtInstagram.Location = new System.Drawing.Point(151, 103);
+            this.txtInstagram.Margin = new System.Windows.Forms.Padding(2);
+            this.txtInstagram.Name = "txtInstagram";
+            this.txtInstagram.Size = new System.Drawing.Size(209, 20);
+            this.txtInstagram.TabIndex = 37;
+            // 
+            // txtwhastsApp
+            // 
+            this.txtwhastsApp.Location = new System.Drawing.Point(150, 49);
+            this.txtwhastsApp.Margin = new System.Windows.Forms.Padding(2);
+            this.txtwhastsApp.Name = "txtwhastsApp";
+            this.txtwhastsApp.Size = new System.Drawing.Size(209, 20);
+            this.txtwhastsApp.TabIndex = 36;
+            // 
+            // txtCorreoElectronicoDeLaEmpresa
+            // 
+            this.txtCorreoElectronicoDeLaEmpresa.Location = new System.Drawing.Point(151, 74);
+            this.txtCorreoElectronicoDeLaEmpresa.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCorreoElectronicoDeLaEmpresa.Name = "txtCorreoElectronicoDeLaEmpresa";
+            this.txtCorreoElectronicoDeLaEmpresa.Size = new System.Drawing.Size(209, 20);
+            this.txtCorreoElectronicoDeLaEmpresa.TabIndex = 34;
+            // 
+            // lblFacebook
+            // 
+            this.lblFacebook.AutoSize = true;
+            this.lblFacebook.BackColor = System.Drawing.Color.Transparent;
+            this.lblFacebook.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFacebook.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblFacebook.Location = new System.Drawing.Point(13, 132);
+            this.lblFacebook.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFacebook.Name = "lblFacebook";
+            this.lblFacebook.Size = new System.Drawing.Size(74, 19);
+            this.lblFacebook.TabIndex = 35;
+            this.lblFacebook.Text = "Facebook";
+            // 
+            // lblInstagram
+            // 
+            this.lblInstagram.AutoSize = true;
+            this.lblInstagram.BackColor = System.Drawing.Color.Transparent;
+            this.lblInstagram.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInstagram.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblInstagram.Location = new System.Drawing.Point(13, 102);
+            this.lblInstagram.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblInstagram.Name = "lblInstagram";
+            this.lblInstagram.Size = new System.Drawing.Size(76, 19);
+            this.lblInstagram.TabIndex = 34;
+            this.lblInstagram.Text = "Instagram";
+            // 
+            // lblCorreo_Electronico
+            // 
+            this.lblCorreo_Electronico.AutoSize = true;
+            this.lblCorreo_Electronico.BackColor = System.Drawing.Color.Transparent;
+            this.lblCorreo_Electronico.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCorreo_Electronico.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblCorreo_Electronico.Location = new System.Drawing.Point(13, 74);
+            this.lblCorreo_Electronico.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCorreo_Electronico.Name = "lblCorreo_Electronico";
+            this.lblCorreo_Electronico.Size = new System.Drawing.Size(134, 19);
+            this.lblCorreo_Electronico.TabIndex = 33;
+            this.lblCorreo_Electronico.Text = "Correo Electronico";
+            // 
+            // lblContactos
+            // 
+            this.lblContactos.AutoSize = true;
+            this.lblContactos.BackColor = System.Drawing.Color.Transparent;
+            this.lblContactos.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContactos.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblContactos.Location = new System.Drawing.Point(19, 10);
+            this.lblContactos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblContactos.Name = "lblContactos";
+            this.lblContactos.Size = new System.Drawing.Size(75, 19);
+            this.lblContactos.TabIndex = 31;
+            this.lblContactos.Text = "Contactos";
+            this.lblContactos.Click += new System.EventHandler(this.label16_Click);
+            // 
+            // lblWhassapt
+            // 
+            this.lblWhassapt.AutoSize = true;
+            this.lblWhassapt.BackColor = System.Drawing.Color.Transparent;
+            this.lblWhassapt.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWhassapt.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblWhassapt.Location = new System.Drawing.Point(13, 48);
+            this.lblWhassapt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblWhassapt.Name = "lblWhassapt";
+            this.lblWhassapt.Size = new System.Drawing.Size(84, 19);
+            this.lblWhassapt.TabIndex = 32;
+            this.lblWhassapt.Text = "WhastsApp";
+            this.lblWhassapt.Click += new System.EventHandler(this.label17_Click);
+            // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.Location = new System.Drawing.Point(26, 129);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(574, 20);
+            this.txtDescripcion.TabIndex = 30;
+            // 
+            // lblNombreDeLaEmpresa
+            // 
+            this.lblNombreDeLaEmpresa.AutoSize = true;
+            this.lblNombreDeLaEmpresa.BackColor = System.Drawing.Color.Transparent;
+            this.lblNombreDeLaEmpresa.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreDeLaEmpresa.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblNombreDeLaEmpresa.Location = new System.Drawing.Point(22, 65);
+            this.lblNombreDeLaEmpresa.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNombreDeLaEmpresa.Name = "lblNombreDeLaEmpresa";
+            this.lblNombreDeLaEmpresa.Size = new System.Drawing.Size(65, 19);
+            this.lblNombreDeLaEmpresa.TabIndex = 29;
+            this.lblNombreDeLaEmpresa.Text = "Nombre";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 26F, System.Drawing.FontStyle.Bold);
+            this.label10.ForeColor = System.Drawing.SystemColors.Control;
+            this.label10.Location = new System.Drawing.Point(163, 15);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(363, 47);
+            this.label10.TabIndex = 28;
+            this.label10.Text = "Datos de La Empresa";
             // 
             // txtNombredelaPeluqueria
             // 
@@ -164,6 +335,18 @@
             this.picFotoMiniatura.TabStop = false;
             this.picFotoMiniatura.DoubleClick += new System.EventHandler(this.btnSeleccionarFotoMiniatura_Click);
             // 
+            // btRegistro
+            // 
+            this.btRegistro.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btRegistro.Location = new System.Drawing.Point(397, 415);
+            this.btRegistro.Margin = new System.Windows.Forms.Padding(2);
+            this.btRegistro.Name = "btRegistro";
+            this.btRegistro.Size = new System.Drawing.Size(132, 28);
+            this.btRegistro.TabIndex = 18;
+            this.btRegistro.Text = "Registrar Datos";
+            this.btRegistro.UseVisualStyleBackColor = true;
+            this.btRegistro.Click += new System.EventHandler(this.btRegistro_Click);
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -177,6 +360,18 @@
             this.label13.TabIndex = 20;
             this.label13.Text = "Normal";
             // 
+            // btGoogleMaps
+            // 
+            this.btGoogleMaps.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btGoogleMaps.Location = new System.Drawing.Point(536, 337);
+            this.btGoogleMaps.Margin = new System.Windows.Forms.Padding(2);
+            this.btGoogleMaps.Name = "btGoogleMaps";
+            this.btGoogleMaps.Size = new System.Drawing.Size(115, 28);
+            this.btGoogleMaps.TabIndex = 17;
+            this.btGoogleMaps.Text = "Google maps";
+            this.btGoogleMaps.UseVisualStyleBackColor = true;
+            this.btGoogleMaps.Click += new System.EventHandler(this.btGoogleMaps_Click);
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -189,6 +384,19 @@
             this.label12.Size = new System.Drawing.Size(73, 19);
             this.label12.TabIndex = 19;
             this.label12.Text = "Miniatura";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 15.2F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.SystemColors.Control;
+            this.label9.Location = new System.Drawing.Point(278, 334);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(251, 30);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "Ubicación de la empresa";
             // 
             // lblDescripcion
             // 
@@ -289,43 +497,6 @@
             this.lblFotodePerfil.Size = new System.Drawing.Size(100, 19);
             this.lblFotodePerfil.TabIndex = 23;
             this.lblFotodePerfil.Text = "Foto de Perfil";
-            // 
-            // btRegistro
-            // 
-            this.btRegistro.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btRegistro.Location = new System.Drawing.Point(397, 415);
-            this.btRegistro.Margin = new System.Windows.Forms.Padding(2);
-            this.btRegistro.Name = "btRegistro";
-            this.btRegistro.Size = new System.Drawing.Size(132, 28);
-            this.btRegistro.TabIndex = 18;
-            this.btRegistro.Text = "Registrar Datos";
-            this.btRegistro.UseVisualStyleBackColor = true;
-            this.btRegistro.Click += new System.EventHandler(this.btRegistro_Click);
-            // 
-            // btGoogleMaps
-            // 
-            this.btGoogleMaps.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btGoogleMaps.Location = new System.Drawing.Point(536, 337);
-            this.btGoogleMaps.Margin = new System.Windows.Forms.Padding(2);
-            this.btGoogleMaps.Name = "btGoogleMaps";
-            this.btGoogleMaps.Size = new System.Drawing.Size(115, 28);
-            this.btGoogleMaps.TabIndex = 17;
-            this.btGoogleMaps.Text = "Google maps";
-            this.btGoogleMaps.UseVisualStyleBackColor = true;
-            this.btGoogleMaps.Click += new System.EventHandler(this.btGoogleMaps_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 15.2F, System.Drawing.FontStyle.Bold);
-            this.label9.ForeColor = System.Drawing.SystemColors.Control;
-            this.label9.Location = new System.Drawing.Point(278, 334);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(251, 30);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "Ubicación de la empresa";
             // 
             // txtCelular
             // 
@@ -491,182 +662,11 @@
             // 
             this.ofdSeleccionar.FileName = "openFileDialog1";
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 26F, System.Drawing.FontStyle.Bold);
-            this.label10.ForeColor = System.Drawing.SystemColors.Control;
-            this.label10.Location = new System.Drawing.Point(163, 15);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(363, 47);
-            this.label10.TabIndex = 28;
-            this.label10.Text = "Datos de La Empresa";
-            // 
-            // lblNombreDeLaEmpresa
-            // 
-            this.lblNombreDeLaEmpresa.AutoSize = true;
-            this.lblNombreDeLaEmpresa.BackColor = System.Drawing.Color.Transparent;
-            this.lblNombreDeLaEmpresa.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreDeLaEmpresa.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblNombreDeLaEmpresa.Location = new System.Drawing.Point(22, 65);
-            this.lblNombreDeLaEmpresa.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblNombreDeLaEmpresa.Name = "lblNombreDeLaEmpresa";
-            this.lblNombreDeLaEmpresa.Size = new System.Drawing.Size(65, 19);
-            this.lblNombreDeLaEmpresa.TabIndex = 29;
-            this.lblNombreDeLaEmpresa.Text = "Nombre";
-            // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.Location = new System.Drawing.Point(26, 129);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(574, 20);
-            this.txtDescripcion.TabIndex = 30;
-            // 
-            // lblContactos
-            // 
-            this.lblContactos.AutoSize = true;
-            this.lblContactos.BackColor = System.Drawing.Color.Transparent;
-            this.lblContactos.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContactos.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblContactos.Location = new System.Drawing.Point(19, 10);
-            this.lblContactos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblContactos.Name = "lblContactos";
-            this.lblContactos.Size = new System.Drawing.Size(75, 19);
-            this.lblContactos.TabIndex = 31;
-            this.lblContactos.Text = "Contactos";
-            this.lblContactos.Click += new System.EventHandler(this.label16_Click);
-            // 
-            // lblWhassapt
-            // 
-            this.lblWhassapt.AutoSize = true;
-            this.lblWhassapt.BackColor = System.Drawing.Color.Transparent;
-            this.lblWhassapt.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWhassapt.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblWhassapt.Location = new System.Drawing.Point(13, 48);
-            this.lblWhassapt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblWhassapt.Name = "lblWhassapt";
-            this.lblWhassapt.Size = new System.Drawing.Size(84, 19);
-            this.lblWhassapt.TabIndex = 32;
-            this.lblWhassapt.Text = "WhastsApp";
-            this.lblWhassapt.Click += new System.EventHandler(this.label17_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel3.Controls.Add(this.txtFacebook);
-            this.panel3.Controls.Add(this.txtInstagram);
-            this.panel3.Controls.Add(this.txtwhastsApp);
-            this.panel3.Controls.Add(this.txtCorreoElectronicoDeLaEmpresa);
-            this.panel3.Controls.Add(this.lblFacebook);
-            this.panel3.Controls.Add(this.lblInstagram);
-            this.panel3.Controls.Add(this.lblCorreo_Electronico);
-            this.panel3.Controls.Add(this.lblContactos);
-            this.panel3.Controls.Add(this.lblWhassapt);
-            this.panel3.Location = new System.Drawing.Point(283, 154);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(367, 164);
-            this.panel3.TabIndex = 33;
-            // 
-            // lblCorreo_Electronico
-            // 
-            this.lblCorreo_Electronico.AutoSize = true;
-            this.lblCorreo_Electronico.BackColor = System.Drawing.Color.Transparent;
-            this.lblCorreo_Electronico.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCorreo_Electronico.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblCorreo_Electronico.Location = new System.Drawing.Point(13, 74);
-            this.lblCorreo_Electronico.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblCorreo_Electronico.Name = "lblCorreo_Electronico";
-            this.lblCorreo_Electronico.Size = new System.Drawing.Size(134, 19);
-            this.lblCorreo_Electronico.TabIndex = 33;
-            this.lblCorreo_Electronico.Text = "Correo Electronico";
-            // 
-            // lblInstagram
-            // 
-            this.lblInstagram.AutoSize = true;
-            this.lblInstagram.BackColor = System.Drawing.Color.Transparent;
-            this.lblInstagram.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInstagram.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblInstagram.Location = new System.Drawing.Point(13, 102);
-            this.lblInstagram.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblInstagram.Name = "lblInstagram";
-            this.lblInstagram.Size = new System.Drawing.Size(76, 19);
-            this.lblInstagram.TabIndex = 34;
-            this.lblInstagram.Text = "Instagram";
-            // 
-            // lblFacebook
-            // 
-            this.lblFacebook.AutoSize = true;
-            this.lblFacebook.BackColor = System.Drawing.Color.Transparent;
-            this.lblFacebook.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFacebook.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblFacebook.Location = new System.Drawing.Point(13, 132);
-            this.lblFacebook.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblFacebook.Name = "lblFacebook";
-            this.lblFacebook.Size = new System.Drawing.Size(74, 19);
-            this.lblFacebook.TabIndex = 35;
-            this.lblFacebook.Text = "Facebook";
-            // 
-            // txtCorreoElectronicoDeLaEmpresa
-            // 
-            this.txtCorreoElectronicoDeLaEmpresa.Location = new System.Drawing.Point(151, 74);
-            this.txtCorreoElectronicoDeLaEmpresa.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCorreoElectronicoDeLaEmpresa.Name = "txtCorreoElectronicoDeLaEmpresa";
-            this.txtCorreoElectronicoDeLaEmpresa.Size = new System.Drawing.Size(209, 20);
-            this.txtCorreoElectronicoDeLaEmpresa.TabIndex = 34;
-            // 
-            // txtwhastsApp
-            // 
-            this.txtwhastsApp.Location = new System.Drawing.Point(150, 49);
-            this.txtwhastsApp.Margin = new System.Windows.Forms.Padding(2);
-            this.txtwhastsApp.Name = "txtwhastsApp";
-            this.txtwhastsApp.Size = new System.Drawing.Size(209, 20);
-            this.txtwhastsApp.TabIndex = 36;
-            // 
-            // txtInstagram
-            // 
-            this.txtInstagram.Location = new System.Drawing.Point(151, 103);
-            this.txtInstagram.Margin = new System.Windows.Forms.Padding(2);
-            this.txtInstagram.Name = "txtInstagram";
-            this.txtInstagram.Size = new System.Drawing.Size(209, 20);
-            this.txtInstagram.TabIndex = 37;
-            // 
-            // txtFacebook
-            // 
-            this.txtFacebook.Location = new System.Drawing.Point(150, 133);
-            this.txtFacebook.Margin = new System.Windows.Forms.Padding(2);
-            this.txtFacebook.Name = "txtFacebook";
-            this.txtFacebook.Size = new System.Drawing.Size(209, 20);
-            this.txtFacebook.TabIndex = 38;
-            // 
-            // lblDescripcionDeLaUbicacionLocalmente
-            // 
-            this.lblDescripcionDeLaUbicacionLocalmente.AutoSize = true;
-            this.lblDescripcionDeLaUbicacionLocalmente.BackColor = System.Drawing.Color.Transparent;
-            this.lblDescripcionDeLaUbicacionLocalmente.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcionDeLaUbicacionLocalmente.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblDescripcionDeLaUbicacionLocalmente.Location = new System.Drawing.Point(279, 367);
-            this.lblDescripcionDeLaUbicacionLocalmente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblDescripcionDeLaUbicacionLocalmente.Name = "lblDescripcionDeLaUbicacionLocalmente";
-            this.lblDescripcionDeLaUbicacionLocalmente.Size = new System.Drawing.Size(275, 19);
-            this.lblDescripcionDeLaUbicacionLocalmente.TabIndex = 34;
-            this.lblDescripcionDeLaUbicacionLocalmente.Text = "Descripcion de la Ubicacion Localmente";
-            // 
-            // txtDescripiconDeLaUbicacionLocalemente
-            // 
-            this.txtDescripiconDeLaUbicacionLocalemente.Location = new System.Drawing.Point(283, 388);
-            this.txtDescripiconDeLaUbicacionLocalemente.Margin = new System.Windows.Forms.Padding(2);
-            this.txtDescripiconDeLaUbicacionLocalemente.Name = "txtDescripiconDeLaUbicacionLocalemente";
-            this.txtDescripiconDeLaUbicacionLocalemente.Size = new System.Drawing.Size(360, 20);
-            this.txtDescripiconDeLaUbicacionLocalemente.TabIndex = 35;
-            // 
             // RegisUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1047, 449);
+            this.ClientSize = new System.Drawing.Size(1052, 449);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -674,13 +674,13 @@
             this.Text = "Form1";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picFotoNormal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFotoMiniatura)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picFotodePerfil)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
