@@ -46,6 +46,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnVolver = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -180,6 +181,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel1.Controls.Add(this.btnVolver);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Location = new System.Drawing.Point(-10, -22);
             this.panel1.Name = "panel1";
@@ -246,6 +248,18 @@
             this.label1.TabIndex = 27;
             this.label1.Text = "Peluquerias";
             // 
+            // btnVolver
+            // 
+            this.btnVolver.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnVolver.BackgroundImage = global::PRESENTACION.Properties.Resources.icons8_regreso_50;
+            this.btnVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnVolver.Location = new System.Drawing.Point(23, 523);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(4);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(46, 55);
+            this.btnVolver.TabIndex = 26;
+            this.btnVolver.UseVisualStyleBackColor = false;
+            // 
             // PrincipialCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -285,5 +299,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnVolver;
     }
 }

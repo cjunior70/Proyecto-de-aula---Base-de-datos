@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textNomb = new System.Windows.Forms.TextBox();
@@ -40,11 +45,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbContactos = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnVolver = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -70,6 +71,51 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(614, 555);
             this.panel1.TabIndex = 1;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(416, 274);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(148, 22);
+            this.textBox1.TabIndex = 35;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(416, 336);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(148, 22);
+            this.textBox4.TabIndex = 34;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.Control;
+            this.label6.Location = new System.Drawing.Point(63, 329);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(327, 28);
+            this.label6.TabIndex = 33;
+            this.label6.Text = "Turnos generales disponibles hoy";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(416, 220);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(148, 22);
+            this.textBox3.TabIndex = 32;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Control;
+            this.label4.Location = new System.Drawing.Point(63, 213);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(249, 28);
+            this.label4.TabIndex = 31;
+            this.label4.Text = "Trabajadores Disponibles";
             // 
             // label11
             // 
@@ -168,6 +214,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.MediumBlue;
+            this.panel2.Controls.Add(this.btnVolver);
             this.panel2.Controls.Add(this.lbContactos);
             this.panel2.Location = new System.Drawing.Point(-3, 455);
             this.panel2.Name = "panel2";
@@ -186,50 +233,17 @@
             this.lbContactos.TabIndex = 8;
             this.lbContactos.Text = "Contactos";
             // 
-            // label4
+            // btnVolver
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(63, 213);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(249, 28);
-            this.label4.TabIndex = 31;
-            this.label4.Text = "Trabajadores Disponibles";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(416, 220);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(148, 22);
-            this.textBox3.TabIndex = 32;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(63, 329);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(327, 28);
-            this.label6.TabIndex = 33;
-            this.label6.Text = "Turnos generales disponibles hoy";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(416, 336);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(148, 22);
-            this.textBox4.TabIndex = 34;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(416, 274);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(148, 22);
-            this.textBox1.TabIndex = 35;
+            this.btnVolver.BackColor = System.Drawing.Color.MediumBlue;
+            this.btnVolver.BackgroundImage = global::PRESENTACION.Properties.Resources.icons8_regreso_50;
+            this.btnVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnVolver.Location = new System.Drawing.Point(16, 18);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(4);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(73, 68);
+            this.btnVolver.TabIndex = 26;
+            this.btnVolver.UseVisualStyleBackColor = false;
             // 
             // EmpresaCliente
             // 
@@ -267,5 +281,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnVolver;
     }
 }

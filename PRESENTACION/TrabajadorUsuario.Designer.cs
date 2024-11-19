@@ -30,17 +30,20 @@
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.btGuardarDatosT = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnVolver = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.MediumBlue;
+            this.flowLayoutPanel1.Controls.Add(this.btnVolver);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(282, 749);
@@ -59,41 +62,15 @@
             this.panel1.Size = new System.Drawing.Size(424, 545);
             this.panel1.TabIndex = 1;
             // 
-            // label2
+            // btGuardarDatosT
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(145, 283);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(152, 46);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Nombre";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(74, 344);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(178, 31);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "limite de cupos";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(74, 388);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(147, 31);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Experiencias";
+            this.btGuardarDatosT.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btGuardarDatosT.Location = new System.Drawing.Point(209, 484);
+            this.btGuardarDatosT.Name = "btGuardarDatosT";
+            this.btGuardarDatosT.Size = new System.Drawing.Size(202, 44);
+            this.btGuardarDatosT.TabIndex = 20;
+            this.btGuardarDatosT.Text = "Guardar Datos";
+            this.btGuardarDatosT.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -107,15 +84,53 @@
             this.label4.TabIndex = 14;
             this.label4.Text = "Estado";
             // 
-            // btGuardarDatosT
+            // label3
             // 
-            this.btGuardarDatosT.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btGuardarDatosT.Location = new System.Drawing.Point(209, 484);
-            this.btGuardarDatosT.Name = "btGuardarDatosT";
-            this.btGuardarDatosT.Size = new System.Drawing.Size(202, 44);
-            this.btGuardarDatosT.TabIndex = 20;
-            this.btGuardarDatosT.Text = "Guardar Datos";
-            this.btGuardarDatosT.UseVisualStyleBackColor = true;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
+            this.label3.Location = new System.Drawing.Point(74, 388);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(147, 31);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Experiencias";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(74, 344);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(178, 31);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "limite de cupos";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(145, 283);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(147, 45);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Nombre";
+            // 
+            // btnVolver
+            // 
+            this.btnVolver.BackColor = System.Drawing.Color.MediumBlue;
+            this.btnVolver.BackgroundImage = global::PRESENTACION.Properties.Resources.icons8_regreso_50;
+            this.btnVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnVolver.Location = new System.Drawing.Point(4, 4);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(4);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(73, 68);
+            this.btnVolver.TabIndex = 26;
+            this.btnVolver.UseVisualStyleBackColor = false;
             // 
             // TrabajadorUsuario
             // 
@@ -127,6 +142,7 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "TrabajadorUsuario";
             this.Text = "TrabajadorUsuario";
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -142,5 +158,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btGuardarDatosT;
+        private System.Windows.Forms.Button btnVolver;
     }
 }

@@ -99,7 +99,7 @@
             this.cbxGenero.Items.AddRange(new object[] {
             ""});
             this.cbxGenero.Location = new System.Drawing.Point(283, 363);
-            this.cbxGenero.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxGenero.Margin = new System.Windows.Forms.Padding(4);
             this.cbxGenero.Name = "cbxGenero";
             this.cbxGenero.Size = new System.Drawing.Size(235, 24);
             this.cbxGenero.TabIndex = 19;
@@ -276,7 +276,7 @@
             // btnSeleccionar
             // 
             this.btnSeleccionar.Location = new System.Drawing.Point(675, 336);
-            this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(4);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(277, 37);
             this.btnSeleccionar.TabIndex = 4;
@@ -290,7 +290,7 @@
             this.picFotodePerfil.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picFotodePerfil.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picFotodePerfil.Location = new System.Drawing.Point(675, 50);
-            this.picFotodePerfil.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picFotodePerfil.Margin = new System.Windows.Forms.Padding(4);
             this.picFotodePerfil.Name = "picFotodePerfil";
             this.picFotodePerfil.Size = new System.Drawing.Size(290, 244);
             this.picFotodePerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -300,14 +300,15 @@
             // 
             // btnVolver
             // 
+            this.btnVolver.BackColor = System.Drawing.Color.MidnightBlue;
             this.btnVolver.BackgroundImage = global::PRESENTACION.Properties.Resources.icons8_regreso_50;
-            this.btnVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnVolver.Location = new System.Drawing.Point(879, 470);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnVolver.Location = new System.Drawing.Point(892, 472);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(4);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(73, 68);
             this.btnVolver.TabIndex = 25;
-            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // RegisCliente

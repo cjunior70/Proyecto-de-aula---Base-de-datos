@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
-            this.lblNombreDeLaEmpresa = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblNombreDeLaEmpresa = new System.Windows.Forms.Label();
+            this.btnVolver = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -47,17 +48,6 @@
             this.panel1.Size = new System.Drawing.Size(301, 493);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.lblNombreDeLaEmpresa);
-            this.panel2.Location = new System.Drawing.Point(-56, 1);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(729, 746);
-            this.panel2.TabIndex = 1;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -70,17 +60,29 @@
             this.label10.TabIndex = 21;
             this.label10.Text = "Conoce al\r\nequipo\r\n";
             // 
-            // lblNombreDeLaEmpresa
+            // panel2
             // 
-            this.lblNombreDeLaEmpresa.AutoSize = true;
-            this.lblNombreDeLaEmpresa.BackColor = System.Drawing.Color.Transparent;
-            this.lblNombreDeLaEmpresa.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold);
-            this.lblNombreDeLaEmpresa.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblNombreDeLaEmpresa.Location = new System.Drawing.Point(420, 69);
-            this.lblNombreDeLaEmpresa.Name = "lblNombreDeLaEmpresa";
-            this.lblNombreDeLaEmpresa.Size = new System.Drawing.Size(227, 38);
-            this.lblNombreDeLaEmpresa.TabIndex = 30;
-            this.lblNombreDeLaEmpresa.Text = "Jimena Domech";
+            this.panel2.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel2.Controls.Add(this.btnVolver);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.lblNombreDeLaEmpresa);
+            this.panel2.Location = new System.Drawing.Point(-56, 1);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(729, 746);
+            this.panel2.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(420, 517);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(143, 38);
+            this.label2.TabIndex = 32;
+            this.label2.Text = "Yair Pérez";
             // 
             // label1
             // 
@@ -94,17 +96,29 @@
             this.label1.TabIndex = 31;
             this.label1.Text = "Jimena Domech";
             // 
-            // label2
+            // lblNombreDeLaEmpresa
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(420, 517);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(143, 38);
-            this.label2.TabIndex = 32;
-            this.label2.Text = "Yair Pérez";
+            this.lblNombreDeLaEmpresa.AutoSize = true;
+            this.lblNombreDeLaEmpresa.BackColor = System.Drawing.Color.Transparent;
+            this.lblNombreDeLaEmpresa.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold);
+            this.lblNombreDeLaEmpresa.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblNombreDeLaEmpresa.Location = new System.Drawing.Point(420, 69);
+            this.lblNombreDeLaEmpresa.Name = "lblNombreDeLaEmpresa";
+            this.lblNombreDeLaEmpresa.Size = new System.Drawing.Size(227, 38);
+            this.lblNombreDeLaEmpresa.TabIndex = 30;
+            this.lblNombreDeLaEmpresa.Text = "Jimena Domech";
+            // 
+            // btnVolver
+            // 
+            this.btnVolver.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnVolver.BackgroundImage = global::PRESENTACION.Properties.Resources.icons8_regreso_50;
+            this.btnVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnVolver.Location = new System.Drawing.Point(69, 671);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(4);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(73, 68);
+            this.btnVolver.TabIndex = 26;
+            this.btnVolver.UseVisualStyleBackColor = false;
             // 
             // TrabajadorCliente
             // 
@@ -132,5 +146,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblNombreDeLaEmpresa;
+        private System.Windows.Forms.Button btnVolver;
     }
 }
