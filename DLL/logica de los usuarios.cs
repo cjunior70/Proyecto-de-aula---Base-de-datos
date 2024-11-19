@@ -42,12 +42,17 @@ namespace DLL
             //Llamada de la funcion del dal para ingresar a este los datos a la base
             Funciones_del_usuario funciones_Del_Usuario = new Funciones_del_usuario();
 
-            //Variable para saber la existencia de alguien ya registrado
-            DataTable existencia;
+            //Datos de conexion del usuario administrdor para poder ingresar los datos
+            datos_de_conexion.usuario = "admin";
 
-            existencia = funciones_Del_Usuario.Consultar_Un_usuario(datos_de_conexion, datos_de_usuario);
+            datos_de_conexion.constraseña = "admin";
 
-            return existencia;
+            //Variable para saber la datos_del_usuario de alguien ya registrado
+            DataTable datos_del_usuario;
+
+            datos_del_usuario = funciones_Del_Usuario.Consultar_Un_usuario(datos_de_conexion, datos_de_usuario);
+
+            return datos_del_usuario;
         }
 
         //Funcion para consultar todos los usuarios
@@ -56,7 +61,7 @@ namespace DLL
             //Llamada de la funcion del dal para ingresar a este los datos a la base
             Funciones_del_usuario funciones_Del_Usuario = new Funciones_del_usuario();
 
-            //Variable para saber la existencia de alguien ya registrado
+            //Variable para saber la datos_del_usuario de alguien ya registrado
             DataTable existencia;
 
             existencia = funciones_Del_Usuario.Consultar_Usuarios(datos_de_conexion);
@@ -70,7 +75,7 @@ namespace DLL
             //Llamada de la funcion del dal para ingresar a este los datos a la base
             Funciones_del_usuario funciones_Del_usuario = new Funciones_del_usuario();
 
-            //Variable para saber la existencia de alguien ya registrado
+            //Variable para saber la datos_del_usuario de alguien ya registrado
             Boolean existencia;
 
             existencia = funciones_Del_usuario.Modificar_datos_del_usuario(datos_de_conexion, datos_nuevo_Del_Usuario);
@@ -84,14 +89,13 @@ namespace DLL
             //Llamada de la funcion del dal para ingresar a este los datos a la base
             Funciones_del_usuario funciones_Del_Usuario = new Funciones_del_usuario();
 
-            //Variable para saber la existencia de alguien ya registrado
+            //Variable para saber la datos_del_usuario de alguien ya registrado
             Boolean existencia;
 
             existencia = funciones_Del_Usuario.borrar_un_usuario(datos_de_conexion, datos_nuevo_Del_Usuario);
 
             return existencia;
         }
-
 
     }
 }

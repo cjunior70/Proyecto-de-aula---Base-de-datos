@@ -43,7 +43,7 @@ namespace PRESENTACION
             {
                 MessageBox.Show("Bienvenido");
 
-                RegisCliente frm = new RegisCliente();
+                PrincipialCliente frm = new PrincipialCliente();
                 frm.Show();
                 this.Hide();
             }

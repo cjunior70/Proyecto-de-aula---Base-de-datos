@@ -8,7 +8,9 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -38,6 +40,12 @@ namespace PRESENTACION
         public void guardar_datos_de_la_ubicacion(Ubicacion datos_de_la_ubicacion)
         {
             datos_de_la_ubicacion_globales = datos_de_la_ubicacion;
+
+            //Es para que el computador tenga tiempo para guardar los datos en la base
+            Thread.Sleep(2000);
+
+            buscar_codigo_de_la_ubicacion();
+
         }
 
         private void btnSeleccionarFotodePerfil_Click(object sender, EventArgs e)
@@ -88,12 +96,21 @@ namespace PRESENTACION
             //Codigo para guardar datos de la interfaz a variables
             guardar_datos_personales();
 
-             logica_de_los_usuarios logica_De_Los_Clientes = new logica_de_los_usuarios();
+            logica_de_los_usuarios logica_De_Los_Clientes = new logica_de_los_usuarios();
 
             confirmacion1 = logica_De_Los_Clientes.registro_de_un_usuario(datos_del_usuario_globales);
 
+            //Es para que el computador tenga tiempo para guardar los datos en la base
+            Thread.Sleep(2000);
+
             //Buscar codigo del usuario o el propietario de la empresa
-            
+            buscar_codigo_del_usuario();
+
+            //Buscar codigo de la ubicacion de donde se encuentra la empresa
+            buscar_codigo_de_la_ubicacion();
+
+            //Es para que el computador tenga tiempo para guardar los datos en la base
+            Thread.Sleep(2000);
 
             //Codigo para guardar datos de la interfaz a variables
             guardar_datos_De_la_empresa();
@@ -103,7 +120,7 @@ namespace PRESENTACION
             confirmacion2 = logica_De_Las_Empresas.registro_de_una_empresa(datos_de_la_empresa_globales);
 
 
-            if ( confirmacion2 == false)
+            if ( confirmacion2 == false && confirmacion1 == false)
             {
 
                 MessageBox.Show("Lo siento, ha ocurrido un error");
@@ -182,7 +199,7 @@ namespace PRESENTACION
             datos_de_la_empresa.correo = txtCorreoElectronicoDeLaEmpresa.Text;
             datos_de_la_empresa.instagram = txtInstagram.Text;
             datos_de_la_empresa.facebook = txtFacebook.Text;
-            datos_de_la_empresa.descripcion_de_la_empresa = txtDescripiconDeLaUbicacionLocalemente.Text;
+            datos_de_la_empresa.descripcion_de_la_localizacion = txtDescripiconDeLaUbicacionLocalemente.Text;
             datos_de_la_empresa.imagen_miniatura = Foto_Miniatura;
             datos_de_la_empresa.imagen_general = Foto_General;
             datos_de_la_empresa.usuario = datos_del_usuario_globales;
@@ -192,6 +209,48 @@ namespace PRESENTACION
 
         }
     
+        private void buscar_codigo_de_la_ubicacion()
+        {
+            logica_de_las_ubicaciones logica_De_Las_Ubicaciones = new logica_de_las_ubicaciones();
+
+            int codigo = 0;
+
+            DataTable datos_de_la_ubicacion = new DataTable();
+
+            datos_de_la_ubicacion = logica_De_Las_Ubicaciones.buscar_una_ubicacion(datos_de_la_ubicacion_globales);
+
+            if (datos_de_la_ubicacion.Rows.Count > 0)
+            {
+                codigo = Convert.ToInt32(datos_de_la_ubicacion.Rows[0]["codigo"]);
+                //MessageBox.Show("el codigo es " + codigo);
+            }
+
+            datos_de_la_ubicacion_globales.codigo = codigo;
+
+        }
+
+        private void buscar_codigo_del_usuario()
+        {
+            logica_de_los_usuarios logica_De_Los_Usuarios = new logica_de_los_usuarios();
+
+            int codigo = 0;
+
+            DataTable datos_del_usuario = new DataTable();
+
+            datos_del_usuario =  logica_De_Los_Usuarios.consulta_De_datos_personales(datos_del_usuario_globales);
+
+
+            //dtaprueba.DataSource = datos_del_usuario;
+
+            if(datos_del_usuario.Rows.Count > 0) 
+            {
+                codigo = Convert.ToInt32(datos_del_usuario.Rows[0]["codigo"]);
+                //MessageBox.Show("el codigo es " + codigo);
+            }
+
+            datos_del_usuario_globales.codigo = codigo;
+
+        }
 
         private void txtNombredelaPeluqueria_TextChanged(object sender, EventArgs e)
         {
