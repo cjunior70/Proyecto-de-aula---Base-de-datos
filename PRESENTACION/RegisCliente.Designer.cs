@@ -31,7 +31,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.cbxGenero = new System.Windows.Forms.ComboBox();
-            this.btRegistrar = new System.Windows.Forms.Button();
             this.txtCelular = new System.Windows.Forms.TextBox();
             this.txtCorreoElectronico = new System.Windows.Forms.TextBox();
             this.txtSgApellidoU = new System.Windows.Forms.TextBox();
@@ -47,6 +46,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btRegistrar = new System.Windows.Forms.Button();
             this.Seleccionar = new System.Windows.Forms.OpenFileDialog();
             this.btnSeleccionar = new System.Windows.Forms.Button();
             this.picFotodePerfil = new System.Windows.Forms.PictureBox();
@@ -104,18 +104,6 @@
             this.cbxGenero.Size = new System.Drawing.Size(177, 21);
             this.cbxGenero.TabIndex = 19;
             this.cbxGenero.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // btRegistrar
-            // 
-            this.btRegistrar.Font = new System.Drawing.Font("Segoe UI", 18.2F, System.Drawing.FontStyle.Bold);
-            this.btRegistrar.Location = new System.Drawing.Point(514, 336);
-            this.btRegistrar.Margin = new System.Windows.Forms.Padding(2);
-            this.btRegistrar.Name = "btRegistrar";
-            this.btRegistrar.Size = new System.Drawing.Size(200, 41);
-            this.btRegistrar.TabIndex = 18;
-            this.btRegistrar.Text = "Registrarme";
-            this.btRegistrar.UseVisualStyleBackColor = true;
-            this.btRegistrar.Click += new System.EventHandler(this.btRegistrar_Click);
             // 
             // txtCelular
             // 
@@ -277,6 +265,18 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Cedula";
             // 
+            // btRegistrar
+            // 
+            this.btRegistrar.Font = new System.Drawing.Font("Segoe UI", 18.2F, System.Drawing.FontStyle.Bold);
+            this.btRegistrar.Location = new System.Drawing.Point(514, 336);
+            this.btRegistrar.Margin = new System.Windows.Forms.Padding(2);
+            this.btRegistrar.Name = "btRegistrar";
+            this.btRegistrar.Size = new System.Drawing.Size(200, 41);
+            this.btRegistrar.TabIndex = 18;
+            this.btRegistrar.Text = "Registrarme";
+            this.btRegistrar.UseVisualStyleBackColor = true;
+            this.btRegistrar.Click += new System.EventHandler(this.btRegistrar_Click);
+            // 
             // Seleccionar
             // 
             this.Seleccionar.FileName = "ofdSeleccionar";
@@ -295,13 +295,14 @@
             // 
             this.picFotodePerfil.BackColor = System.Drawing.Color.DarkBlue;
             this.picFotodePerfil.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picFotodePerfil.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.picFotodePerfil.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picFotodePerfil.Location = new System.Drawing.Point(506, 41);
             this.picFotodePerfil.Name = "picFotodePerfil";
             this.picFotodePerfil.Size = new System.Drawing.Size(218, 199);
             this.picFotodePerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picFotodePerfil.TabIndex = 3;
             this.picFotodePerfil.TabStop = false;
+            this.picFotodePerfil.DoubleClick += new System.EventHandler(this.btnSeleccionar_Click);
             // 
             // btnVolver
             // 

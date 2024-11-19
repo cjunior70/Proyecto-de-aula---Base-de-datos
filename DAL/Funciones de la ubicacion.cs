@@ -63,8 +63,8 @@ namespace DAL
             {
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
-                cmd.Parameters.Add("p_lalitud", OracleDbType.Double).Value = datos_de_ubicacion.latitud;
-                cmd.Parameters.Add("p_longitud", OracleDbType.Double).Value = datos_de_ubicacion.longitud;
+                cmd.Parameters.Add("p_lalitud", OracleDbType.Varchar2).Value = datos_de_ubicacion.latitud;
+                cmd.Parameters.Add("p_longitud", OracleDbType.Varchar2).Value = datos_de_ubicacion.longitud;
 
                 cmd.ExecuteNonQuery();
             }
@@ -147,8 +147,8 @@ namespace DAL
             comando.CommandType = System.Data.CommandType.StoredProcedure;
 
             comando.Parameters.Add("p_codigo", OracleDbType.Int16).Value = datos_de_ubicacion.codigo;
-            comando.Parameters.Add("p_lalitud", OracleDbType.Double).Value = datos_de_ubicacion.latitud;
-            comando.Parameters.Add("p_longitud", OracleDbType.Double).Value = datos_de_ubicacion.longitud;
+            comando.Parameters.Add("p_lalitud", OracleDbType.Varchar2).Value = datos_de_ubicacion.latitud;
+            comando.Parameters.Add("p_longitud", OracleDbType.Varchar2).Value = datos_de_ubicacion.longitud;
 
             comando.ExecuteNonQuery();
 
@@ -197,7 +197,7 @@ namespace DAL
         //Variable para traer los datos de una sola ubicacion
         DataTable Usuario = new DataTable();
         //Funcion para poder traer todos las ubicaciones existentes
-        public DataTable Consultar_Una_Ubicacion(Datos_login Conexion_del_Usuario, Ubicacion datos_de_la_ubicacion)
+        public DataTable Consultar_Una_Ubicacion_por_Coordenadas(Datos_login Conexion_del_Usuario, Ubicacion datos_de_la_ubicacion)
         {
 
             try
@@ -226,13 +226,14 @@ namespace DAL
         }
 
         //Funcion privada para buscar en la base de dato a un empleado
-        private void traer_datos_de_una_ubicacion(Ubicacion datos_del_usuario)
+        private void traer_datos_de_una_ubicacion(Ubicacion datos_de_la_ubicacion)
         {
-            OracleCommand comando = new OracleCommand("PK_BUSCAR_UNA_UBICACION", ora);
+            OracleCommand comando = new OracleCommand("PK_BUSCAR_UNA_UBICACION_POR_COORDENADAS", ora);
             comando.CommandType = System.Data.CommandType.StoredProcedure;
 
 
-            comando.Parameters.Add("p_codigo", OracleDbType.Varchar2).Value = datos_del_usuario.codigo;
+            comando.Parameters.Add("p_latitud", OracleDbType.Varchar2).Value = datos_de_la_ubicacion.latitud;
+            comando.Parameters.Add("p_longitud", OracleDbType.Varchar2).Value = datos_de_la_ubicacion.longitud;
             comando.Parameters.Add("p_registro", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
 
             OracleDataAdapter adaptador = new OracleDataAdapter();

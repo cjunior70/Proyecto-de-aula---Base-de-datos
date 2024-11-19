@@ -51,6 +51,7 @@ namespace DAL
                 //Cerrar conexion
                 ora.Close();
 
+
                 return false;
             }
 
@@ -73,8 +74,10 @@ namespace DAL
                 cmd.Parameters.Add("p_descripcion_de_la_localizacion", OracleDbType.Varchar2).Value = datos_de_la_empresa.descripcion_de_la_localizacion;
                 cmd.Parameters.Add("p_imagen_en_miniatura", OracleDbType.Blob).Value = datos_de_la_empresa.imagen_miniatura;
                 cmd.Parameters.Add("p_imagen_general", OracleDbType.Blob).Value = datos_de_la_empresa.imagen_general;
-                cmd.Parameters.Add("p_usuario_codigo", OracleDbType.Varchar2).Value = datos_de_la_empresa.usuario.codigo;
-                cmd.Parameters.Add("P_ubicacion_codigo", OracleDbType.Varchar2).Value = datos_de_la_empresa.ubicaion.codigo;
+                cmd.Parameters.Add("p_usuario_codigo", OracleDbType.Int64).Value = datos_de_la_empresa.usuario.codigo;
+                cmd.Parameters.Add("P_ubicacion_codigo", OracleDbType.Int64).Value = datos_de_la_empresa.ubicaion.codigo;
+
+                Console.WriteLine("codigo del dueño " + datos_de_la_empresa.usuario.codigo);
 
                 cmd.ExecuteNonQuery();
             }

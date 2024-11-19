@@ -20,6 +20,12 @@ namespace DLL
         //Funcion para registar la ubicacion de una empresa
         public Boolean registrar_una_ubicacion(Ubicacion datos_de_la_ubicacion)
         {
+
+            //Datos de conexion del usuario administrdor para poder ingresar los datos
+            datos_de_conexion.usuario = "admin";
+
+            datos_de_conexion.constraseña = "admin";
+
             Boolean confirmacion;
 
             confirmacion = funciones_De_La_Ubicacion.Ingresar_Una_Ubicacion(datos_de_conexion, datos_de_la_ubicacion);
@@ -32,6 +38,11 @@ namespace DLL
         public DataTable consultar_todas_las_ubicaciones()
         {
             DataTable datos;
+
+            //Datos de conexion del usuario administrdor para poder ingresar los datos
+            datos_de_conexion.usuario = "admin";
+
+            datos_de_conexion.constraseña = "admin";
 
             datos = funciones_De_La_Ubicacion.Consultar_Todas_las_ubicaciones(datos_de_conexion );
 
@@ -63,11 +74,16 @@ namespace DLL
         //Funcion para buscar una ubicacion
         public DataTable buscar_una_ubicacion(Ubicacion datos_de_la_ubicasion)
         {
-            DataTable ubicaicon;
+            DataTable Ubicacion;
 
-            ubicaicon = funciones_De_La_Ubicacion.Consultar_Una_Ubicacion(datos_de_conexion, datos_de_la_ubicasion);
+            //Datos de conexion del usuario administrdor para poder ingresar los datos
+            datos_de_conexion.usuario = "admin";
 
-            return ubicaicon;
+            datos_de_conexion.constraseña = "admin";
+
+            Ubicacion = funciones_De_La_Ubicacion.Consultar_Una_Ubicacion_por_Coordenadas(datos_de_conexion, datos_de_la_ubicasion);
+
+            return Ubicacion;
 
         }
 

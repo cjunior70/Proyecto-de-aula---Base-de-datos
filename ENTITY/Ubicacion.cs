@@ -10,22 +10,24 @@ namespace ENTITY
     {
 
         //Datos basicos de la ubicacion
-        public string codigo { get; set; }
-        public double latitud { get; set; }
-        public double longitud { get; set; }
+        public int codigo { get; set; }
+        public string latitud { get; set; }
+        public string longitud { get; set; }
 
         //Constructor para acceso a la clase
         public Ubicacion()
         {
         }
 
+
         //Constructor para los datos basicos
-        public Ubicacion(string codigo, double latitud, double longitud)
+        public Ubicacion(int codigo, string latitud, string longitud)
         {
             this.codigo = codigo;
             this.latitud = latitud;
             this.longitud = longitud;
         }
+
 
     }
 }

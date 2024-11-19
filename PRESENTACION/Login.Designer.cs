@@ -150,7 +150,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(81, 25);
             this.label6.TabIndex = 8;
-            this.label6.Text = "Usuario";
+            this.label6.Text = "datatable";
             // 
             // panel3
             // 

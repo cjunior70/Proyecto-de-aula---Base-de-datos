@@ -247,7 +247,7 @@ namespace DAL
             comando.CommandType = System.Data.CommandType.StoredProcedure;
 
 
-            comando.Parameters.Add("p_cedula", OracleDbType.Varchar2).Value = datos_del_usuario.codigo;
+            comando.Parameters.Add("p_cedula", OracleDbType.Varchar2).Value = datos_del_usuario.cedula;
             comando.Parameters.Add("p_registro", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
 
             OracleDataAdapter adaptador = new OracleDataAdapter();

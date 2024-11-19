@@ -27,8 +27,8 @@ namespace ENTITY
         public string instagram {  get; set; }
         public string facebook { get; set; }
         public string descripcion_de_la_localizacion { get; set; }
-        public byte imagen_miniatura { get; set; }
-        public byte imagen_general { get; set; }
+        public byte[] imagen_miniatura { get; set; }
+        public byte[] imagen_general { get; set; }
 
         //Constructor para el acceso a la clase
         public Empresa()
@@ -36,7 +36,7 @@ namespace ENTITY
         }
 
         //Construtor de los datos de la empresa
-        public Empresa(Usuario usuario, Ubicacion ubicaion, List<Empleados> lista_de_empleados, List<Servicios> lista_de_servicios, int codigo, string nombre_de_la_empresa, string descripcion_de_la_empresa, int extrellas, string whatsapp, string correo, string instagram, string facebook, string descripcion_de_la_localizacion, byte imagen_miniatura, byte imagen_general)
+        public Empresa(Usuario usuario, Ubicacion ubicaion, List<Empleados> lista_de_empleados, List<Servicios> lista_de_servicios, int codigo, string nombre_de_la_empresa, string descripcion_de_la_empresa, int extrellas, string whatsapp, string correo, string instagram, string facebook, string descripcion_de_la_localizacion, byte[] imagen_miniatura, byte[] imagen_general)
         {
             this.usuario = usuario;
             this.ubicaion = ubicaion;
