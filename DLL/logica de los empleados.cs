@@ -12,13 +12,10 @@ namespace DLL
     public class logica_de_los_empleados
     {
 
-        //Conexion general par el ingreso y registro de las personas nuevas
-        Datos_login datos_de_conexion = new Datos_login();
-
         Funciones_del_empleado funciones_Del_Empleado = new Funciones_del_empleado();
 
         //Funcion para ingresar un empleado
-        public Boolean ingresar_un_empleado(Empleados datos_empleado, Empresa datos_de_la_empresa)
+        public Boolean ingresar_un_empleado(Empleados datos_empleado, Datos_login datos_de_conexion)
         {
 
             Boolean confirmacion;
@@ -30,7 +27,7 @@ namespace DLL
         }
 
         //Funcion para consultar todos los empleados
-        public DataTable consultar_todos_los_empleados()
+        public DataTable consultar_todos_los_empleados(Datos_login datos_de_conexion)
         {
             DataTable datos;
 
@@ -41,7 +38,7 @@ namespace DLL
         }
 
         //Funcion para modificar los datos de un empleado
-        public Boolean actualizar_datos_de_un_empleado(Empleados datos_actualizados)
+        public Boolean actualizar_datos_de_un_empleado(Empleados datos_actualizados, Datos_login datos_de_conexion)
         {
             Boolean confirmacion;
 
@@ -52,7 +49,7 @@ namespace DLL
         }
 
         //Funcion para poder borrar a un empleado
-        public Boolean borrar_un_empleado(Empleados datos_del_empleado)
+        public Boolean borrar_un_empleado(Empleados datos_del_empleado, Datos_login datos_de_conexion)
         {
             Boolean confirmacion;
 
@@ -63,7 +60,7 @@ namespace DLL
         }
 
         //Funcion para consultar los datos de un empleado
-        public DataTable consultar_detos_de_un_empleado(Empleados datos_del_empleado )
+        public DataTable consultar_datos_de_un_empleado(Empleados datos_del_empleado, Datos_login datos_de_conexion)
         {
             DataTable datos;
 

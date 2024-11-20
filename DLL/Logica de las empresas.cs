@@ -45,8 +45,10 @@ namespace DLL
         }
 
         //Funcion para consultar todas las empresas registradas
-        public DataTable consultar_todas_las_empresas(Datos_login datos_de_conexion)
+        public List<Empresa> consultar_todas_las_empresas(Datos_login datos_de_conexion)
         {
+            List<Empresa> lista_de_las_empresas = new List<Empresa>();
+
             //Llamada de la funcion del dal para ingresar a este los datos a la base
             Funciones_de_Empresa funciones_De_Empresa = new Funciones_de_Empresa();
 
@@ -55,7 +57,28 @@ namespace DLL
 
             existencia = funciones_De_Empresa.Consultar_Todas_las_Empresas(datos_de_conexion);
 
-            return existencia;
+            lista_de_las_empresas =  mapeo_del_datatable_que_tiene_los_datos_de_informacion(existencia);
+
+            return lista_de_las_empresas;
+        }
+
+        private List<Empresa> mapeo_del_datatable_que_tiene_los_datos_de_informacion(DataTable datos_de_todas_las_empresa_globales )
+        {
+            List<Empresa> lista_de_las_empresas = new List<Empresa>();
+
+            for (int i = 0; i < datos_de_todas_las_empresa_globales.Rows.Count; i++)
+            {
+
+                Empresa datos = new Empresa();
+                datos.codigo = Convert.ToInt32(datos_de_todas_las_empresa_globales.Rows[i]["codigo"]);
+                datos.nombre_de_la_empresa = Convert.ToString(datos_de_todas_las_empresa_globales.Rows[i]["nombre"]);
+                datos.imagen_miniatura = (Byte[])(datos_de_todas_las_empresa_globales.Rows[i]["IMAGEN_EN_MINIATURA"]);
+
+                lista_de_las_empresas.Add(datos);
+
+            }
+
+            return lista_de_las_empresas;
         }
 
         //Funcion para actualizar datos de una empresa 
