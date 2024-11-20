@@ -16,5 +16,14 @@ namespace PRESENTACION
         {
             InitializeComponent();
         }
+
+        private void btAgregarEmpleado_Click(object sender, EventArgs e)
+        {
+
+            TrabajadorCliente TrabajadorCli = new TrabajadorCliente();
+            TrabajadorCli.Show();
+
+            this.Hide();
+        }
     }
 }
