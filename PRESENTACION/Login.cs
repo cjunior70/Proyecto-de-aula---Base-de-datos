@@ -24,28 +24,41 @@ namespace PRESENTACION
 
         }
 
+        //Entrada del sistema
+        Datos_login datos_de_conexion = new Datos_login();
+
+        //Datatable para poder saber la exixstencia de la persona que quiere entrar al programa
+        DataTable existencia = new DataTable();
+
+        logica_de_los_clientes logica_De_Los_Clientes = new logica_de_los_clientes();
+
+        logica_de_los_usuarios logica_De_Los_Usuarios = new logica_de_los_usuarios();
+
+        logica_de_los_empleados logica_De_Los_Empleados = new logica_de_los_empleados();
+
         private void lbEntrarB_Click(object sender, EventArgs e)
         {
 
-            //Entrada del sistema
-            Datos_login datos = new Datos_login();
-
-            datos.constraseña = txtContraseña.Text;
-            datos.usuario = txtUsuario.Text;
+            datos_de_conexion.constraseña = txtContraseña.Text;
+            datos_de_conexion.usuario = txtUsuario.Text;
 
             Boolean confirmacion;
 
             Funcion_de_conexion funcion_De_Conexion = new Funcion_de_conexion();
 
-            confirmacion = funcion_De_Conexion.conexion(datos);
+            confirmacion = funcion_De_Conexion.conexion(datos_de_conexion);
 
             if (confirmacion == true)
             {
-                MessageBox.Show("Bienvenido");
 
-                PrincipialCliente frm = new PrincipialCliente();
-                frm.Show();
-                this.Hide();
+                if (datos_de_conexion.usuario == "admin" && datos_de_conexion.constraseña == "admin")
+                {
+                    interfaz_principal_cliente();
+                }
+                else
+                {
+                    consultar_quien_entra();
+                }
             }
             else
             {
@@ -53,6 +66,165 @@ namespace PRESENTACION
                 MessageBox.Show("Usuario invalido");
 
             }
+
+        }
+
+        private void consultar_quien_entra()
+        {
+
+            //Variable para la confirmacion de datos
+            Boolean confirmacion;
+
+            confirmacion =  buscar_existencia_del_cliente();
+
+            if( confirmacion == true )
+            {
+                //Si el datatatble no esta vacio entonces entro un cliente
+                datos_de_conexion.quien_esta = 'C';
+
+                interfaz_principal_cliente();
+
+            }
+            else
+            {
+                confirmacion = buscar_existencia_del_usuario();
+
+                if( confirmacion == true )
+                {
+                    //Si el datatatble no esta vacio entonces entro un cliente
+                    datos_de_conexion.quien_esta = 'U';
+
+                    interfaz_principal_usuario();
+
+                }
+                else
+                {
+                    confirmacion = buscar_existencia_del_empleado();
+
+                    if( confirmacion == true)
+                    {
+                        //Si el datatatble no esta vacio entonces entro un cliente
+                        datos_de_conexion.quien_esta = 'E';
+
+                        //interfaz_principal_empleado();
+
+                        MessageBox.Show("Aun falta la interfaz del empleado");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usuario invalido");
+                    }
+                }
+
+            }
+
+            
+        }
+
+        //Interfaz para poder entrar a la interfaz del cliente
+        private void interfaz_principal_cliente()
+        {
+
+            //Funcion para entrar a la interfaz principal
+            PrincipialCliente Interfaz_del_cliente_principal = new PrincipialCliente();
+            Interfaz_del_cliente_principal.datos_de_conexion(datos_de_conexion);
+            Interfaz_del_cliente_principal.Show();
+            Interfaz_del_cliente_principal.buscar_todas_las_empresa();
+
+            //Para cerrar la interfaz actual
+            this.Hide();
+
+        }
+
+        //Interfaz para poder entrar a la interfaz del usuario
+        private void interfaz_principal_usuario()
+        {
+
+            //Funcion para entrar a la interfaz principal
+            PrincipalUsuario interfaz_del_usuario_principal = new PrincipalUsuario();
+            interfaz_del_usuario_principal.datos_de_conexion(datos_de_conexion);
+            interfaz_del_usuario_principal.Show();
+
+            //Para cerrar la interfaz actual
+            this.Hide();
+
+        }
+
+        //Interfaz para poder entrar a la interfaz del empleado
+        private void interfaz_principal_empleado()
+        {
+
+            //Funcion para entrar a la interfaz principal
+           
+
+        }
+
+        //Funcion para buscar si los datos que se ingreso son de un cliente
+        private Boolean buscar_existencia_del_cliente()
+        {
+            Boolean confirmacion;
+
+            Cliente datos_del_cliente = new Cliente();
+            datos_del_cliente.cedula = datos_de_conexion.constraseña;
+
+            existencia = logica_De_Los_Clientes.consulta_De_datos_personales(datos_del_cliente, datos_de_conexion);
+
+            if( existencia == null )
+            {
+                confirmacion = false;
+            }
+            else
+            {
+                confirmacion = true;
+            }
+
+            return confirmacion;
+
+        }
+
+        //Funcion para buscar si los datos que se ingreso son de un usuario
+        private Boolean buscar_existencia_del_usuario()
+        {
+            Boolean confirmacion;
+
+            Usuario datos_del_usuario = new Usuario();
+            datos_del_usuario.cedula = datos_de_conexion.constraseña;
+
+            existencia = logica_De_Los_Usuarios.consulta_De_datos_personales(datos_del_usuario, datos_de_conexion);
+
+            if (existencia == null)
+            {
+                confirmacion = false;
+            }
+            else
+            {
+                confirmacion = true;
+            }
+
+            return confirmacion;
+
+        }
+
+        //Funcion para buscar si los datos que se ingreso son de un empleado
+        private Boolean buscar_existencia_del_empleado()
+        {
+            Boolean confirmacion;
+
+            Empleados datos_del_empleado = new Empleados();
+            datos_del_empleado.cedula = datos_de_conexion.constraseña;
+
+            existencia = logica_De_Los_Empleados.consultar_datos_de_un_empleado(datos_del_empleado, datos_de_conexion);
+
+            if (existencia == null)
+            {
+                confirmacion = false;
+            }
+            else
+            {
+                confirmacion = true;
+            }
+
+            return confirmacion;
 
         }
 
@@ -81,6 +253,7 @@ namespace PRESENTACION
             {
                 // Lógica para la opción "Yes"
                 RegisUsuario regisUsuario = new RegisUsuario();
+                regisUsuario.datos_de_conexion(datos_de_la_conexion);
                 regisUsuario.Show();
 
                 // Ocultar el formulario actual

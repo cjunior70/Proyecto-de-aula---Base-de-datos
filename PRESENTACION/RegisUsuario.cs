@@ -50,7 +50,7 @@ namespace PRESENTACION
         {
             datos_de_la_ubicacion_globales = datos_de_la_ubicacion;
 
-            //Es para que el computador tenga tiempo para guardar los datos en la base
+            //Es para que el computador tenga tiempo para guardar los datos_de_conexion en la base
             Thread.Sleep(2000);
 
             buscar_codigo_de_la_ubicacion();
@@ -99,17 +99,17 @@ namespace PRESENTACION
 
         private void btRegistro_Click(object sender, EventArgs e)
         {
-            //Variable para la confirmacion de datos personales y para la confirmacion de datos de la empresa
+            //Variable para la confirmacion de datos_de_conexion personales y para la confirmacion de datos_de_conexion de la empresa
             Boolean confirmacion1, confirmacion2;
 
-            //Codigo para guardar datos de la interfaz a variables
+            //Codigo para guardar datos_de_conexion de la interfaz a variables
             guardar_datos_personales();
 
             logica_de_los_usuarios logica_De_Los_Clientes = new logica_de_los_usuarios();
 
             confirmacion1 = logica_De_Los_Clientes.registro_de_un_usuario(datos_del_usuario_globales, datos_de_la_conexion);
 
-            //Es para que el computador tenga tiempo para guardar los datos en la base
+            //Es para que el computador tenga tiempo para guardar los datos_de_conexion en la base
             Thread.Sleep(2000);
 
             //Buscar codigo del usuario o el propietario de la empresa
@@ -118,10 +118,10 @@ namespace PRESENTACION
             //Buscar codigo de la ubicacion de donde se encuentra la empresa
             buscar_codigo_de_la_ubicacion();
 
-            //Es para que el computador tenga tiempo para guardar los datos en la base
+            //Es para que el computador tenga tiempo para guardar los datos_de_conexion en la base
             Thread.Sleep(2000);
 
-            //Codigo para guardar datos de la interfaz a variables
+            //Codigo para guardar datos_de_conexion de la interfaz a variables
             guardar_datos_De_la_empresa();
 
             logica_de_las_empresas logica_De_Las_Empresas = new logica_de_las_empresas();
@@ -149,7 +149,7 @@ namespace PRESENTACION
 
         }
 
-        //Funcion para guardar los datos personales del usuario 
+        //Funcion para guardar los datos_de_conexion personales del usuario 
         private void guardar_datos_personales()
         {
             Usuario datos_Personales = new Usuario();
@@ -183,7 +183,7 @@ namespace PRESENTACION
 
         }
 
-        //Funcion para guardar los datos de la empresa del usuario que se quiere registrar
+        //Funcion para guardar los datos_de_conexion de la empresa del usuario que se quiere registrar
         private void guardar_datos_De_la_empresa()
         {
             //Conversion de la imagen general a byte para un trabajo mejor
@@ -198,7 +198,7 @@ namespace PRESENTACION
             picFotoMiniatura.Image.Save(imagen_miniatura, ImageFormat.Jpeg);
             byte[] Foto_Miniatura = imagen_miniatura.ToArray();
 
-            //Recoleccion de datos de la empresa con la interfaz
+            //Recoleccion de datos_de_conexion de la empresa con la interfaz
             Empresa datos_de_la_empresa = new Empresa();
 
             datos_de_la_empresa.nombre_de_la_empresa = txtNombredelaPeluqueria.Text;
@@ -283,6 +283,16 @@ namespace PRESENTACION
             googlemaps.Show();
 
             // Ocultar el formulario actual
+            this.Hide();
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            //Codigo para poder regresar al login
+            Login FrmLog = new Login();
+            FrmLog.Show();
+
+            //Codigo para cerrar la interfac actual
             this.Hide();
         }
     }

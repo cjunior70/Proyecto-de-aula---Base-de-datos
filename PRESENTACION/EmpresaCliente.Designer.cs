@@ -44,8 +44,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lbContactos = new System.Windows.Forms.Label();
             this.btnVolver = new System.Windows.Forms.Button();
+            this.lbContactos = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -67,23 +67,26 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(368, 0);
+            this.panel1.Location = new System.Drawing.Point(276, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(614, 555);
+            this.panel1.Size = new System.Drawing.Size(460, 451);
             this.panel1.TabIndex = 1;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(416, 274);
+            this.textBox1.Location = new System.Drawing.Point(312, 223);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(148, 22);
+            this.textBox1.Size = new System.Drawing.Size(112, 20);
             this.textBox1.TabIndex = 35;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(416, 336);
+            this.textBox4.Location = new System.Drawing.Point(312, 273);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(148, 22);
+            this.textBox4.Size = new System.Drawing.Size(112, 20);
             this.textBox4.TabIndex = 34;
             // 
             // label6
@@ -92,17 +95,19 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(63, 329);
+            this.label6.Location = new System.Drawing.Point(47, 267);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(327, 28);
+            this.label6.Size = new System.Drawing.Size(264, 21);
             this.label6.TabIndex = 33;
             this.label6.Text = "Turnos generales disponibles hoy";
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(416, 220);
+            this.textBox3.Location = new System.Drawing.Point(312, 179);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(148, 22);
+            this.textBox3.Size = new System.Drawing.Size(112, 20);
             this.textBox3.TabIndex = 32;
             // 
             // label4
@@ -111,9 +116,10 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(63, 213);
+            this.label4.Location = new System.Drawing.Point(47, 173);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(249, 28);
+            this.label4.Size = new System.Drawing.Size(202, 21);
             this.label4.TabIndex = 31;
             this.label4.Text = "Trabajadores Disponibles";
             // 
@@ -123,32 +129,36 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.Control;
-            this.label11.Location = new System.Drawing.Point(65, 101);
+            this.label11.Location = new System.Drawing.Point(49, 82);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(80, 17);
+            this.label11.Size = new System.Drawing.Size(67, 13);
             this.label11.TabIndex = 30;
             this.label11.Text = "Descripcion";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(416, 405);
+            this.textBox2.Location = new System.Drawing.Point(312, 329);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(148, 22);
+            this.textBox2.Size = new System.Drawing.Size(112, 20);
             this.textBox2.TabIndex = 28;
             // 
             // textNomb
             // 
-            this.textNomb.Location = new System.Drawing.Point(416, 168);
+            this.textNomb.Location = new System.Drawing.Point(312, 136);
+            this.textNomb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textNomb.Name = "textNomb";
-            this.textNomb.Size = new System.Drawing.Size(148, 22);
+            this.textNomb.Size = new System.Drawing.Size(112, 20);
             this.textNomb.TabIndex = 26;
             // 
             // btHReservacion
             // 
             this.btHReservacion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btHReservacion.Location = new System.Drawing.Point(327, 500);
+            this.btHReservacion.Location = new System.Drawing.Point(245, 406);
+            this.btHReservacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btHReservacion.Name = "btHReservacion";
-            this.btHReservacion.Size = new System.Drawing.Size(249, 41);
+            this.btHReservacion.Size = new System.Drawing.Size(187, 33);
             this.btHReservacion.TabIndex = 20;
             this.btHReservacion.Text = "Hacer una reservacion";
             this.btHReservacion.UseVisualStyleBackColor = true;
@@ -157,9 +167,10 @@
             // btGoogleMaps
             // 
             this.btGoogleMaps.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btGoogleMaps.Location = new System.Drawing.Point(91, 500);
+            this.btGoogleMaps.Location = new System.Drawing.Point(68, 406);
+            this.btGoogleMaps.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btGoogleMaps.Name = "btGoogleMaps";
-            this.btGoogleMaps.Size = new System.Drawing.Size(156, 41);
+            this.btGoogleMaps.Size = new System.Drawing.Size(117, 33);
             this.btGoogleMaps.TabIndex = 19;
             this.btGoogleMaps.Text = "Google Maps";
             this.btGoogleMaps.UseVisualStyleBackColor = true;
@@ -170,9 +181,10 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(63, 371);
+            this.label5.Location = new System.Drawing.Point(47, 301);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(249, 56);
+            this.label5.Size = new System.Drawing.Size(201, 42);
             this.label5.TabIndex = 11;
             this.label5.Text = "Ubicación de la empresa \r\ncomúnmente";
             // 
@@ -182,9 +194,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(63, 258);
+            this.label2.Location = new System.Drawing.Point(47, 210);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(215, 56);
+            this.label2.Size = new System.Drawing.Size(174, 42);
             this.label2.TabIndex = 10;
             this.label2.Text = "Tiempo Promedio en \r\nterminar el trabajo";
             // 
@@ -194,9 +207,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(63, 161);
+            this.label1.Location = new System.Drawing.Point(47, 131);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 28);
+            this.label1.Size = new System.Drawing.Size(61, 21);
             this.label1.TabIndex = 1;
             this.label1.Text = "Dueño";
             // 
@@ -206,9 +220,10 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 26F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(40, 21);
+            this.label3.Location = new System.Drawing.Point(30, 17);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(496, 60);
+            this.label3.Size = new System.Drawing.Size(396, 47);
             this.label3.TabIndex = 9;
             this.label3.Text = "Nombre de la empresa";
             // 
@@ -217,10 +232,23 @@
             this.panel2.BackColor = System.Drawing.Color.MediumBlue;
             this.panel2.Controls.Add(this.btnVolver);
             this.panel2.Controls.Add(this.lbContactos);
-            this.panel2.Location = new System.Drawing.Point(-3, 455);
+            this.panel2.Location = new System.Drawing.Point(-2, 370);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(371, 100);
+            this.panel2.Size = new System.Drawing.Size(278, 81);
             this.panel2.TabIndex = 2;
+            // 
+            // btnVolver
+            // 
+            this.btnVolver.BackColor = System.Drawing.Color.MediumBlue;
+            this.btnVolver.BackgroundImage = global::PRESENTACION.Properties.Resources.icons8_regreso_50;
+            this.btnVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnVolver.Location = new System.Drawing.Point(12, 15);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(55, 55);
+            this.btnVolver.TabIndex = 26;
+            this.btnVolver.UseVisualStyleBackColor = false;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // lbContactos
             // 
@@ -228,31 +256,21 @@
             this.lbContactos.BackColor = System.Drawing.Color.Transparent;
             this.lbContactos.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbContactos.ForeColor = System.Drawing.SystemColors.Control;
-            this.lbContactos.Location = new System.Drawing.Point(128, 32);
+            this.lbContactos.Location = new System.Drawing.Point(96, 26);
+            this.lbContactos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbContactos.Name = "lbContactos";
-            this.lbContactos.Size = new System.Drawing.Size(121, 31);
+            this.lbContactos.Size = new System.Drawing.Size(101, 25);
             this.lbContactos.TabIndex = 8;
             this.lbContactos.Text = "Contactos";
             // 
-            // btnVolver
-            // 
-            this.btnVolver.BackColor = System.Drawing.Color.MediumBlue;
-            this.btnVolver.BackgroundImage = global::PRESENTACION.Properties.Resources.icons8_regreso_50;
-            this.btnVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnVolver.Location = new System.Drawing.Point(16, 18);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(4);
-            this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(73, 68);
-            this.btnVolver.TabIndex = 26;
-            this.btnVolver.UseVisualStyleBackColor = false;
-            // 
             // EmpresaCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(982, 553);
+            this.ClientSize = new System.Drawing.Size(736, 449);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "EmpresaCliente";
             this.Text = "EmpresaCliente";
             this.panel1.ResumeLayout(false);

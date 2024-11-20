@@ -119,7 +119,7 @@ namespace PRESENTACION
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            Login FrmLog = new Login();
+            PrincipialCliente FrmLog = new PrincipialCliente();
             FrmLog.Show();
             this.Hide();
         }
