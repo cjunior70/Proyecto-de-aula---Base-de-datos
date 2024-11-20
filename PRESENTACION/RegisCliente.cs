@@ -26,6 +26,15 @@ namespace PRESENTACION
 
         }
 
+        Datos_login datos_de_la_conexion=new Datos_login();
+
+        public void datos_de_conexion(Datos_login datos_De_conexion)
+        {
+            datos_de_la_conexion.usuario = datos_De_conexion.usuario;
+            datos_de_la_conexion.constraseña = datos_De_conexion.constraseña;
+                
+        }
+
         private void btRegistrar_Click(object sender, EventArgs e)
         {
 
@@ -61,7 +70,7 @@ namespace PRESENTACION
 
             Boolean confirmacion;
 
-            confirmacion = logica_De_Los_Clientes.registro_de_cliente(datos_Personales);
+            confirmacion = logica_De_Los_Clientes.registro_de_cliente(datos_Personales,datos_de_la_conexion);
 
             if ( confirmacion == false )
             {

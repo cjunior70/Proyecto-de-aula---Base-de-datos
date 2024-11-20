@@ -12,19 +12,12 @@ namespace DLL
     public class logica_de_las_ubicaciones
     {
 
-        //Conexion general par el ingreso y registro de las personas nuevas
-        Datos_login datos_de_conexion = new Datos_login();
 
         Funciones_de_la_ubicacion funciones_De_La_Ubicacion = new Funciones_de_la_ubicacion();
 
         //Funcion para registar la ubicacion de una empresa
-        public Boolean registrar_una_ubicacion(Ubicacion datos_de_la_ubicacion)
+        public Boolean registrar_una_ubicacion(Ubicacion datos_de_la_ubicacion, Datos_login datos_de_conexion)
         {
-
-            //Datos de conexion del usuario administrdor para poder ingresar los datos
-            datos_de_conexion.usuario = "admin";
-
-            datos_de_conexion.constraseña = "admin";
 
             Boolean confirmacion;
 
@@ -35,7 +28,7 @@ namespace DLL
         }
 
         //Funcion para consultar todas las ubicaciones
-        public DataTable consultar_todas_las_ubicaciones()
+        public DataTable consultar_todas_las_ubicaciones(Datos_login datos_de_conexion)
         {
             DataTable datos;
 
@@ -44,14 +37,14 @@ namespace DLL
 
             datos_de_conexion.constraseña = "admin";
 
-            datos = funciones_De_La_Ubicacion.Consultar_Todas_las_ubicaciones(datos_de_conexion );
+            datos = funciones_De_La_Ubicacion.Consultar_Todas_las_ubicaciones(datos_de_conexion);
 
             return datos;
 
         }
 
         //Funcion para actualizar una ubicacion
-        public Boolean actualizar_ubicacion(Ubicacion datos_nuevos_de_la_ubicacion)
+        public Boolean actualizar_ubicacion(Ubicacion datos_nuevos_de_la_ubicacion, Datos_login datos_de_conexion)
         {
             Boolean confirmacion;
 
@@ -62,7 +55,7 @@ namespace DLL
         }
 
         //Funcion para borrar una ubicacion
-        public Boolean borrar_una_ubicacion(Ubicacion datos_de_la_ubicacion)
+        public Boolean borrar_una_ubicacion(Ubicacion datos_de_la_ubicacion, Datos_login datos_de_conexion)
         {
             Boolean confirmacion;
 
@@ -72,7 +65,7 @@ namespace DLL
         }
 
         //Funcion para buscar una ubicacion
-        public DataTable buscar_una_ubicacion(Ubicacion datos_de_la_ubicasion)
+        public DataTable buscar_una_ubicacion(Ubicacion datos_de_la_ubicasion, Datos_login datos_de_conexion)
         {
             DataTable Ubicacion;
 

@@ -31,6 +31,15 @@ namespace PRESENTACION
             InitializeComponent();
         }
 
+        Datos_login datos_de_la_conexion = new Datos_login();
+
+        public void datos_de_conexion(Datos_login datos_De_conexion)
+        {
+            datos_de_la_conexion.usuario = datos_De_conexion.usuario;
+            datos_de_la_conexion.constraseña = datos_De_conexion.constraseña;
+
+        }
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             dt.Rows.Add(txtDescripcion.Text,txtLatitud.Text,txtLongitud.Text);
@@ -131,7 +140,7 @@ namespace PRESENTACION
 
             logica_de_las_ubicaciones logica_De_Las_Ubicaciones = new logica_de_las_ubicaciones();
 
-            confirmacion = logica_De_Las_Ubicaciones.registrar_una_ubicacion(datos_De_la_ubicacion);
+            confirmacion = logica_De_Las_Ubicaciones.registrar_una_ubicacion(datos_De_la_ubicacion, datos_de_la_conexion);
 
             //Logica para abiri la interfaz de login
             RegisUsuario registro_usuario = new RegisUsuario();
