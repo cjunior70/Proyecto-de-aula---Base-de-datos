@@ -152,6 +152,7 @@
             this.btHReservacion.TabIndex = 20;
             this.btHReservacion.Text = "Hacer una reservacion";
             this.btHReservacion.UseVisualStyleBackColor = true;
+            this.btHReservacion.Click += new System.EventHandler(this.btHReservacion_Click);
             // 
             // btGoogleMaps
             // 

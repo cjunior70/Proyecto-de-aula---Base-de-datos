@@ -35,6 +35,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblNombreDeLaEmpresa = new System.Windows.Forms.Label();
             this.btnVolver = new System.Windows.Forms.Button();
+            this.btSeleccionarEmple = new System.Windows.Forms.Button();
+            this.btCancelarReservacion = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -43,7 +45,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.AliceBlue;
             this.panel1.Controls.Add(this.label10);
-            this.panel1.Location = new System.Drawing.Point(679, 118);
+            this.panel1.Location = new System.Drawing.Point(679, 41);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(301, 493);
             this.panel1.TabIndex = 0;
@@ -120,12 +122,34 @@
             this.btnVolver.TabIndex = 26;
             this.btnVolver.UseVisualStyleBackColor = false;
             // 
+            // btSeleccionarEmple
+            // 
+            this.btSeleccionarEmple.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSeleccionarEmple.Location = new System.Drawing.Point(700, 564);
+            this.btSeleccionarEmple.Name = "btSeleccionarEmple";
+            this.btSeleccionarEmple.Size = new System.Drawing.Size(249, 41);
+            this.btSeleccionarEmple.TabIndex = 22;
+            this.btSeleccionarEmple.Text = "Seleccionar empleado";
+            this.btSeleccionarEmple.UseVisualStyleBackColor = true;
+            // 
+            // btCancelarReservacion
+            // 
+            this.btCancelarReservacion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btCancelarReservacion.Location = new System.Drawing.Point(700, 647);
+            this.btCancelarReservacion.Name = "btCancelarReservacion";
+            this.btCancelarReservacion.Size = new System.Drawing.Size(249, 41);
+            this.btCancelarReservacion.TabIndex = 23;
+            this.btCancelarReservacion.Text = "Cancelar reservacion";
+            this.btCancelarReservacion.UseVisualStyleBackColor = true;
+            // 
             // TrabajadorCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumBlue;
             this.ClientSize = new System.Drawing.Size(982, 753);
+            this.Controls.Add(this.btCancelarReservacion);
+            this.Controls.Add(this.btSeleccionarEmple);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Name = "TrabajadorCliente";
@@ -147,5 +171,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblNombreDeLaEmpresa;
         private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.Button btSeleccionarEmple;
+        private System.Windows.Forms.Button btCancelarReservacion;
     }
 }

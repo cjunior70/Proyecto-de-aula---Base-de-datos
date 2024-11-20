@@ -16,5 +16,15 @@ namespace PRESENTACION
         {
             InitializeComponent();
         }
+
+        private void btHReservacion_Click(object sender, EventArgs e)
+        {
+            
+              
+                ClienteReservacion reserva = new ClienteReservacion();
+                reserva.Show();
+
+                this.Hide();
+            }
     }
 }
