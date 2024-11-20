@@ -12,20 +12,12 @@ namespace DLL
     public class logica_de_las_empresas
     {
 
-        //Conexion general par el ingreso y registro de las personas nuevas
-        Datos_login datos_de_conexion = new Datos_login();
-
         //Funcion para el ingreso de datos de una empresa
-        public Boolean registro_de_una_empresa(Empresa datos_de_la_empresa)
+        public Boolean registro_de_una_empresa(Empresa datos_de_la_empresa, Datos_login datos_de_conexion)
         {
 
             //Llamada de la funcion del dal para ingresar a este los datos a la base
             Funciones_de_Empresa funciones_de_la_empresa = new Funciones_de_Empresa();
-
-            //Datos de conexion del usuario administrdor para poder ingresar los datos
-            datos_de_conexion.usuario = "admin";
-
-            datos_de_conexion.constraseña = "admin";
 
             //Variabale para la confirmacion de ninguno error ajeno
             Boolean confirmacion;
@@ -38,7 +30,7 @@ namespace DLL
         }
 
         //Funcion para consultar los datos de una empresa con interes o datos de la empresa
-        public DataTable consultar_datos_de_una_empresa(Empresa datos_de_la_empresa)
+        public DataTable consultar_datos_de_una_empresa(Empresa datos_de_la_empresa, Datos_login datos_de_conexion)
         {
             //Llamada de la funcion del dal para ingresar a este los datos a la base
             Funciones_de_Empresa funciones_De_Empresa = new Funciones_de_Empresa();
@@ -53,7 +45,7 @@ namespace DLL
         }
 
         //Funcion para consultar todas las empresas registradas
-        public DataTable consultar_todas_las_empresas()
+        public DataTable consultar_todas_las_empresas(Datos_login datos_de_conexion)
         {
             //Llamada de la funcion del dal para ingresar a este los datos a la base
             Funciones_de_Empresa funciones_De_Empresa = new Funciones_de_Empresa();
@@ -67,7 +59,7 @@ namespace DLL
         }
 
         //Funcion para actualizar datos de una empresa 
-        public Boolean actualizar_datos_de_la_empresa(Empresa datos_actualizados)
+        public Boolean actualizar_datos_de_la_empresa(Empresa datos_actualizados, Datos_login datos_de_conexion)
         {
             //Llamada de la funcion del dal para ingresar a este los datos a la base
             Funciones_de_Empresa funciones_De_Empresa = new Funciones_de_Empresa();
@@ -82,7 +74,7 @@ namespace DLL
         }
 
         //Funcion para poder borrar datos de la empresa
-        public Boolean borrar_datos_de_la_empresa(Empresa datos_de_la_empresa)
+        public Boolean borrar_datos_de_la_empresa(Empresa datos_de_la_empresa, Datos_login datos_de_conexion)
         {
             //Llamada de la funcion del dal para ingresar a este los datos a la base
             Funciones_de_Empresa funciones_De_Empresa = new Funciones_de_Empresa();

@@ -60,10 +60,18 @@ namespace PRESENTACION
         {
             DialogResult result = MessageBox.Show("¿Tiene una empresa para registrar ?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
+            //Datos de conexion
+            Datos_login datos_de_la_conexion = new Datos_login();
+
+            datos_de_la_conexion.usuario = "admin";
+            datos_de_la_conexion.constraseña = "admin";
+
             if (result == DialogResult.No)
             {
+
                 // Lógica para la opción "No"
                 RegisCliente regisCliente = new RegisCliente();
+                regisCliente.datos_de_conexion(datos_de_la_conexion);
                 regisCliente.Show();
 
                 // Ocultar el formulario actual

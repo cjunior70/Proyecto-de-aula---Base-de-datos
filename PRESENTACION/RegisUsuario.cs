@@ -28,6 +28,15 @@ namespace PRESENTACION
 
         }
 
+        Datos_login datos_de_la_conexion = new Datos_login();
+
+        public void datos_de_conexion(Datos_login datos_De_conexion)
+        {
+            datos_de_la_conexion.usuario = datos_De_conexion.usuario;
+            datos_de_la_conexion.constraseña = datos_De_conexion.constraseña;
+
+        }
+
         //Datos del usuario globales para usarlo para el registro de la empresa
         Usuario datos_del_usuario_globales = new Usuario();
 
@@ -98,7 +107,7 @@ namespace PRESENTACION
 
             logica_de_los_usuarios logica_De_Los_Clientes = new logica_de_los_usuarios();
 
-            confirmacion1 = logica_De_Los_Clientes.registro_de_un_usuario(datos_del_usuario_globales);
+            confirmacion1 = logica_De_Los_Clientes.registro_de_un_usuario(datos_del_usuario_globales, datos_de_la_conexion);
 
             //Es para que el computador tenga tiempo para guardar los datos en la base
             Thread.Sleep(2000);
@@ -117,7 +126,7 @@ namespace PRESENTACION
 
             logica_de_las_empresas logica_De_Las_Empresas = new logica_de_las_empresas();
 
-            confirmacion2 = logica_De_Las_Empresas.registro_de_una_empresa(datos_de_la_empresa_globales);
+            confirmacion2 = logica_De_Las_Empresas.registro_de_una_empresa(datos_de_la_empresa_globales, datos_de_la_conexion);
 
 
             if ( confirmacion2 == false && confirmacion1 == false)
@@ -217,7 +226,7 @@ namespace PRESENTACION
 
             DataTable datos_de_la_ubicacion = new DataTable();
 
-            datos_de_la_ubicacion = logica_De_Las_Ubicaciones.buscar_una_ubicacion(datos_de_la_ubicacion_globales);
+            datos_de_la_ubicacion = logica_De_Las_Ubicaciones.buscar_una_ubicacion(datos_de_la_ubicacion_globales, datos_de_la_conexion);
 
             if (datos_de_la_ubicacion.Rows.Count > 0)
             {
@@ -237,7 +246,7 @@ namespace PRESENTACION
 
             DataTable datos_del_usuario = new DataTable();
 
-            datos_del_usuario =  logica_De_Los_Usuarios.consulta_De_datos_personales(datos_del_usuario_globales);
+            datos_del_usuario =  logica_De_Los_Usuarios.consulta_De_datos_personales(datos_del_usuario_globales, datos_de_la_conexion);
 
 
             //dtaprueba.DataSource = datos_del_usuario;
@@ -270,6 +279,7 @@ namespace PRESENTACION
         private void btGoogleMaps_Click(object sender, EventArgs e)
         {
             Google_Maps googlemaps = new Google_Maps();
+            googlemaps.datos_de_conexion(datos_de_la_conexion);
             googlemaps.Show();
 
             // Ocultar el formulario actual
