@@ -52,7 +52,7 @@ namespace PRESENTACION
             dt.Columns.Add(new DataColumn("Lat", typeof(double)));
             dt.Columns.Add(new DataColumn("Long", typeof(double)));
 
-            //Insertando datos al dt para mostrar en la lista
+            //Insertando datos_de_conexion al dt para mostrar en la lista
             dt.Rows.Add("Ubicacion", LatInicial, LngInicial);
             dataGridView1.DataSource = dt;
 
@@ -88,7 +88,7 @@ namespace PRESENTACION
         {
             filaseleccionada = e.RowIndex; // fila seleccionada
 
-            //Recuperamos los datos del grid y los asignamos a los texbox
+            //Recuperamos los datos_de_conexion del grid y los asignamos a los texbox
             txtDescripcion.Text = dataGridView1.Rows[filaseleccionada].Cells[0].Value.ToString();
             txtLatitud.Text = dataGridView1.Rows[filaseleccionada].Cells[1].Value.ToString();
             txtLongitud.Text = dataGridView1.Rows[filaseleccionada].Cells[2].Value.ToString();
@@ -104,7 +104,7 @@ namespace PRESENTACION
 
         private void gMapControl1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            //Se obtiente los datos de lat y lng del mapa donde el usuario presiono
+            //Se obtiente los datos_de_conexion de lat y lng del mapa donde el usuario presiono
 
             double lat = gMapControl1.FromLocalToLatLng(e.X, e.Y).Lat;
             double lng = gMapControl1.FromLocalToLatLng(e.X, e.Y).Lng;
@@ -126,7 +126,7 @@ namespace PRESENTACION
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.RemoveAt(filaseleccionada); //remover la tabla
-            //procedimiento para eliminar de una base de datos.
+            //procedimiento para eliminar de una base de datos_de_conexion.
         }
 
         private void btnUbicacion_Click(object sender, EventArgs e)
