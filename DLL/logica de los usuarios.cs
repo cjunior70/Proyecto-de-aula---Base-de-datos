@@ -10,21 +10,13 @@ using ENTITY;
 namespace DLL
 {
     public class logica_de_los_usuarios
-    {
-
-        //Conexion general par el ingreso y registro de las personas nuevas
-        Datos_login datos_de_conexion = new Datos_login();
+    { 
 
         //Funcion para el ingreso de datos de un usuario
-        public Boolean registro_de_un_usuario(Usuario datos_de_usuario)
+        public Boolean registro_de_un_usuario(Usuario datos_de_usuario,Datos_login datos_de_conexion)
         {
             //Llamada de la funcion del dal para ingresar a este los datos a la base
             Funciones_del_usuario funciones_Del_Usuario = new Funciones_del_usuario();
-
-            //Datos de conexion del usuario administrdor para poder ingresar los datos
-            datos_de_conexion.usuario = "admin";
-
-            datos_de_conexion.constraseña = "admin";
 
             //Variabale para la confirmacion de ninguno error ajeno
             Boolean confirmacion;
@@ -37,15 +29,10 @@ namespace DLL
         }
 
         //Funcion para poder consultar datos personales
-        public DataTable consulta_De_datos_personales(Usuario datos_de_usuario)
+        public DataTable consulta_De_datos_personales(Usuario datos_de_usuario, Datos_login datos_de_conexion)
         {
             //Llamada de la funcion del dal para ingresar a este los datos a la base
             Funciones_del_usuario funciones_Del_Usuario = new Funciones_del_usuario();
-
-            //Datos de conexion del usuario administrdor para poder ingresar los datos
-            datos_de_conexion.usuario = "admin";
-
-            datos_de_conexion.constraseña = "admin";
 
             //Variable para saber la datos_del_usuario de alguien ya registrado
             DataTable datos_del_usuario;
@@ -56,7 +43,7 @@ namespace DLL
         }
 
         //Funcion para consultar todos los usuarios
-        public DataTable consultar_todo_los_usuarios()
+        public DataTable consultar_todo_los_usuarios(Datos_login datos_de_conexion)
         {
             //Llamada de la funcion del dal para ingresar a este los datos a la base
             Funciones_del_usuario funciones_Del_Usuario = new Funciones_del_usuario();
@@ -70,7 +57,7 @@ namespace DLL
         }
 
         //Funcion para actualizar datos de un usuario
-        public Boolean actualizar_datos_de_un_usuario(Usuario datos_nuevo_Del_Usuario)
+        public Boolean actualizar_datos_de_un_usuario(Usuario datos_nuevo_Del_Usuario, Datos_login datos_de_conexion)
         {
             //Llamada de la funcion del dal para ingresar a este los datos a la base
             Funciones_del_usuario funciones_Del_usuario = new Funciones_del_usuario();
@@ -84,7 +71,7 @@ namespace DLL
         }
 
         //Funcion para borrar datos de un usuario
-        public Boolean borrar_datos_de_un_usuario(Usuario datos_nuevo_Del_Usuario)
+        public Boolean borrar_datos_de_un_usuario(Usuario datos_nuevo_Del_Usuario, Datos_login datos_de_conexion)
         {
             //Llamada de la funcion del dal para ingresar a este los datos a la base
             Funciones_del_usuario funciones_Del_Usuario = new Funciones_del_usuario();

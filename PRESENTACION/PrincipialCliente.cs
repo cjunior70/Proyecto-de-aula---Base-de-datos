@@ -16,5 +16,12 @@ namespace PRESENTACION
         {
             InitializeComponent();
         }
+
+        private void btRegisClient_Click(object sender, EventArgs e)
+        {
+            RegisCliente RegCliente = new RegisCliente();
+            RegCliente.Show();
+             this.Hide();
+        }
     }
 }
