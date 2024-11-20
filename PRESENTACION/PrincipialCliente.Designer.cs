@@ -30,6 +30,7 @@
         {
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btRegisClient = new System.Windows.Forms.Button();
             this.btUbicacion = new System.Windows.Forms.Button();
             this.textFecha = new System.Windows.Forms.TextBox();
             this.textNomb = new System.Windows.Forms.TextBox();
@@ -41,12 +42,12 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnVolver = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnVolver = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -65,6 +66,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panel3.Controls.Add(this.btRegisClient);
             this.panel3.Controls.Add(this.btUbicacion);
             this.panel3.Controls.Add(this.textFecha);
             this.panel3.Controls.Add(this.textNomb);
@@ -77,13 +79,24 @@
             this.panel3.Controls.Add(this.label10);
             this.panel3.Location = new System.Drawing.Point(12, 58);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(244, 486);
+            this.panel3.Size = new System.Drawing.Size(244, 491);
             this.panel3.TabIndex = 0;
+            // 
+            // btRegisClient
+            // 
+            this.btRegisClient.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btRegisClient.Image = global::PRESENTACION.Properties.Resources.icons8_usuario_501;
+            this.btRegisClient.Location = new System.Drawing.Point(93, 16);
+            this.btRegisClient.Name = "btRegisClient";
+            this.btRegisClient.Size = new System.Drawing.Size(61, 56);
+            this.btRegisClient.TabIndex = 27;
+            this.btRegisClient.UseVisualStyleBackColor = false;
+            this.btRegisClient.Click += new System.EventHandler(this.btRegisClient_Click);
             // 
             // btUbicacion
             // 
             this.btUbicacion.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btUbicacion.Location = new System.Drawing.Point(42, 419);
+            this.btUbicacion.Location = new System.Drawing.Point(39, 441);
             this.btUbicacion.Name = "btUbicacion";
             this.btUbicacion.Size = new System.Drawing.Size(176, 34);
             this.btUbicacion.TabIndex = 19;
@@ -92,28 +105,28 @@
             // 
             // textFecha
             // 
-            this.textFecha.Location = new System.Drawing.Point(49, 130);
+            this.textFecha.Location = new System.Drawing.Point(49, 172);
             this.textFecha.Name = "textFecha";
             this.textFecha.Size = new System.Drawing.Size(148, 22);
             this.textFecha.TabIndex = 26;
             // 
             // textNomb
             // 
-            this.textNomb.Location = new System.Drawing.Point(49, 200);
+            this.textNomb.Location = new System.Drawing.Point(49, 242);
             this.textNomb.Name = "textNomb";
             this.textNomb.Size = new System.Drawing.Size(148, 22);
             this.textNomb.TabIndex = 25;
             // 
             // txtTiemp
             // 
-            this.txtTiemp.Location = new System.Drawing.Point(48, 288);
+            this.txtTiemp.Location = new System.Drawing.Point(48, 330);
             this.txtTiemp.Name = "txtTiemp";
             this.txtTiemp.Size = new System.Drawing.Size(148, 22);
             this.txtTiemp.TabIndex = 24;
             // 
             // txtPago
             // 
-            this.txtPago.Location = new System.Drawing.Point(48, 352);
+            this.txtPago.Location = new System.Drawing.Point(48, 394);
             this.txtPago.Name = "txtPago";
             this.txtPago.Size = new System.Drawing.Size(148, 22);
             this.txtPago.TabIndex = 19;
@@ -124,7 +137,7 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 12.2F, System.Drawing.FontStyle.Bold);
             this.label14.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label14.Location = new System.Drawing.Point(45, 319);
+            this.label14.Location = new System.Drawing.Point(45, 361);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(140, 30);
             this.label14.TabIndex = 23;
@@ -136,7 +149,7 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 12.2F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label13.Location = new System.Drawing.Point(48, 226);
+            this.label13.Location = new System.Drawing.Point(48, 268);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(142, 60);
             this.label13.TabIndex = 22;
@@ -148,7 +161,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 12.2F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label12.Location = new System.Drawing.Point(48, 167);
+            this.label12.Location = new System.Drawing.Point(48, 209);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(94, 30);
             this.label12.TabIndex = 21;
@@ -160,7 +173,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 12.2F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label11.Location = new System.Drawing.Point(48, 89);
+            this.label11.Location = new System.Drawing.Point(48, 131);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(137, 30);
             this.label11.TabIndex = 20;
@@ -172,7 +185,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 18.2F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label10.Location = new System.Drawing.Point(19, 14);
+            this.label10.Location = new System.Drawing.Point(16, 75);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(225, 42);
             this.label10.TabIndex = 19;
@@ -187,6 +200,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(730, 597);
             this.panel1.TabIndex = 3;
+            // 
+            // btnVolver
+            // 
+            this.btnVolver.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnVolver.BackgroundImage = global::PRESENTACION.Properties.Resources.icons8_regreso_50;
+            this.btnVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnVolver.Location = new System.Drawing.Point(23, 523);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(4);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(46, 55);
+            this.btnVolver.TabIndex = 26;
+            this.btnVolver.UseVisualStyleBackColor = false;
             // 
             // panel4
             // 
@@ -248,18 +273,6 @@
             this.label1.TabIndex = 27;
             this.label1.Text = "Peluquerias";
             // 
-            // btnVolver
-            // 
-            this.btnVolver.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnVolver.BackgroundImage = global::PRESENTACION.Properties.Resources.icons8_regreso_50;
-            this.btnVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnVolver.Location = new System.Drawing.Point(23, 523);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(4);
-            this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(46, 55);
-            this.btnVolver.TabIndex = 26;
-            this.btnVolver.UseVisualStyleBackColor = false;
-            // 
             // PrincipialCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -300,5 +313,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.Button btRegisClient;
     }
 }
