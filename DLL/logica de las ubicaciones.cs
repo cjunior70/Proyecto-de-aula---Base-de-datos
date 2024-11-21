@@ -64,15 +64,10 @@ namespace DLL
             return confirmacion;
         }
 
-        //Funcion para buscar una ubicacion
+        //Funcion para buscar una ubicacion por coordenadas
         public DataTable buscar_una_ubicacion(Ubicacion datos_de_la_ubicasion, Datos_login datos_de_conexion)
         {
             DataTable Ubicacion;
-
-            //Datos de conexion del usuario administrdor para poder ingresar los datos
-            datos_de_conexion.usuario = "admin";
-
-            datos_de_conexion.constraseña = "admin";
 
             Ubicacion = funciones_De_La_Ubicacion.Consultar_Una_Ubicacion_por_Coordenadas(datos_de_conexion, datos_de_la_ubicasion);
 
@@ -80,6 +75,16 @@ namespace DLL
 
         }
 
+        //Funcion para buscar una ubicacion por codigo
+        public DataTable buscar_una_ubicacion_por_codigo(Ubicacion datos_de_la_ubicasion, Datos_login datos_de_conexion)
+        {
+            DataTable Ubicacion;
+
+            Ubicacion = funciones_De_La_Ubicacion.Consultar_Una_Ubicacion_por_Codigo(datos_de_conexion, datos_de_la_ubicasion);
+
+            return Ubicacion;
+
+        }
 
     }
 }
