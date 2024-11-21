@@ -100,13 +100,12 @@ namespace PRESENTACION
 
         private void btHReservacion_Click(object sender, EventArgs e)
         {
-            
               
-                ClienteReservacion reserva = new ClienteReservacion();
-                reserva.Show();
+             ClienteReservacion reserva = new ClienteReservacion();
+             reserva.Show();
 
-                this.Hide();
-            }
+             this.Hide();
+         }
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
@@ -130,6 +129,17 @@ namespace PRESENTACION
 
             //Para cerrar la interfaz actual
             this.Hide();
+        }
+
+        private void IrAContantos(object sender, EventArgs e)
+        {
+            //Abiri la interfaz de contacos de la empresa
+            Contactos contactos = new Contactos();
+            contactos.Show();
+
+            //Cerrar la interfaz actual
+            this.Hide();
+
         }
     }
 }
