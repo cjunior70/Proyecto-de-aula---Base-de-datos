@@ -31,6 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btAgregarEmpleado = new System.Windows.Forms.Button();
             this.btHReservacion = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -43,17 +44,19 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.btAgregarEmpleado = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -61,9 +64,9 @@
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.panel4);
-            this.panel1.Location = new System.Drawing.Point(492, 0);
+            this.panel1.Location = new System.Drawing.Point(492, 52);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(490, 750);
+            this.panel1.Size = new System.Drawing.Size(490, 698);
             this.panel1.TabIndex = 0;
             // 
             // label10
@@ -72,7 +75,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 18.2F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label10.Location = new System.Drawing.Point(149, 31);
+            this.label10.Location = new System.Drawing.Point(151, 42);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(194, 42);
             this.label10.TabIndex = 20;
@@ -93,15 +96,26 @@
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.label1);
-            this.panel4.Location = new System.Drawing.Point(13, 89);
+            this.panel4.Location = new System.Drawing.Point(13, 87);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(465, 619);
+            this.panel4.Size = new System.Drawing.Size(465, 602);
             this.panel4.TabIndex = 0;
+            // 
+            // btAgregarEmpleado
+            // 
+            this.btAgregarEmpleado.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btAgregarEmpleado.Location = new System.Drawing.Point(231, 410);
+            this.btAgregarEmpleado.Name = "btAgregarEmpleado";
+            this.btAgregarEmpleado.Size = new System.Drawing.Size(215, 39);
+            this.btAgregarEmpleado.TabIndex = 38;
+            this.btAgregarEmpleado.Text = "Agregar empleado";
+            this.btAgregarEmpleado.UseVisualStyleBackColor = true;
+            this.btAgregarEmpleado.Click += new System.EventHandler(this.btAgregarEmpleado_Click);
             // 
             // btHReservacion
             // 
             this.btHReservacion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btHReservacion.Location = new System.Drawing.Point(107, 545);
+            this.btHReservacion.Location = new System.Drawing.Point(107, 535);
             this.btHReservacion.Name = "btHReservacion";
             this.btHReservacion.Size = new System.Drawing.Size(249, 41);
             this.btHReservacion.TabIndex = 21;
@@ -213,19 +227,10 @@
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.label6);
-            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Location = new System.Drawing.Point(0, 52);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(490, 750);
+            this.panel3.Size = new System.Drawing.Size(490, 698);
             this.panel3.TabIndex = 1;
-            // 
-            // panel2
-            // 
-            this.panel2.BackgroundImage = global::PRESENTACION.Properties.Resources.icons8_regreso_50;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Location = new System.Drawing.Point(12, 655);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(49, 46);
-            this.panel2.TabIndex = 33;
             // 
             // label12
             // 
@@ -233,7 +238,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 12.2F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label12.Location = new System.Drawing.Point(150, 671);
+            this.label12.Location = new System.Drawing.Point(126, 634);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(200, 30);
             this.label12.TabIndex = 32;
@@ -245,7 +250,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label11.Location = new System.Drawing.Point(104, 479);
+            this.label11.Location = new System.Drawing.Point(104, 497);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(270, 41);
             this.label11.TabIndex = 31;
@@ -257,7 +262,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label9.Location = new System.Drawing.Point(104, 359);
+            this.label9.Location = new System.Drawing.Point(104, 382);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(91, 41);
             this.label9.TabIndex = 30;
@@ -269,7 +274,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label8.Location = new System.Drawing.Point(104, 239);
+            this.label8.Location = new System.Drawing.Point(104, 254);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(209, 41);
             this.label8.TabIndex = 29;
@@ -281,7 +286,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label7.Location = new System.Drawing.Point(104, 119);
+            this.label7.Location = new System.Drawing.Point(104, 150);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(112, 41);
             this.label7.TabIndex = 28;
@@ -293,22 +298,41 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 18.2F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(74, 31);
+            this.label6.Location = new System.Drawing.Point(80, 87);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(324, 42);
             this.label6.TabIndex = 21;
             this.label6.Text = "Servicios disponibles";
             // 
-            // btAgregarEmpleado
+            // panel5
             // 
-            this.btAgregarEmpleado.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btAgregarEmpleado.Location = new System.Drawing.Point(231, 410);
-            this.btAgregarEmpleado.Name = "btAgregarEmpleado";
-            this.btAgregarEmpleado.Size = new System.Drawing.Size(215, 39);
-            this.btAgregarEmpleado.TabIndex = 38;
-            this.btAgregarEmpleado.Text = "Agregar empleado";
-            this.btAgregarEmpleado.UseVisualStyleBackColor = true;
-            this.btAgregarEmpleado.Click += new System.EventHandler(this.btAgregarEmpleado_Click);
+            this.panel5.BackColor = System.Drawing.Color.MediumBlue;
+            this.panel5.Controls.Add(this.button1);
+            this.panel5.Location = new System.Drawing.Point(6, 3);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(976, 43);
+            this.panel5.TabIndex = 34;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.MediumBlue;
+            this.button1.BackgroundImage = global::PRESENTACION.Properties.Resources.icons8_cerrar_ventana_48;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(926, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(50, 44);
+            this.button1.TabIndex = 0;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = global::PRESENTACION.Properties.Resources.icons8_regreso_50;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Location = new System.Drawing.Point(12, 643);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(49, 46);
+            this.panel2.TabIndex = 33;
             // 
             // ClienteReservacion
             // 
@@ -316,6 +340,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(982, 753);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -327,6 +352,7 @@
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -356,5 +382,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btAgregarEmpleado;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button button1;
     }
 }
