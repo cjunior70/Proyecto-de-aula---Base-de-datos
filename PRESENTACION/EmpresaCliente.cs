@@ -34,7 +34,9 @@ namespace PRESENTACION
 
         //Funciones de la capa logica del usuario
         logica_de_los_usuarios Logica_De_Los_Usuarios = new logica_de_los_usuarios();
-       
+
+        //Variable para poder tener el codigo de la ubicacion
+        Ubicacion datos_de_la_ubicacion_global = new Ubicacion();
 
         public void datos_de_conexion(Datos_login datos_De_conexion)
         {
@@ -73,6 +75,8 @@ namespace PRESENTACION
             }
 
             buscar_datos_del_propietario();
+
+            datos_de_la_ubicacion_global.codigo = datos_de_la_empresa_globales[0].ubicaion.codigo;
 
         }
 
@@ -120,6 +124,8 @@ namespace PRESENTACION
         {
             //Para abir la interfaz del mapa y mostrar la ubicacion
             Google_Maps frm = new Google_Maps();
+            frm.datos_de_conexion(datos_de_la_conexion_globales);
+            frm.guardar_codigo_de_la_ubicacion_de_la_empresa_seleccionada(datos_de_la_ubicacion_global);
             frm.Show();
 
             //Para cerrar la interfaz actual

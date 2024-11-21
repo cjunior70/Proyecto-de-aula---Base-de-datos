@@ -29,15 +29,65 @@ namespace PRESENTACION
         public Google_Maps()
         {
             InitializeComponent();
+
+            btnUbicacion.Visible = true;
+            btnAgregar.Visible = true;
+            btnEliminar.Visible = true;
+            dataGridView1.Visible = true;
         }
 
+        //Variable para usar los datos para la conexion
         Datos_login datos_de_la_conexion = new Datos_login();
 
+        //variable para guardar las coordenadas de la empresa
+        Ubicacion datos_de_la_ubicacion_globales = new Ubicacion();
+
+        //Variable para poder tener el control del zoom 
+         int zoom = 0;
+
+        //Funcion para poder entrar al dll de las ubicaciones
+        logica_de_las_ubicaciones Logica_De_Las_Ubicaciones = new logica_de_las_ubicaciones();
         public void datos_de_conexion(Datos_login datos_De_conexion)
         {
             datos_de_la_conexion.usuario = datos_De_conexion.usuario;
             datos_de_la_conexion.constraseña = datos_De_conexion.constraseña;
 
+        }
+
+        //Funcion para poder tener el codigo de la ubicacion de la empresa
+        public void guardar_codigo_de_la_ubicacion_de_la_empresa_seleccionada(Ubicacion datos_actuales_de_la_empresa)
+        {
+            datos_de_la_ubicacion_globales = datos_actuales_de_la_empresa;
+
+            buscar_codigo_de_la_ubicacion_en_la_base();
+
+        }
+
+        private void buscar_codigo_de_la_ubicacion_en_la_base()
+        {
+            DataTable datos_recolectados = new DataTable();
+
+            datos_recolectados = Logica_De_Las_Ubicaciones.buscar_una_ubicacion_por_codigo(datos_de_la_ubicacion_globales, datos_de_la_conexion);
+
+            Ubicacion datos_de_la_ubicacion = new Ubicacion();
+
+            datos_de_la_ubicacion.codigo = Convert.ToInt32(datos_recolectados.Rows[0]["CODIGO"]);
+            datos_de_la_ubicacion.latitud = datos_recolectados.Rows[0]["LATITUD"].ToString();
+            datos_de_la_ubicacion.longitud = datos_recolectados.Rows[0]["LONGITUD"].ToString();
+
+            LatInicial = Convert.ToDouble(datos_de_la_ubicacion.latitud);
+            LngInicial = Convert.ToDouble(datos_de_la_ubicacion.longitud);
+
+            txtDescripcion.Text = datos_de_la_ubicacion.codigo.ToString();
+            txtLatitud.Text = datos_de_la_ubicacion.latitud.ToString();
+            txtLongitud.Text = datos_de_la_ubicacion.longitud.ToString();
+
+            zoom = 1;
+
+            btnUbicacion.Visible = false;
+            btnAgregar.Visible = false;
+            btnEliminar.Visible = false;
+            dataGridView1.Visible = false;
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -48,7 +98,7 @@ namespace PRESENTACION
         private void Google_Maps_Load(object sender, EventArgs e)
         {
             dt = new DataTable();
-            dt.Columns.Add(new DataColumn("Descripcion", typeof(string)));
+            dt.Columns.Add(new DataColumn("Codigo", typeof(string)));
             dt.Columns.Add(new DataColumn("Lat", typeof(double)));
             dt.Columns.Add(new DataColumn("Long", typeof(double)));
 
@@ -67,7 +117,16 @@ namespace PRESENTACION
             gMapControl1.Position = new PointLatLng(LatInicial, LngInicial);
             gMapControl1.MinZoom = 0;
             gMapControl1.MaxZoom = 24;
-            gMapControl1.Zoom = 13;
+            
+            if( zoom == 0 )
+            {
+                gMapControl1.Zoom = 13;
+            }
+            else
+            {
+                gMapControl1.Zoom = 14;
+            }
+
             gMapControl1.AutoScroll = true;
 
             //Marcador 

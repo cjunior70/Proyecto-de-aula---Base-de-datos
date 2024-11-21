@@ -195,7 +195,7 @@ namespace DAL
         }
 
         //Variable para traer los datos de una sola ubicacion
-        DataTable Usuario = new DataTable();
+        DataTable Ubicacion= new DataTable();
         //Funcion para poder traer todos las ubicaciones existentes
         public DataTable Consultar_Una_Ubicacion_por_Coordenadas(Datos_login Conexion_del_Usuario, Ubicacion datos_de_la_ubicacion)
         {
@@ -212,7 +212,7 @@ namespace DAL
                 //Cerrar conexion
                 ora.Close();
 
-                return Usuario;
+                return Ubicacion;
 
             }
             catch (Exception)
@@ -238,9 +238,54 @@ namespace DAL
 
             OracleDataAdapter adaptador = new OracleDataAdapter();
             adaptador.SelectCommand = comando;
-            adaptador.Fill(Usuario);
+            adaptador.Fill(Ubicacion);
         }
 
+        //Variable para traer los datos de una sola ubicacion
+        DataTable Ubicacion_con_codigo = new DataTable();
+        //Funcion para poder traer todos las ubicaciones existentes
+        public DataTable Consultar_Una_Ubicacion_por_Codigo(Datos_login Conexion_del_Usuario, Ubicacion datos_de_la_ubicacion)
+        {
+
+            try
+            {
+                conexion(Conexion_del_Usuario);
+
+                //Abir conexion
+                ora.Open();
+
+                traer_datos_de_una_ubicacion_por_codigo(datos_de_la_ubicacion);
+
+                //Cerrar conexion
+                ora.Close();
+
+                return Ubicacion_con_codigo;
+
+            }
+            catch (Exception)
+            {
+                //Cerrar conexion
+                ora.Close();
+
+                return null;
+            }
+
+        }
+
+        //Funcion privada para buscar en la base de dato a un empleado
+        private void traer_datos_de_una_ubicacion_por_codigo(Ubicacion datos_de_la_ubicacion)
+        {
+            OracleCommand comando = new OracleCommand("PK_BUSCAR_UNA_UBICACION_POR_CODIGO", ora);
+            comando.CommandType = System.Data.CommandType.StoredProcedure;
+
+
+            comando.Parameters.Add("p_codigo", OracleDbType.Varchar2).Value = datos_de_la_ubicacion.codigo;
+            comando.Parameters.Add("p_registro", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
+
+            OracleDataAdapter adaptador = new OracleDataAdapter();
+            adaptador.SelectCommand = comando;
+            adaptador.Fill(Ubicacion_con_codigo);
+        }
 
     }
 }
