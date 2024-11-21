@@ -19,8 +19,6 @@ namespace PRESENTACION
         public PrincipialCliente()
         {
             InitializeComponent();
-
-
         }
 
         //Variable global para poder saber la ubicacion de la coleccion de los datos de las empresas
@@ -66,7 +64,6 @@ namespace PRESENTACION
 
             dgListaDeEmpresa.DataSource = lista_de_las_empresas_globales;
 
-
             mostrar_datos_de_las_empresa();
 
         }
@@ -81,7 +78,7 @@ namespace PRESENTACION
             pnl3.Visible = true;
             lblTurnosDisponibles3.Visible = true;
 
-            if (Fila_Actual <= lista_de_las_empresas_globales.Count)
+            if (Fila_Actual <= lista_de_las_empresas_globales.Count - 1)
             {
 
                 var empresa = lista_de_las_empresas_globales[Fila_Actual]; // Acceder a la empresa por su índice
@@ -101,7 +98,7 @@ namespace PRESENTACION
                 {
                     var empresa2 = lista_de_las_empresas_globales[Fila_Actual];
 
-                    txtTurnosDisponibles2.Text = empresa2.nombre_de_la_empresa.ToString();
+                    lblNombredelaEmpresa2.Text = empresa2.nombre_de_la_empresa.ToString();
 
                     Segunda_valor_de_las_filas = Fila_Actual;
 
@@ -117,7 +114,7 @@ namespace PRESENTACION
                     {
                         var empresa3 = lista_de_las_empresas_globales[Fila_Actual];
 
-                        lblNombredelaEmpresa2.Text = empresa3.nombre_de_la_empresa.ToString();
+                        lblNombredelaEmpresa3.Text = empresa3.nombre_de_la_empresa.ToString();
 
                         Tercera_valor_de_las_filas = Fila_Actual;
 
@@ -194,7 +191,7 @@ namespace PRESENTACION
             Segunda_valor_de_las_filas = 0;
             Tercera_valor_de_las_filas = 0;
 
-            //limpieza_de_datos();
+            limpieza_de_datos();
 
             mostrar_datos_de_las_empresa();
 
@@ -224,11 +221,10 @@ namespace PRESENTACION
 
             codigo_de_la_empresa =  lista_de_las_empresas_globales[Primer_valor_de_las_filas].codigo;
 
-            MessageBox.Show("codigo de la empresa seleecionada : " + codigo_de_la_empresa);
-
             //Funcion para ir al logn
             EmpresaCliente FrmLog = new EmpresaCliente();
             FrmLog.datos_de_conexion(datos_de_la_conexion);
+            FrmLog.datos_de_la_empresa_seleccionada(codigo_de_la_empresa);
             FrmLog.Show();
 
             //Cerrar interfaz actual
@@ -242,11 +238,10 @@ namespace PRESENTACION
 
             codigo_de_la_empresa = lista_de_las_empresas_globales[Segunda_valor_de_las_filas].codigo;
 
-            MessageBox.Show("codigo de la empresa seleecionada : " + codigo_de_la_empresa);
-
             //Funcion para ir al logn
             EmpresaCliente FrmLog = new EmpresaCliente();
             FrmLog.datos_de_conexion(datos_de_la_conexion);
+            FrmLog.datos_de_la_empresa_seleccionada(codigo_de_la_empresa);
             FrmLog.Show();
 
             //Cerrar interfaz actual
@@ -259,11 +254,10 @@ namespace PRESENTACION
 
             codigo_de_la_empresa = lista_de_las_empresas_globales[Tercera_valor_de_las_filas].codigo;
 
-            MessageBox.Show("codigo de la empresa seleecionada : " + codigo_de_la_empresa);
-
-            //Funcion para ir al logn
+            //Funcion para ir al login
             EmpresaCliente FrmLog = new EmpresaCliente();
             FrmLog.datos_de_conexion(datos_de_la_conexion);
+            FrmLog.datos_de_la_empresa_seleccionada(codigo_de_la_empresa);
             FrmLog.Show();
 
             //Cerrar interfaz actual

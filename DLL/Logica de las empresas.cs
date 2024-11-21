@@ -30,8 +30,10 @@ namespace DLL
         }
 
         //Funcion para consultar los datos de una empresa con interes o datos de la empresa
-        public DataTable consultar_datos_de_una_empresa(Empresa datos_de_la_empresa, Datos_login datos_de_conexion)
+        public List<Empresa> consultar_datos_de_una_empresa(Empresa datos_de_la_empresa, Datos_login datos_de_conexion)
         {
+            List<Empresa> Datos_De_la_empresa = new List<Empresa>();
+
             //Llamada de la funcion del dal para ingresar a este los datos a la base
             Funciones_de_Empresa funciones_De_Empresa = new Funciones_de_Empresa();
 
@@ -40,8 +42,48 @@ namespace DLL
 
             existencia = funciones_De_Empresa.Consultar_Una_Empresa(datos_de_conexion, datos_de_la_empresa);
 
-            return existencia;
+            Datos_De_la_empresa = mapeo_del_datatable_que_tiene_los_datos_de_informacion_de_una_sola_empresa(existencia,datos_de_la_empresa);
 
+            return Datos_De_la_empresa;
+
+        }
+
+        private List<Empresa> mapeo_del_datatable_que_tiene_los_datos_de_informacion_de_una_sola_empresa(DataTable datos_de_todas_las_empresa_globales, Empresa datos_de_la_empresa_a_buscar)
+        {
+            List<Empresa> lista_de_las_empresas = new List<Empresa>();
+
+            for (int i = 0; i < datos_de_todas_las_empresa_globales.Rows.Count; i++)
+            {
+
+                Empresa datos = new Empresa();
+                datos.codigo = Convert.ToInt32(datos_de_todas_las_empresa_globales.Rows[i]["codigo"]);
+                datos.nombre_de_la_empresa = Convert.ToString(datos_de_todas_las_empresa_globales.Rows[i]["nombre"]);
+                datos.descripcion_de_la_empresa = Convert.ToString(datos_de_todas_las_empresa_globales.Rows[i]["DESCRIPCION_DE_LA_EMPRESA"]);
+
+                if (datos_de_todas_las_empresa_globales.Rows[i]["EXTRELLAS"] != null)
+                {
+                    //datos.extrellas = Convert.ToInt16(datos_de_todas_las_empresa_globales.Rows[i]["EXTRELLAS"]);
+                }
+
+
+                datos.whatsapp = Convert.ToString(datos_de_todas_las_empresa_globales.Rows[i]["WHATSAPP"]);
+                datos.correo = Convert.ToString(datos_de_todas_las_empresa_globales.Rows[i]["CORREO_ELECTRONICO"]);
+                datos.instagram = Convert.ToString(datos_de_todas_las_empresa_globales.Rows[i]["INSTAGRAM"]);
+                datos.facebook = Convert.ToString(datos_de_todas_las_empresa_globales.Rows[i]["FACEBOOK"]);
+                datos.descripcion_de_la_localizacion = Convert.ToString(datos_de_todas_las_empresa_globales.Rows[i]["DESCRIPCION_DE_LA_LOCALIZACION"]);
+                datos.imagen_miniatura = (Byte[])(datos_de_todas_las_empresa_globales.Rows[i]["IMAGEN_EN_MINIATURA"]);
+                datos.imagen_general = (Byte[])(datos_de_todas_las_empresa_globales.Rows[i]["IMAGEN_GENERAL"]);
+                datos.usuario.codigo = Convert.ToInt32(datos_de_todas_las_empresa_globales.Rows[i]["PROPIETARIO"]);
+                datos.ubicaion.codigo = Convert.ToInt32(datos_de_todas_las_empresa_globales.Rows[i]["UBICACION"]);
+
+                if ( datos.codigo == datos_de_la_empresa_a_buscar.codigo )
+                {
+                    lista_de_las_empresas.Add(datos);
+                }
+
+            }
+
+            return lista_de_las_empresas;
         }
 
         //Funcion para consultar todas las empresas registradas
@@ -72,7 +114,23 @@ namespace DLL
                 Empresa datos = new Empresa();
                 datos.codigo = Convert.ToInt32(datos_de_todas_las_empresa_globales.Rows[i]["codigo"]);
                 datos.nombre_de_la_empresa = Convert.ToString(datos_de_todas_las_empresa_globales.Rows[i]["nombre"]);
+                datos.descripcion_de_la_empresa = Convert.ToString(datos_de_todas_las_empresa_globales.Rows[i]["DESCRIPCION_DE_LA_EMPRESA"]);
+
+                if (datos_de_todas_las_empresa_globales.Rows[i]["EXTRELLAS"] != null)
+                {
+                    //datos.extrellas = Convert.ToInt16(datos_de_todas_las_empresa_globales.Rows[i]["EXTRELLAS"]);
+                }
+
+                
+                datos.whatsapp = Convert.ToString(datos_de_todas_las_empresa_globales.Rows[i]["WHATSAPP"]);
+                datos.correo = Convert.ToString(datos_de_todas_las_empresa_globales.Rows[i]["CORREO_ELECTRONICO"]);
+                datos.instagram = Convert.ToString(datos_de_todas_las_empresa_globales.Rows[i]["INSTAGRAM"]);
+                datos.facebook = Convert.ToString(datos_de_todas_las_empresa_globales.Rows[i]["FACEBOOK"]);
+                datos.descripcion_de_la_localizacion = Convert.ToString(datos_de_todas_las_empresa_globales.Rows[i]["DESCRIPCION_DE_LA_LOCALIZACION"]);
                 datos.imagen_miniatura = (Byte[])(datos_de_todas_las_empresa_globales.Rows[i]["IMAGEN_EN_MINIATURA"]);
+                datos.imagen_general = (Byte[])(datos_de_todas_las_empresa_globales.Rows[i]["IMAGEN_GENERAL"]);
+                datos.usuario.codigo = Convert.ToInt32(datos_de_todas_las_empresa_globales.Rows[i]["PROPIETARIO"]);
+                datos.ubicaion.codigo = Convert.ToInt32(datos_de_todas_las_empresa_globales.Rows[i]["UBICACION"]);
 
                 lista_de_las_empresas.Add(datos);
 
