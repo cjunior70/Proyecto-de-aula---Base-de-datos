@@ -255,5 +255,51 @@ namespace DAL
             adaptador.Fill(Usuario);
         }
 
+        //Variable para traer los datos de un solo administrador
+        DataTable Usuario_con_cedula = new DataTable();
+        //Funcion para poder traer todos los usuario existentes
+        public DataTable Consultar_Un_usuario_por_su_codigo(Datos_login Conexion_del_Usuario, Usuario datos_del_usuario)
+        {
+
+            try
+            {
+                conexion(Conexion_del_Usuario);
+
+                //Abir conexion
+                ora.Open();
+
+                traer_datos_de_un_administrador_del_usuario_con_codigo(datos_del_usuario);
+
+                //Cerrar conexion
+                ora.Close();
+
+                return Usuario_con_cedula;
+
+            }
+            catch (Exception)
+            {
+                //Cerrar conexion
+                ora.Close();
+
+                return null;
+            }
+
+        }
+
+        //Funcion privada para buscar en la base de dato al administrador
+        private void traer_datos_de_un_administrador_del_usuario_con_codigo(Usuario datos_del_usuario)
+        {
+            OracleCommand comando = new OracleCommand("PK_BUSCAR_UN_USUARIO_POR_SU_CODIGO", ora);
+            comando.CommandType = System.Data.CommandType.StoredProcedure;
+
+
+            comando.Parameters.Add("p_codigo", OracleDbType.Varchar2).Value = datos_del_usuario.codigo;
+            comando.Parameters.Add("p_registro", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
+
+            OracleDataAdapter adaptador = new OracleDataAdapter();
+            adaptador.SelectCommand = comando;
+            adaptador.Fill(Usuario_con_cedula);
+        }
+
     }
 }
