@@ -220,5 +220,11 @@ namespace PRESENTACION
             //Cerrar interfaz del mapa
             this.Hide();
         }
+
+        private void btClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+
+        }
     }
 }
