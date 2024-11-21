@@ -21,5 +21,10 @@ namespace PRESENTACION
         {
 
         }
+
+        private void btCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

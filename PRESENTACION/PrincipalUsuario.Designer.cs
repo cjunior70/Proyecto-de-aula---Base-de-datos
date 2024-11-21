@@ -40,10 +40,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnVolver = new System.Windows.Forms.Button();
             this.lbContactos = new System.Windows.Forms.Label();
+            this.btnVolver = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btClose = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -59,10 +62,10 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(274, 1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(365, 31);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(460, 451);
+            this.panel1.Size = new System.Drawing.Size(613, 525);
             this.panel1.TabIndex = 0;
             // 
             // label11
@@ -71,44 +74,43 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.Control;
-            this.label11.Location = new System.Drawing.Point(49, 82);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Location = new System.Drawing.Point(65, 101);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(87, 19);
+            this.label11.Size = new System.Drawing.Size(103, 23);
             this.label11.TabIndex = 30;
             this.label11.Text = "Descripcion";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(312, 222);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Location = new System.Drawing.Point(416, 273);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(112, 20);
+            this.textBox1.Size = new System.Drawing.Size(148, 22);
             this.textBox1.TabIndex = 29;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(312, 285);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Location = new System.Drawing.Point(416, 351);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(112, 20);
+            this.textBox2.Size = new System.Drawing.Size(148, 22);
             this.textBox2.TabIndex = 28;
             // 
             // textNomb
             // 
-            this.textNomb.Location = new System.Drawing.Point(312, 161);
-            this.textNomb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textNomb.Location = new System.Drawing.Point(416, 198);
+            this.textNomb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textNomb.Name = "textNomb";
-            this.textNomb.Size = new System.Drawing.Size(112, 20);
+            this.textNomb.Size = new System.Drawing.Size(148, 22);
             this.textNomb.TabIndex = 26;
             // 
             // btGuardarDatos
             // 
             this.btGuardarDatos.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btGuardarDatos.Location = new System.Drawing.Point(166, 388);
-            this.btGuardarDatos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btGuardarDatos.Location = new System.Drawing.Point(220, 456);
+            this.btGuardarDatos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btGuardarDatos.Name = "btGuardarDatos";
-            this.btGuardarDatos.Size = new System.Drawing.Size(146, 41);
+            this.btGuardarDatos.Size = new System.Drawing.Size(195, 50);
             this.btGuardarDatos.TabIndex = 20;
             this.btGuardarDatos.Text = "Guardar Datos";
             this.btGuardarDatos.UseVisualStyleBackColor = true;
@@ -117,10 +119,10 @@
             // btActualizarLocalizacion
             // 
             this.btActualizarLocalizacion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btActualizarLocalizacion.Location = new System.Drawing.Point(38, 332);
-            this.btActualizarLocalizacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btActualizarLocalizacion.Location = new System.Drawing.Point(50, 396);
+            this.btActualizarLocalizacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btActualizarLocalizacion.Name = "btActualizarLocalizacion";
-            this.btActualizarLocalizacion.Size = new System.Drawing.Size(182, 32);
+            this.btActualizarLocalizacion.Size = new System.Drawing.Size(243, 39);
             this.btActualizarLocalizacion.TabIndex = 19;
             this.btActualizarLocalizacion.Text = "Actualizar localizacion";
             this.btActualizarLocalizacion.UseVisualStyleBackColor = true;
@@ -131,10 +133,9 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(47, 253);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(63, 311);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(232, 50);
+            this.label5.Size = new System.Drawing.Size(280, 62);
             this.label5.TabIndex = 11;
             this.label5.Text = "Ubicación de la empresa \r\ncomúnmente";
             // 
@@ -144,10 +145,9 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(47, 189);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(63, 233);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(204, 50);
+            this.label2.Size = new System.Drawing.Size(244, 62);
             this.label2.TabIndex = 10;
             this.label2.Text = "Tiempo Promedio en \r\nterminar el trabajo";
             // 
@@ -157,10 +157,9 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(47, 154);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(63, 190);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 25);
+            this.label1.Size = new System.Drawing.Size(85, 31);
             this.label1.TabIndex = 1;
             this.label1.Text = "Dueño";
             // 
@@ -170,10 +169,9 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 26F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(30, 17);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(40, 21);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(396, 47);
+            this.label3.Size = new System.Drawing.Size(496, 60);
             this.label3.TabIndex = 9;
             this.label3.Text = "Nombre de la empresa";
             // 
@@ -182,22 +180,11 @@
             this.panel2.BackColor = System.Drawing.Color.MediumBlue;
             this.panel2.Controls.Add(this.btnVolver);
             this.panel2.Controls.Add(this.lbContactos);
-            this.panel2.Location = new System.Drawing.Point(0, 370);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Location = new System.Drawing.Point(0, 455);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(274, 81);
+            this.panel2.Size = new System.Drawing.Size(365, 100);
             this.panel2.TabIndex = 0;
-            // 
-            // btnVolver
-            // 
-            this.btnVolver.BackColor = System.Drawing.Color.MediumBlue;
-            this.btnVolver.BackgroundImage = global::PRESENTACION.Properties.Resources.icons8_regreso_50;
-            this.btnVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnVolver.Location = new System.Drawing.Point(10, 15);
-            this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(55, 55);
-            this.btnVolver.TabIndex = 26;
-            this.btnVolver.UseVisualStyleBackColor = false;
             // 
             // lbContactos
             // 
@@ -205,27 +192,63 @@
             this.lbContactos.BackColor = System.Drawing.Color.Transparent;
             this.lbContactos.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbContactos.ForeColor = System.Drawing.SystemColors.Control;
-            this.lbContactos.Location = new System.Drawing.Point(96, 26);
-            this.lbContactos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbContactos.Location = new System.Drawing.Point(128, 32);
             this.lbContactos.Name = "lbContactos";
-            this.lbContactos.Size = new System.Drawing.Size(101, 25);
+            this.lbContactos.Size = new System.Drawing.Size(121, 31);
             this.lbContactos.TabIndex = 8;
             this.lbContactos.Text = "Contactos";
             // 
+            // btnVolver
+            // 
+            this.btnVolver.BackColor = System.Drawing.Color.MediumBlue;
+            this.btnVolver.BackgroundImage = global::PRESENTACION.Properties.Resources.icons8_regreso_50;
+            this.btnVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnVolver.Location = new System.Drawing.Point(13, 18);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(4);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(73, 68);
+            this.btnVolver.TabIndex = 26;
+            this.btnVolver.UseVisualStyleBackColor = false;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.MediumBlue;
+            this.panel5.Controls.Add(this.btClose);
+            this.panel5.Location = new System.Drawing.Point(0, -3);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(979, 52);
+            this.panel5.TabIndex = 36;
+            // 
+            // btClose
+            // 
+            this.btClose.BackColor = System.Drawing.Color.MediumBlue;
+            this.btClose.BackgroundImage = global::PRESENTACION.Properties.Resources.icons8_cerrar_ventana_48;
+            this.btClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btClose.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btClose.Location = new System.Drawing.Point(929, 0);
+            this.btClose.Name = "btClose";
+            this.btClose.Size = new System.Drawing.Size(50, 52);
+            this.btClose.TabIndex = 0;
+            this.btClose.UseVisualStyleBackColor = false;
+            this.btClose.Click += new System.EventHandler(this.btClose_Click);
+            // 
             // PrincipalUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(736, 449);
+            this.ClientSize = new System.Drawing.Size(981, 553);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "PrincipalUsuario";
             this.Text = "PrincipalUsuario";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -246,5 +269,7 @@
         private System.Windows.Forms.TextBox textNomb;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button btClose;
     }
 }

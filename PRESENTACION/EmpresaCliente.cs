@@ -131,5 +131,11 @@ namespace PRESENTACION
             //Para cerrar la interfaz actual
             this.Hide();
         }
+
+        private void btClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+
+        }
     }
 }

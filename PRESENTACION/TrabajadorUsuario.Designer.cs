@@ -29,38 +29,28 @@
         private void InitializeComponent()
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnVolver = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btGuardarDatosT = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnVolver = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btCerrar = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.MediumBlue;
             this.flowLayoutPanel1.Controls.Add(this.btnVolver);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 2);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(1, 49);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(282, 749);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(282, 732);
             this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // btnVolver
-            // 
-            this.btnVolver.BackColor = System.Drawing.Color.MediumBlue;
-            this.btnVolver.BackgroundImage = global::PRESENTACION.Properties.Resources.icons8_regreso_50;
-            this.btnVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnVolver.Location = new System.Drawing.Point(4, 4);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(4);
-            this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(73, 68);
-            this.btnVolver.TabIndex = 26;
-            this.btnVolver.UseVisualStyleBackColor = false;
-            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // panel1
             // 
@@ -133,19 +123,57 @@
             this.label2.TabIndex = 11;
             this.label2.Text = "Nombre";
             // 
+            // btnVolver
+            // 
+            this.btnVolver.BackColor = System.Drawing.Color.MediumBlue;
+            this.btnVolver.BackgroundImage = global::PRESENTACION.Properties.Resources.icons8_regreso_50;
+            this.btnVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnVolver.Location = new System.Drawing.Point(4, 4);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(4);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(73, 68);
+            this.btnVolver.TabIndex = 26;
+            this.btnVolver.UseVisualStyleBackColor = false;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.MediumBlue;
+            this.panel5.Controls.Add(this.btCerrar);
+            this.panel5.Location = new System.Drawing.Point(1, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(987, 43);
+            this.panel5.TabIndex = 35;
+            // 
+            // btCerrar
+            // 
+            this.btCerrar.BackColor = System.Drawing.Color.MediumBlue;
+            this.btCerrar.BackgroundImage = global::PRESENTACION.Properties.Resources.icons8_cerrar_ventana_48;
+            this.btCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btCerrar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btCerrar.Location = new System.Drawing.Point(937, 0);
+            this.btCerrar.Name = "btCerrar";
+            this.btCerrar.Size = new System.Drawing.Size(50, 43);
+            this.btCerrar.TabIndex = 0;
+            this.btCerrar.UseVisualStyleBackColor = false;
+            this.btCerrar.Click += new System.EventHandler(this.btCerrar_Click);
+            // 
             // TrabajadorUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(982, 753);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TrabajadorUsuario";
             this.Text = "TrabajadorUsuario";
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -160,5 +188,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btGuardarDatosT;
         private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button btCerrar;
     }
 }
