@@ -45,12 +45,16 @@
             this.btClose = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnVolver = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dataGridTrabajdor = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridTrabajdor)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -60,7 +64,7 @@
             this.panel2.Location = new System.Drawing.Point(1052, 54);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(298, 595);
+            this.panel2.Size = new System.Drawing.Size(298, 603);
             this.panel2.TabIndex = 5;
             // 
             // panel3
@@ -224,7 +228,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.btnVolver);
             this.panel1.Location = new System.Drawing.Point(0, 54);
             this.panel1.Name = "panel1";
@@ -243,15 +247,50 @@
             this.btnVolver.TabIndex = 26;
             this.btnVolver.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // panel4
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(33, 115);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(997, 458);
-            this.dataGridView1.TabIndex = 27;
+            this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Controls.Add(this.dataGridTrabajdor);
+            this.panel4.Location = new System.Drawing.Point(32, 61);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1014, 523);
+            this.panel4.TabIndex = 29;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 18.2F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(18, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(257, 42);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "Servicios de hoy";
+            // 
+            // dataGridTrabajdor
+            // 
+            this.dataGridTrabajdor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridTrabajdor.Location = new System.Drawing.Point(17, 95);
+            this.dataGridTrabajdor.Name = "dataGridTrabajdor";
+            this.dataGridTrabajdor.RowHeadersWidth = 51;
+            this.dataGridTrabajdor.RowTemplate.Height = 24;
+            this.dataGridTrabajdor.Size = new System.Drawing.Size(976, 403);
+            this.dataGridTrabajdor.TabIndex = 27;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 18.2F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(365, 28);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(260, 42);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "Total de Clientes";
             // 
             // InterfazTrabajador
             // 
@@ -269,7 +308,9 @@
             this.panel3.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridTrabajdor)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -293,6 +334,9 @@
         private System.Windows.Forms.Button btClose;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnVolver;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridTrabajdor;
     }
 }
