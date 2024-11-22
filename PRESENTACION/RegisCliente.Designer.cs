@@ -49,10 +49,13 @@
             this.btRegistrar = new System.Windows.Forms.Button();
             this.Seleccionar = new System.Windows.Forms.OpenFileDialog();
             this.btnSeleccionar = new System.Windows.Forms.Button();
-            this.picFotodePerfil = new System.Windows.Forms.PictureBox();
             this.btnVolver = new System.Windows.Forms.Button();
+            this.picFotodePerfil = new System.Windows.Forms.PictureBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btClose = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picFotodePerfil)).BeginInit();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -75,10 +78,10 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(12, 50);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(636, 502);
+            this.panel1.Size = new System.Drawing.Size(636, 464);
             this.panel1.TabIndex = 2;
             // 
             // label9
@@ -284,6 +287,19 @@
             this.btnSeleccionar.UseVisualStyleBackColor = true;
             this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
+            // btnVolver
+            // 
+            this.btnVolver.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnVolver.BackgroundImage = global::PRESENTACION.Properties.Resources.icons8_regreso_50;
+            this.btnVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnVolver.Location = new System.Drawing.Point(892, 472);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(4);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(73, 68);
+            this.btnVolver.TabIndex = 25;
+            this.btnVolver.UseVisualStyleBackColor = false;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
             // picFotodePerfil
             // 
             this.picFotodePerfil.BackColor = System.Drawing.Color.DarkBlue;
@@ -298,18 +314,27 @@
             this.picFotodePerfil.TabStop = false;
             this.picFotodePerfil.DoubleClick += new System.EventHandler(this.btnSeleccionar_Click);
             // 
-            // btnVolver
+            // panel5
             // 
-            this.btnVolver.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnVolver.BackgroundImage = global::PRESENTACION.Properties.Resources.icons8_regreso_50;
-            this.btnVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnVolver.Location = new System.Drawing.Point(892, 472);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(4);
-            this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(73, 68);
-            this.btnVolver.TabIndex = 25;
-            this.btnVolver.UseVisualStyleBackColor = false;
-            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            this.panel5.BackColor = System.Drawing.Color.MediumBlue;
+            this.panel5.Controls.Add(this.btClose);
+            this.panel5.Location = new System.Drawing.Point(1, -7);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(979, 52);
+            this.panel5.TabIndex = 37;
+            // 
+            // btClose
+            // 
+            this.btClose.BackColor = System.Drawing.Color.MediumBlue;
+            this.btClose.BackgroundImage = global::PRESENTACION.Properties.Resources.icons8_cerrar_ventana_48;
+            this.btClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btClose.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btClose.Location = new System.Drawing.Point(929, 0);
+            this.btClose.Name = "btClose";
+            this.btClose.Size = new System.Drawing.Size(50, 52);
+            this.btClose.TabIndex = 0;
+            this.btClose.UseVisualStyleBackColor = false;
+            this.btClose.Click += new System.EventHandler(this.btClose_Click);
             // 
             // RegisCliente
             // 
@@ -318,17 +343,20 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.DarkBlue;
             this.ClientSize = new System.Drawing.Size(981, 553);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.picFotodePerfil);
             this.Controls.Add(this.btRegistrar);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "RegisCliente";
             this.Text = "RegisCliente";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picFotodePerfil)).EndInit();
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -358,5 +386,7 @@
         private System.Windows.Forms.OpenFileDialog Seleccionar;
         private System.Windows.Forms.Button btnSeleccionar;
         private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button btClose;
     }
 }

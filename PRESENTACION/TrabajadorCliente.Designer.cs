@@ -34,18 +34,21 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblNombreDeLaEmpresa = new System.Windows.Forms.Label();
-            this.btnVolver = new System.Windows.Forms.Button();
             this.btSeleccionarEmple = new System.Windows.Forms.Button();
             this.btCancelarReservacion = new System.Windows.Forms.Button();
+            this.btnVolver = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.AliceBlue;
             this.panel1.Controls.Add(this.label10);
-            this.panel1.Location = new System.Drawing.Point(679, 41);
+            this.panel1.Location = new System.Drawing.Point(679, 50);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(301, 493);
             this.panel1.TabIndex = 0;
@@ -69,9 +72,9 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.lblNombreDeLaEmpresa);
-            this.panel2.Location = new System.Drawing.Point(-56, 1);
+            this.panel2.Location = new System.Drawing.Point(-56, 41);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(729, 746);
+            this.panel2.Size = new System.Drawing.Size(729, 706);
             this.panel2.TabIndex = 1;
             // 
             // label2
@@ -110,18 +113,6 @@
             this.lblNombreDeLaEmpresa.TabIndex = 30;
             this.lblNombreDeLaEmpresa.Text = "Jimena Domech";
             // 
-            // btnVolver
-            // 
-            this.btnVolver.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnVolver.BackgroundImage = global::PRESENTACION.Properties.Resources.icons8_regreso_50;
-            this.btnVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnVolver.Location = new System.Drawing.Point(69, 671);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(4);
-            this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(73, 68);
-            this.btnVolver.TabIndex = 26;
-            this.btnVolver.UseVisualStyleBackColor = false;
-            // 
             // btSeleccionarEmple
             // 
             this.btSeleccionarEmple.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -142,22 +133,59 @@
             this.btCancelarReservacion.Text = "Cancelar reservacion";
             this.btCancelarReservacion.UseVisualStyleBackColor = true;
             // 
+            // btnVolver
+            // 
+            this.btnVolver.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnVolver.BackgroundImage = global::PRESENTACION.Properties.Resources.icons8_regreso_50;
+            this.btnVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnVolver.Location = new System.Drawing.Point(57, 620);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(4);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(73, 68);
+            this.btnVolver.TabIndex = 26;
+            this.btnVolver.UseVisualStyleBackColor = false;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.MediumBlue;
+            this.panel5.Controls.Add(this.button1);
+            this.panel5.Location = new System.Drawing.Point(1, -8);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(979, 52);
+            this.panel5.TabIndex = 35;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.MediumBlue;
+            this.button1.BackgroundImage = global::PRESENTACION.Properties.Resources.icons8_cerrar_ventana_48;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button1.Location = new System.Drawing.Point(929, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(50, 52);
+            this.button1.TabIndex = 0;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // TrabajadorCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumBlue;
             this.ClientSize = new System.Drawing.Size(982, 753);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btCancelarReservacion);
             this.Controls.Add(this.btSeleccionarEmple);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TrabajadorCliente";
             this.Text = "TrabajadorCliente";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -173,5 +201,7 @@
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Button btSeleccionarEmple;
         private System.Windows.Forms.Button btCancelarReservacion;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -123,5 +123,11 @@ namespace PRESENTACION
             FrmLog.Show();
             this.Hide();
         }
+
+        private void btClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+
+        }
     }
 }

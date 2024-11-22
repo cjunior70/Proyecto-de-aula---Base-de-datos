@@ -211,5 +211,11 @@
   <ItemGroup>
     <None Include="Resources\Izquierda.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-salida-de-incendios-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cerrar-ventana-48.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
