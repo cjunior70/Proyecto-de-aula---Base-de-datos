@@ -64,6 +64,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(365, 31);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(613, 525);
             this.panel1.TabIndex = 0;
@@ -84,6 +85,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(416, 273);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(148, 22);
             this.textBox1.TabIndex = 29;
@@ -92,6 +94,7 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(416, 351);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(148, 22);
             this.textBox2.TabIndex = 28;

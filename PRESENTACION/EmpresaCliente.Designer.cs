@@ -248,6 +248,7 @@
             this.lbContactos.Size = new System.Drawing.Size(121, 31);
             this.lbContactos.TabIndex = 8;
             this.lbContactos.Text = "Contactos";
+            this.lbContactos.Click += new System.EventHandler(this.IrAContantos);
             // 
             // picImagenGeneral
             // 
