@@ -38,34 +38,36 @@ namespace PRESENTACION
 
         private void lbEntrarB_Click(object sender, EventArgs e)
         {
-
-            datos_de_conexion.constraseña = txtContraseña.Text;
             datos_de_conexion.usuario = txtUsuario.Text;
+            datos_de_conexion.constraseña = txtContraseña.Text;
+            datos_de_conexion.cedula_del_usuario = txtContraseña.Text;
 
             Boolean confirmacion;
 
             Funcion_de_conexion funcion_De_Conexion = new Funcion_de_conexion();
 
-            confirmacion = funcion_De_Conexion.conexion(datos_de_conexion);
 
-            if (confirmacion == true)
-            {
+           if (datos_de_conexion.usuario == "admin" && datos_de_conexion.constraseña == "admin")
+           {
+                datos_de_conexion.quien_esta = 'A';
 
-                if (datos_de_conexion.usuario == "admin" && datos_de_conexion.constraseña == "admin")
+                confirmacion = funcion_De_Conexion.conexion(datos_de_conexion);
+
+                if (confirmacion == false)
                 {
-                    interfaz_principal_cliente();
+                    MessageBox.Show("Usuario o datos Invalidos");
                 }
                 else
                 {
-                    consultar_quien_entra();
+                    interfaz_principal_cliente();
                 }
-            }
-            else
-            {
+                
+           }
+           else
+           {
+               consultar_quien_entra();
+           } 
 
-                MessageBox.Show("Usuario invalido");
-
-            }
 
         }
 
@@ -74,6 +76,9 @@ namespace PRESENTACION
 
             //Variable para la confirmacion de datos
             Boolean confirmacion;
+
+            datos_de_conexion.usuario = "cliente";
+            datos_de_conexion.constraseña = "cliente";  
 
             confirmacion =  buscar_existencia_del_cliente();
 
@@ -87,6 +92,9 @@ namespace PRESENTACION
             }
             else
             {
+                datos_de_conexion.usuario = "empleado";
+                datos_de_conexion.constraseña = "empleado1";
+
                 confirmacion = buscar_existencia_del_usuario();
 
                 if( confirmacion == true )
@@ -165,9 +173,10 @@ namespace PRESENTACION
             Boolean confirmacion;
 
             Cliente datos_del_cliente = new Cliente();
-            datos_del_cliente.cedula = datos_de_conexion.constraseña;
+            datos_del_cliente.cedula = datos_de_conexion.cedula_del_usuario;
 
             existencia = logica_De_Los_Clientes.consulta_De_datos_personales(datos_del_cliente, datos_de_conexion);
+
 
             if( existencia == null )
             {

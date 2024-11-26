@@ -36,7 +36,7 @@ namespace DLL
             Funciones_del_cliente funciones_Del_Cliente = new Funciones_del_cliente();
 
             //Variable para saber la existencia de alguien ya registrado
-            DataTable existencia;
+            DataTable existencia=new DataTable();
 
             existencia = funciones_Del_Cliente.Consultar_Un_Cliente(datos_de_conexion, datos_de_cliente);
 

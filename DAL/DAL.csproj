@@ -88,6 +88,7 @@
     <Compile Include="Funciones para agregar servicio a una reservacion.cs" />
     <Compile Include="Funciones para agregar un empleado a una reservacion.cs" />
     <Compile Include="Funciones para agregar un servicio a una empresa .cs" />
+    <Compile Include="Funciones para agregar una reservacion de un cliente.cs" />
     <Compile Include="Funciones para ingresar un servicio a un empleado .cs" />
     <Compile Include="Funciones_del_cliente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

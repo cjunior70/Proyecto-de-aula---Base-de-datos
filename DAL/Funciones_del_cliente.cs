@@ -239,13 +239,13 @@ namespace DAL
         }
 
         //Funcion privada para buscar en la base de dato al administrador
-        private void traer_datos_de_un_cliente(Cliente datos_del_usuario)
+        private void traer_datos_de_un_cliente(Cliente datos_del_cliente)
         {
             OracleCommand comando = new OracleCommand("PK_BUSCAR_UN_CLIENTE", ora);
             comando.CommandType = System.Data.CommandType.StoredProcedure;
 
 
-            comando.Parameters.Add("p_cedula", OracleDbType.Varchar2).Value = datos_del_usuario.cedula;
+            comando.Parameters.Add("p_cedula", OracleDbType.Varchar2).Value = datos_del_cliente.cedula;
             comando.Parameters.Add("p_registro", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
 
             OracleDataAdapter adaptador = new OracleDataAdapter();

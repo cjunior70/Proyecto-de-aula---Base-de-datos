@@ -100,10 +100,20 @@ namespace PRESENTACION
 
         private void btHReservacion_Click(object sender, EventArgs e)
         {
-              
-             ClienteReservacion reserva = new ClienteReservacion();
-             reserva.Show();
+            //Variable para poder guardar el codigo de la empresa y enviarla a la interfaz de la reservacion
+            Empresa datos_de_la_empresa = new Empresa();
 
+            datos_de_la_empresa.codigo = datos_de_la_empresa_globales[0].codigo;
+
+            MessageBox.Show("Codigo de la empresa actual : " + datos_de_la_empresa.codigo);
+
+            //Funcion para poder ir a la interfaz de la reservacion     
+            ClienteReservacion reserva = new ClienteReservacion();
+            reserva.datos_de_conexion(datos_de_la_conexion_globales);
+            reserva.datos_de_la_empresa(datos_de_la_empresa);
+            reserva.Show();
+
+             //Cerrar interfaz actual
              this.Hide();
          }
 
