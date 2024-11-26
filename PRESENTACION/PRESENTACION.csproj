@@ -79,6 +79,18 @@
     <Compile Include="Google Maps.Designer.cs">
       <DependentUpon>Google Maps.cs</DependentUpon>
     </Compile>
+    <Compile Include="InterfazJefe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazJefe.Designer.cs">
+      <DependentUpon>InterfazJefe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfazTrabajador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazTrabajador.Designer.cs">
+      <DependentUpon>InterfazTrabajador.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +146,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Google Maps.resx">
       <DependentUpon>Google Maps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfazJefe.resx">
+      <DependentUpon>InterfazJefe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfazTrabajador.resx">
+      <DependentUpon>InterfazTrabajador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
