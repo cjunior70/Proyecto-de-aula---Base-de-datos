@@ -57,6 +57,8 @@
             this.txtTurnosDisponibles1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgListaDeEmpresa = new System.Windows.Forms.DataGridView();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btClose = new System.Windows.Forms.Button();
             this.btRegisClient = new System.Windows.Forms.Button();
             this.btnDerecha = new System.Windows.Forms.Button();
             this.btnIzquierda = new System.Windows.Forms.Button();
@@ -64,8 +66,6 @@
             this.pic3 = new System.Windows.Forms.PictureBox();
             this.pic2 = new System.Windows.Forms.PictureBox();
             this.pic1 = new System.Windows.Forms.PictureBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.btClose = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -74,10 +74,10 @@
             this.pnl2.SuspendLayout();
             this.pnl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgListaDeEmpresa)).BeginInit();
+            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).BeginInit();
-            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -220,7 +220,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 18.2F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label10.Location = new System.Drawing.Point(0, 75);
+            this.label10.Location = new System.Drawing.Point(13, 83);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(225, 42);
             this.label10.TabIndex = 19;
@@ -260,7 +260,7 @@
             this.pnl3.Controls.Add(this.pic3);
             this.pnl3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnl3.Location = new System.Drawing.Point(19, 342);
-            this.pnl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl3.Margin = new System.Windows.Forms.Padding(4);
             this.pnl3.Name = "pnl3";
             this.pnl3.Size = new System.Drawing.Size(627, 135);
             this.pnl3.TabIndex = 29;
@@ -292,7 +292,7 @@
             // txtTurnosDisponibles3
             // 
             this.txtTurnosDisponibles3.Location = new System.Drawing.Point(424, 54);
-            this.txtTurnosDisponibles3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTurnosDisponibles3.Margin = new System.Windows.Forms.Padding(4);
             this.txtTurnosDisponibles3.Name = "txtTurnosDisponibles3";
             this.txtTurnosDisponibles3.Size = new System.Drawing.Size(109, 22);
             this.txtTurnosDisponibles3.TabIndex = 2;
@@ -305,7 +305,7 @@
             this.pnl2.Controls.Add(this.pic2);
             this.pnl2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnl2.Location = new System.Drawing.Point(19, 192);
-            this.pnl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl2.Margin = new System.Windows.Forms.Padding(4);
             this.pnl2.Name = "pnl2";
             this.pnl2.Size = new System.Drawing.Size(627, 135);
             this.pnl2.TabIndex = 29;
@@ -337,7 +337,7 @@
             // txtTurnosDisponibles2
             // 
             this.txtTurnosDisponibles2.Location = new System.Drawing.Point(424, 54);
-            this.txtTurnosDisponibles2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTurnosDisponibles2.Margin = new System.Windows.Forms.Padding(4);
             this.txtTurnosDisponibles2.Name = "txtTurnosDisponibles2";
             this.txtTurnosDisponibles2.Size = new System.Drawing.Size(109, 22);
             this.txtTurnosDisponibles2.TabIndex = 2;
@@ -350,7 +350,7 @@
             this.pnl1.Controls.Add(this.pic1);
             this.pnl1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnl1.Location = new System.Drawing.Point(19, 49);
-            this.pnl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl1.Margin = new System.Windows.Forms.Padding(4);
             this.pnl1.Name = "pnl1";
             this.pnl1.Size = new System.Drawing.Size(627, 135);
             this.pnl1.TabIndex = 28;
@@ -382,7 +382,7 @@
             // txtTurnosDisponibles1
             // 
             this.txtTurnosDisponibles1.Location = new System.Drawing.Point(424, 54);
-            this.txtTurnosDisponibles1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTurnosDisponibles1.Margin = new System.Windows.Forms.Padding(4);
             this.txtTurnosDisponibles1.Name = "txtTurnosDisponibles1";
             this.txtTurnosDisponibles1.Size = new System.Drawing.Size(109, 22);
             this.txtTurnosDisponibles1.TabIndex = 2;
@@ -403,11 +403,33 @@
             // 
             this.dgListaDeEmpresa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgListaDeEmpresa.Location = new System.Drawing.Point(1004, 217);
-            this.dgListaDeEmpresa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgListaDeEmpresa.Margin = new System.Windows.Forms.Padding(4);
             this.dgListaDeEmpresa.Name = "dgListaDeEmpresa";
             this.dgListaDeEmpresa.RowHeadersWidth = 51;
             this.dgListaDeEmpresa.Size = new System.Drawing.Size(237, 326);
             this.dgListaDeEmpresa.TabIndex = 5;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.MediumBlue;
+            this.panel5.Controls.Add(this.btClose);
+            this.panel5.Location = new System.Drawing.Point(2, 1);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1244, 52);
+            this.panel5.TabIndex = 38;
+            // 
+            // btClose
+            // 
+            this.btClose.BackColor = System.Drawing.Color.MediumBlue;
+            this.btClose.BackgroundImage = global::PRESENTACION.Properties.Resources.icons8_cerrar_ventana_48;
+            this.btClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btClose.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btClose.Location = new System.Drawing.Point(1194, 0);
+            this.btClose.Name = "btClose";
+            this.btClose.Size = new System.Drawing.Size(50, 52);
+            this.btClose.TabIndex = 0;
+            this.btClose.UseVisualStyleBackColor = false;
+            this.btClose.Click += new System.EventHandler(this.btClose_Click);
             // 
             // btRegisClient
             // 
@@ -415,7 +437,7 @@
             this.btRegisClient.CausesValidation = false;
             this.btRegisClient.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btRegisClient.Image = global::PRESENTACION.Properties.Resources.icons8_usuario_501;
-            this.btRegisClient.Location = new System.Drawing.Point(87, 16);
+            this.btRegisClient.Location = new System.Drawing.Point(100, 16);
             this.btRegisClient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btRegisClient.Name = "btRegisClient";
             this.btRegisClient.Size = new System.Drawing.Size(61, 57);
@@ -492,28 +514,6 @@
             this.pic1.TabIndex = 0;
             this.pic1.TabStop = false;
             // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.MediumBlue;
-            this.panel5.Controls.Add(this.btClose);
-            this.panel5.Location = new System.Drawing.Point(2, 1);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1244, 52);
-            this.panel5.TabIndex = 38;
-            // 
-            // btClose
-            // 
-            this.btClose.BackColor = System.Drawing.Color.MediumBlue;
-            this.btClose.BackgroundImage = global::PRESENTACION.Properties.Resources.icons8_cerrar_ventana_48;
-            this.btClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btClose.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btClose.Location = new System.Drawing.Point(1194, 0);
-            this.btClose.Name = "btClose";
-            this.btClose.Size = new System.Drawing.Size(50, 52);
-            this.btClose.TabIndex = 0;
-            this.btClose.UseVisualStyleBackColor = false;
-            this.btClose.Click += new System.EventHandler(this.btClose_Click);
-            // 
             // PrincipialCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -540,10 +540,10 @@
             this.pnl1.ResumeLayout(false);
             this.pnl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgListaDeEmpresa)).EndInit();
+            this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pic3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).EndInit();
-            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
