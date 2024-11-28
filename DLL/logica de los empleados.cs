@@ -27,11 +27,11 @@ namespace DLL
         }
 
         //Funcion para consultar todos los empleados
-        public DataTable consultar_todos_los_empleados(Datos_login datos_de_conexion)
+        public DataTable consultar_todos_los_empleados_de_una_empresa(Datos_login datos_de_conexion, Empresa datos_de_la_empresa)
         {
             DataTable datos;
 
-            datos = funciones_Del_Empleado.Consultar_Empleados(datos_de_conexion);
+            datos = funciones_Del_Empleado.Consultar_Empleados(datos_de_conexion, datos_de_la_empresa);
 
             return datos;
 

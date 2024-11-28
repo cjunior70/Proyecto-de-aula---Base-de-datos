@@ -62,8 +62,14 @@ namespace PRESENTACION
         //logica de las reservaciones del dll
         logica_de_las_reservaciones Logica_De_Las_Reservaciones = new logica_de_las_reservaciones();
 
+        //Logica de los empleados
+        logica_de_los_empleados Logica_De_Los_Empleados = new logica_de_los_empleados();
+
         //para poder llenar los datos 
         DataTable datos_de_los_servicos_de_la_empresa_selecionada;
+
+        //para poder llenar los datos 
+        DataTable datos_de_los_empleados_de_la_empresa_selecionada;
 
         //Funcion para guardar los datos de conexion
         public void datos_de_conexion(Datos_login datos_De_conexion)
@@ -107,11 +113,51 @@ namespace PRESENTACION
             dtgServiciosDisponibles.DataSource = datos_de_los_servicos_de_la_empresa_selecionada;
 
 
-            modificarcion_del_datagrip();
+            modificarcion_del_datagrip_de_los_servicios_disponibles();
+        }
+
+        //Datos de los empleados de la empresa
+        public void odtener_datos_de_los_empleados_de_una_empresa()
+        {
+
+            Empresa datos_de_empresa = new Empresa();
+
+            datos_de_empresa.codigo = datos_de_la_empresa_globales.codigo;
+
+
+            datos_de_los_empleados_de_la_empresa_selecionada = Logica_De_Los_Empleados.consultar_todos_los_empleados_de_una_empresa(datos_de_la_conexion_globales, datos_de_empresa);
+
+            //Mostrar los servicios de la empresa registrados
+            dtgServiciosDisponibles.DataSource = datos_de_los_servicos_de_la_empresa_selecionada;
+
+
+            modificarcion_del_datagripempleados_disponibles();
         }
 
         //Funcion para modificar el datagrip
-        private void modificarcion_del_datagrip()
+        private void modificarcion_del_datagripempleados_disponibles()
+        {
+
+            // Eliminar el cuadro vacío inicial (selector de filas)
+            dtgEmpleadosDisponibles.RowHeadersVisible = false;
+
+            // Ajustar las columnas para ocupar todo el espacio disponible
+            dtgEmpleadosDisponibles.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            // Opcional: Ajustar el diseño de las filas para que ocupen menos espacio
+            dtgEmpleadosDisponibles.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+
+            // Opcional: Ajustar bordes y diseño general
+            dtgEmpleadosDisponibles.BorderStyle = BorderStyle.None;
+            dtgEmpleadosDisponibles.AllowUserToAddRows = false;  // Deshabilitar fila de nueva adición
+            dtgEmpleadosDisponibles.AllowUserToResizeRows = false; // Deshabilitar el cambio de tamaño de filas
+            dtgEmpleadosDisponibles.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dtgEmpleadosDisponibles.MultiSelect = false;
+
+        }
+
+        //Funcion para modificar el datagrip
+        private void modificarcion_del_datagrip_de_los_servicios_disponibles()
         {
 
             // Eliminar el cuadro vacío inicial (selector de filas)
@@ -131,6 +177,7 @@ namespace PRESENTACION
             dtgServiciosDisponibles.MultiSelect = false;
 
         }
+
 
         private void odtener_datos_de_la_reservacion()
         {

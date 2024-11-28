@@ -119,6 +119,7 @@ namespace PRESENTACION
             reserva.datos_de_la_empresa(datos_de_la_empresa);
             reserva.guardar_datos_de_la_reservacion();
             reserva.odtener_datos_de_los_servcios_de_la_empresa();
+            reserva.odtener_datos_de_los_empleados_de_una_empresa();
             reserva.Show();
 
              //Cerrar interfaz actual

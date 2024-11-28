@@ -88,7 +88,7 @@ namespace DAL
         //Variable para poder guarda el listado de los empleados guardados
         DataTable Tabla_Empleados = new DataTable();
         //Funcion para poder traer todos los usuarios existentes
-        public DataTable Consultar_Empleados(Datos_login Conexion_del_Usuario)
+        public DataTable Consultar_Empleados(Datos_login Conexion_del_Usuario,Empresa datos_de_la_empresa)
         {
 
             try
@@ -97,7 +97,7 @@ namespace DAL
 
                 ora.Open();
 
-                traer_datos();
+                traer_datos(datos_de_la_empresa);
 
                 ora.Close();
 
@@ -114,10 +114,11 @@ namespace DAL
         }
         //Funcion privada para buscar en la bases de datos todos los usuario registrados
 
-        private void traer_datos()
+        private void traer_datos(Empresa datos_de_la_empresa)
         {
             OracleCommand comando = new OracleCommand("PK_MOSTRAR_TODOS_LOS_EMPLEADOS", ora);
             comando.CommandType = System.Data.CommandType.StoredProcedure;
+            comando.Parameters.Add("p_codigo", OracleDbType.Varchar2).Value = datos_de_la_empresa.codigo;
             comando.Parameters.Add("registro", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
 
             OracleDataAdapter adaptador = new OracleDataAdapter();

@@ -51,16 +51,17 @@
             this.pnlAtras = new System.Windows.Forms.Panel();
             this.lblModificarServicios = new System.Windows.Forms.Label();
             this.lblNombreDeLaEmpresa = new System.Windows.Forms.Label();
-            this.lblListaDeServicosEscodigos = new System.Windows.Forms.Label();
-            this.lblListaDeLosPreciosDeLosServicios = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.dtgEmpleadosDisponibles = new System.Windows.Forms.DataGridView();
+            this.lblEmpleadosDisponibles = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgEmpleadosSeleccionados)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgServiciosDisponibles)).BeginInit();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgEmpleadosDisponibles)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -166,7 +167,7 @@
             // btnAgregarEmpleadoYSusServicios
             // 
             this.btnAgregarEmpleadoYSusServicios.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarEmpleadoYSusServicios.Location = new System.Drawing.Point(218, 335);
+            this.btnAgregarEmpleadoYSusServicios.Location = new System.Drawing.Point(218, 348);
             this.btnAgregarEmpleadoYSusServicios.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregarEmpleadoYSusServicios.Name = "btnAgregarEmpleadoYSusServicios";
             this.btnAgregarEmpleadoYSusServicios.Size = new System.Drawing.Size(171, 32);
@@ -273,12 +274,12 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel3.Controls.Add(this.lblEmpleadosDisponibles);
+            this.panel3.Controls.Add(this.dtgEmpleadosDisponibles);
             this.panel3.Controls.Add(this.dtgServiciosDisponibles);
             this.panel3.Controls.Add(this.pnlAtras);
             this.panel3.Controls.Add(this.lblModificarServicios);
             this.panel3.Controls.Add(this.lblNombreDeLaEmpresa);
-            this.panel3.Controls.Add(this.lblListaDeServicosEscodigos);
-            this.panel3.Controls.Add(this.lblListaDeLosPreciosDeLosServicios);
             this.panel3.Location = new System.Drawing.Point(0, 42);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
@@ -288,9 +289,9 @@
             // dtgServiciosDisponibles
             // 
             this.dtgServiciosDisponibles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgServiciosDisponibles.Location = new System.Drawing.Point(20, 115);
+            this.dtgServiciosDisponibles.Location = new System.Drawing.Point(20, 63);
             this.dtgServiciosDisponibles.Name = "dtgServiciosDisponibles";
-            this.dtgServiciosDisponibles.Size = new System.Drawing.Size(342, 397);
+            this.dtgServiciosDisponibles.Size = new System.Drawing.Size(342, 237);
             this.dtgServiciosDisponibles.TabIndex = 40;
             // 
             // pnlAtras
@@ -332,32 +333,6 @@
             this.lblNombreDeLaEmpresa.Text = "Nombre de la Empresa";
             this.lblNombreDeLaEmpresa.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // lblListaDeServicosEscodigos
-            // 
-            this.lblListaDeServicosEscodigos.AutoSize = true;
-            this.lblListaDeServicosEscodigos.BackColor = System.Drawing.Color.Transparent;
-            this.lblListaDeServicosEscodigos.Font = new System.Drawing.Font("Segoe UI", 18.2F, System.Drawing.FontStyle.Bold);
-            this.lblListaDeServicosEscodigos.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblListaDeServicosEscodigos.Location = new System.Drawing.Point(36, 64);
-            this.lblListaDeServicosEscodigos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblListaDeServicosEscodigos.Name = "lblListaDeServicosEscodigos";
-            this.lblListaDeServicosEscodigos.Size = new System.Drawing.Size(120, 35);
-            this.lblListaDeServicosEscodigos.TabIndex = 21;
-            this.lblListaDeServicosEscodigos.Text = "Servicios";
-            // 
-            // lblListaDeLosPreciosDeLosServicios
-            // 
-            this.lblListaDeLosPreciosDeLosServicios.AutoSize = true;
-            this.lblListaDeLosPreciosDeLosServicios.BackColor = System.Drawing.Color.Transparent;
-            this.lblListaDeLosPreciosDeLosServicios.Font = new System.Drawing.Font("Segoe UI", 18.2F, System.Drawing.FontStyle.Bold);
-            this.lblListaDeLosPreciosDeLosServicios.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblListaDeLosPreciosDeLosServicios.Location = new System.Drawing.Point(234, 61);
-            this.lblListaDeLosPreciosDeLosServicios.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblListaDeLosPreciosDeLosServicios.Name = "lblListaDeLosPreciosDeLosServicios";
-            this.lblListaDeLosPreciosDeLosServicios.Size = new System.Drawing.Size(88, 35);
-            this.lblListaDeLosPreciosDeLosServicios.TabIndex = 39;
-            this.lblListaDeLosPreciosDeLosServicios.Text = "Precio";
-            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.MediumBlue;
@@ -382,6 +357,27 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // dtgEmpleadosDisponibles
+            // 
+            this.dtgEmpleadosDisponibles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgEmpleadosDisponibles.Location = new System.Drawing.Point(20, 347);
+            this.dtgEmpleadosDisponibles.Name = "dtgEmpleadosDisponibles";
+            this.dtgEmpleadosDisponibles.Size = new System.Drawing.Size(342, 159);
+            this.dtgEmpleadosDisponibles.TabIndex = 47;
+            // 
+            // lblEmpleadosDisponibles
+            // 
+            this.lblEmpleadosDisponibles.AutoSize = true;
+            this.lblEmpleadosDisponibles.BackColor = System.Drawing.Color.Transparent;
+            this.lblEmpleadosDisponibles.Font = new System.Drawing.Font("Segoe UI", 12.2F, System.Drawing.FontStyle.Bold);
+            this.lblEmpleadosDisponibles.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblEmpleadosDisponibles.Location = new System.Drawing.Point(103, 312);
+            this.lblEmpleadosDisponibles.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEmpleadosDisponibles.Name = "lblEmpleadosDisponibles";
+            this.lblEmpleadosDisponibles.Size = new System.Drawing.Size(195, 23);
+            this.lblEmpleadosDisponibles.TabIndex = 48;
+            this.lblEmpleadosDisponibles.Text = "Empleados Disponibles";
+            // 
             // ClienteReservacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -404,6 +400,7 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgServiciosDisponibles)).EndInit();
             this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgEmpleadosDisponibles)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -428,8 +425,6 @@
         private System.Windows.Forms.Button btnAgregarEmpleadoYSusServicios;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label lblListaDeServicosEscodigos;
-        private System.Windows.Forms.Label lblListaDeLosPreciosDeLosServicios;
         private System.Windows.Forms.DataGridView dgEmpleadosSeleccionados;
         private System.Windows.Forms.Label lblHoraSeleccionada;
         private System.Windows.Forms.DateTimePicker dtpFechaSeleccionada;
@@ -437,5 +432,7 @@
         private System.Windows.Forms.ComboBox cbxSegundos;
         private System.Windows.Forms.ComboBox cbxHora;
         private System.Windows.Forms.DataGridView dtgServiciosDisponibles;
+        private System.Windows.Forms.Label lblEmpleadosDisponibles;
+        private System.Windows.Forms.DataGridView dtgEmpleadosDisponibles;
     }
 }
