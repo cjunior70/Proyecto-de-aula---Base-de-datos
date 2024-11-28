@@ -58,11 +58,12 @@
             this.lblSegundoApellido = new System.Windows.Forms.Label();
             this.lblCedula = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btGuardarDatosT = new System.Windows.Forms.Button();
+            this.btAsignarServiciosAUnEmpleado = new System.Windows.Forms.Button();
             this.lbl = new System.Windows.Forms.Label();
             this.lblLimitePorDia = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btCerrar = new System.Windows.Forms.Button();
+            this.btnGuardarDatos = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -95,6 +96,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel1.Controls.Add(this.btnGuardarDatos);
             this.panel1.Controls.Add(this.cbxGenero);
             this.panel1.Controls.Add(this.cbxCargo);
             this.panel1.Controls.Add(this.cbxEstado);
@@ -118,7 +120,7 @@
             this.panel1.Controls.Add(this.lblSegundoApellido);
             this.panel1.Controls.Add(this.lblCedula);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.btGuardarDatosT);
+            this.panel1.Controls.Add(this.btAsignarServiciosAUnEmpleado);
             this.panel1.Controls.Add(this.lbl);
             this.panel1.Controls.Add(this.lblLimitePorDia);
             this.panel1.Location = new System.Drawing.Point(104, 60);
@@ -397,17 +399,17 @@
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
             // 
-            // btGuardarDatosT
+            // btAsignarServiciosAUnEmpleado
             // 
-            this.btGuardarDatosT.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btGuardarDatosT.Location = new System.Drawing.Point(439, 483);
-            this.btGuardarDatosT.Margin = new System.Windows.Forms.Padding(2);
-            this.btGuardarDatosT.Name = "btGuardarDatosT";
-            this.btGuardarDatosT.Size = new System.Drawing.Size(152, 36);
-            this.btGuardarDatosT.TabIndex = 20;
-            this.btGuardarDatosT.Text = "Guardar Datos";
-            this.btGuardarDatosT.UseVisualStyleBackColor = true;
-            this.btGuardarDatosT.Click += new System.EventHandler(this.btGuardarDatosT_Click);
+            this.btAsignarServiciosAUnEmpleado.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btAsignarServiciosAUnEmpleado.Location = new System.Drawing.Point(15, 479);
+            this.btAsignarServiciosAUnEmpleado.Margin = new System.Windows.Forms.Padding(2);
+            this.btAsignarServiciosAUnEmpleado.Name = "btAsignarServiciosAUnEmpleado";
+            this.btAsignarServiciosAUnEmpleado.Size = new System.Drawing.Size(152, 36);
+            this.btAsignarServiciosAUnEmpleado.TabIndex = 20;
+            this.btAsignarServiciosAUnEmpleado.Text = "Asignar Servicios";
+            this.btAsignarServiciosAUnEmpleado.UseVisualStyleBackColor = true;
+            this.btAsignarServiciosAUnEmpleado.Click += new System.EventHandler(this.btGuardarDatosT_Click);
             // 
             // lbl
             // 
@@ -459,6 +461,17 @@
             this.btCerrar.UseVisualStyleBackColor = false;
             this.btCerrar.Click += new System.EventHandler(this.btCerrar_Click);
             // 
+            // btnGuardarDatos
+            // 
+            this.btnGuardarDatos.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarDatos.Location = new System.Drawing.Point(458, 479);
+            this.btnGuardarDatos.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGuardarDatos.Name = "btnGuardarDatos";
+            this.btnGuardarDatos.Size = new System.Drawing.Size(152, 36);
+            this.btnGuardarDatos.TabIndex = 51;
+            this.btnGuardarDatos.Text = "Guardar Datos";
+            this.btnGuardarDatos.UseVisualStyleBackColor = true;
+            // 
             // TrabajadorUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -489,7 +502,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblLimitePorDia;
         private System.Windows.Forms.Label lbl;
-        private System.Windows.Forms.Button btGuardarDatosT;
+        private System.Windows.Forms.Button btAsignarServiciosAUnEmpleado;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btCerrar;
@@ -520,5 +533,6 @@
         private System.Windows.Forms.ComboBox cbxCargo;
         private System.Windows.Forms.ComboBox cbxEstado;
         private System.Windows.Forms.ComboBox cbxLimiteDeCuposPorDia;
+        private System.Windows.Forms.Button btnGuardarDatos;
     }
 }
