@@ -124,11 +124,10 @@ namespace PRESENTACION
 
             datos_de_empresa.codigo = datos_de_la_empresa_globales.codigo;
 
-
             datos_de_los_empleados_de_la_empresa_selecionada = Logica_De_Los_Empleados.consultar_todos_los_empleados_de_una_empresa(datos_de_la_conexion_globales, datos_de_empresa);
 
             //Mostrar los servicios de la empresa registrados
-            dtgServiciosDisponibles.DataSource = datos_de_los_servicos_de_la_empresa_selecionada;
+            dtgEmpleadosDisponibles.DataSource = datos_de_los_empleados_de_la_empresa_selecionada;
 
 
             modificarcion_del_datagripempleados_disponibles();
@@ -153,6 +152,30 @@ namespace PRESENTACION
             dtgEmpleadosDisponibles.AllowUserToResizeRows = false; // Deshabilitar el cambio de tamaño de filas
             dtgEmpleadosDisponibles.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dtgEmpleadosDisponibles.MultiSelect = false;
+
+            // Ocultar columnas no deseadas
+            dtgEmpleadosDisponibles.Columns["SEGUNDO_NOMBRE"].Visible = false;
+            dtgEmpleadosDisponibles.Columns["SEGUNDO_APELLIDO"].Visible = false;
+            dtgEmpleadosDisponibles.Columns["TELEFONO"].Visible = false;
+            dtgEmpleadosDisponibles.Columns["CORREO_ELECTRONICO"].Visible = false;
+            dtgEmpleadosDisponibles.Columns["FOTO"].Visible = false;
+            dtgEmpleadosDisponibles.Columns["CUPOS_DISPONIBLES_POR_DIA"].Visible = false;
+            dtgEmpleadosDisponibles.Columns["FECHA_DE_INICIO"].Visible = false;
+            dtgEmpleadosDisponibles.Columns["FECHA_FINAL"].Visible = false;
+            dtgEmpleadosDisponibles.Columns["CARGO"].Visible = false;
+            dtgEmpleadosDisponibles.Columns["EMPRESA_CODIGO"].Visible = false;
+            dtgEmpleadosDisponibles.Columns["SEXO"].Visible = false;
+
+            // Cambiar el encabezado de la columna "PRIMER_NOMBRE" a "Nombre"
+            dtgEmpleadosDisponibles.Columns["PRIMER_NOMBRE"].HeaderText = "Nombre";
+
+            // Si tienes más columnas que renombrar, simplemente añade más líneas
+            dtgEmpleadosDisponibles.Columns["PRIMER_APELLIDO"].HeaderText = "Apellido";
+            dtgEmpleadosDisponibles.Columns["CEDULA"].HeaderText = "Cédula";
+            dtgEmpleadosDisponibles.Columns["ESTADO"].HeaderText = "Estado";
+
+            // Autoajustar el ancho de todas las columnas al contenido
+            dtgEmpleadosDisponibles.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
         }
 

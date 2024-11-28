@@ -47,21 +47,21 @@
             this.lblHoraDisponibles = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lblEmpleadosDisponibles = new System.Windows.Forms.Label();
+            this.dtgEmpleadosDisponibles = new System.Windows.Forms.DataGridView();
             this.dtgServiciosDisponibles = new System.Windows.Forms.DataGridView();
             this.pnlAtras = new System.Windows.Forms.Panel();
             this.lblModificarServicios = new System.Windows.Forms.Label();
             this.lblNombreDeLaEmpresa = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.dtgEmpleadosDisponibles = new System.Windows.Forms.DataGridView();
-            this.lblEmpleadosDisponibles = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgEmpleadosSeleccionados)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgEmpleadosDisponibles)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgServiciosDisponibles)).BeginInit();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgEmpleadosDisponibles)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -69,10 +69,10 @@
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.Controls.Add(this.lblDatosDeLaReservacion);
             this.panel1.Controls.Add(this.panel4);
-            this.panel1.Location = new System.Drawing.Point(362, 42);
+            this.panel1.Location = new System.Drawing.Point(382, 42);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(448, 567);
+            this.panel1.Size = new System.Drawing.Size(449, 567);
             this.panel1.TabIndex = 0;
             // 
             // lblDatosDeLaReservacion
@@ -81,7 +81,7 @@
             this.lblDatosDeLaReservacion.BackColor = System.Drawing.Color.Transparent;
             this.lblDatosDeLaReservacion.Font = new System.Drawing.Font("Segoe UI", 18.2F, System.Drawing.FontStyle.Bold);
             this.lblDatosDeLaReservacion.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblDatosDeLaReservacion.Location = new System.Drawing.Point(163, 16);
+            this.lblDatosDeLaReservacion.Location = new System.Drawing.Point(197, 15);
             this.lblDatosDeLaReservacion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDatosDeLaReservacion.Name = "lblDatosDeLaReservacion";
             this.lblDatosDeLaReservacion.Size = new System.Drawing.Size(156, 35);
@@ -106,7 +106,7 @@
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.lblHoraDisponibles);
             this.panel4.Controls.Add(this.lblFecha);
-            this.panel4.Location = new System.Drawing.Point(29, 53);
+            this.panel4.Location = new System.Drawing.Point(28, 52);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(408, 507);
@@ -283,15 +283,36 @@
             this.panel3.Location = new System.Drawing.Point(0, 42);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(378, 567);
+            this.panel3.Size = new System.Drawing.Size(406, 567);
             this.panel3.TabIndex = 1;
+            // 
+            // lblEmpleadosDisponibles
+            // 
+            this.lblEmpleadosDisponibles.AutoSize = true;
+            this.lblEmpleadosDisponibles.BackColor = System.Drawing.Color.Transparent;
+            this.lblEmpleadosDisponibles.Font = new System.Drawing.Font("Segoe UI", 12.2F, System.Drawing.FontStyle.Bold);
+            this.lblEmpleadosDisponibles.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblEmpleadosDisponibles.Location = new System.Drawing.Point(103, 312);
+            this.lblEmpleadosDisponibles.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEmpleadosDisponibles.Name = "lblEmpleadosDisponibles";
+            this.lblEmpleadosDisponibles.Size = new System.Drawing.Size(195, 23);
+            this.lblEmpleadosDisponibles.TabIndex = 48;
+            this.lblEmpleadosDisponibles.Text = "Empleados Disponibles";
+            // 
+            // dtgEmpleadosDisponibles
+            // 
+            this.dtgEmpleadosDisponibles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgEmpleadosDisponibles.Location = new System.Drawing.Point(20, 347);
+            this.dtgEmpleadosDisponibles.Name = "dtgEmpleadosDisponibles";
+            this.dtgEmpleadosDisponibles.Size = new System.Drawing.Size(369, 159);
+            this.dtgEmpleadosDisponibles.TabIndex = 47;
             // 
             // dtgServiciosDisponibles
             // 
             this.dtgServiciosDisponibles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgServiciosDisponibles.Location = new System.Drawing.Point(20, 63);
             this.dtgServiciosDisponibles.Name = "dtgServiciosDisponibles";
-            this.dtgServiciosDisponibles.Size = new System.Drawing.Size(342, 237);
+            this.dtgServiciosDisponibles.Size = new System.Drawing.Size(369, 237);
             this.dtgServiciosDisponibles.TabIndex = 40;
             // 
             // pnlAtras
@@ -312,7 +333,7 @@
             this.lblModificarServicios.BackColor = System.Drawing.Color.Transparent;
             this.lblModificarServicios.Font = new System.Drawing.Font("Segoe UI", 12.2F, System.Drawing.FontStyle.Bold);
             this.lblModificarServicios.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblModificarServicios.Location = new System.Drawing.Point(211, 536);
+            this.lblModificarServicios.Location = new System.Drawing.Point(225, 536);
             this.lblModificarServicios.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblModificarServicios.Name = "lblModificarServicios";
             this.lblModificarServicios.Size = new System.Drawing.Size(164, 23);
@@ -340,7 +361,7 @@
             this.panel5.Location = new System.Drawing.Point(4, 2);
             this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(806, 35);
+            this.panel5.Size = new System.Drawing.Size(827, 35);
             this.panel5.TabIndex = 34;
             // 
             // button1
@@ -349,7 +370,7 @@
             this.button1.BackgroundImage = global::PRESENTACION.Properties.Resources.icons8_cerrar_ventana_48;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button1.Location = new System.Drawing.Point(768, 0);
+            this.button1.Location = new System.Drawing.Point(789, 0);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(38, 35);
@@ -357,33 +378,12 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // dtgEmpleadosDisponibles
-            // 
-            this.dtgEmpleadosDisponibles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgEmpleadosDisponibles.Location = new System.Drawing.Point(20, 347);
-            this.dtgEmpleadosDisponibles.Name = "dtgEmpleadosDisponibles";
-            this.dtgEmpleadosDisponibles.Size = new System.Drawing.Size(342, 159);
-            this.dtgEmpleadosDisponibles.TabIndex = 47;
-            // 
-            // lblEmpleadosDisponibles
-            // 
-            this.lblEmpleadosDisponibles.AutoSize = true;
-            this.lblEmpleadosDisponibles.BackColor = System.Drawing.Color.Transparent;
-            this.lblEmpleadosDisponibles.Font = new System.Drawing.Font("Segoe UI", 12.2F, System.Drawing.FontStyle.Bold);
-            this.lblEmpleadosDisponibles.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblEmpleadosDisponibles.Location = new System.Drawing.Point(103, 312);
-            this.lblEmpleadosDisponibles.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblEmpleadosDisponibles.Name = "lblEmpleadosDisponibles";
-            this.lblEmpleadosDisponibles.Size = new System.Drawing.Size(195, 23);
-            this.lblEmpleadosDisponibles.TabIndex = 48;
-            this.lblEmpleadosDisponibles.Text = "Empleados Disponibles";
-            // 
             // ClienteReservacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(810, 612);
+            this.ClientSize = new System.Drawing.Size(832, 612);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
@@ -398,9 +398,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgEmpleadosSeleccionados)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgEmpleadosDisponibles)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgServiciosDisponibles)).EndInit();
             this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgEmpleadosDisponibles)).EndInit();
             this.ResumeLayout(false);
 
         }
