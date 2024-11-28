@@ -42,11 +42,18 @@ namespace PRESENTACION
         {
             datos_de_la_conexion_globales.usuario = datos_De_conexion.usuario;
             datos_de_la_conexion_globales.constraseña = datos_De_conexion.constraseña;
+            datos_de_la_conexion_globales.quien_esta = datos_De_conexion.quien_esta;
 
         }
 
         public void datos_de_la_empresa_seleccionada(int codigo_de_la_empresa_seleccionada)
         {
+
+            if (datos_de_la_conexion_globales.quien_esta == 'E')
+            {
+                btHReservacion.Visible = false;
+            }
+
             codigo_de_la_empresa_global = codigo_de_la_empresa_seleccionada;
 
             buscar_datos_de_la_empresa_seleccionada();
@@ -104,13 +111,14 @@ namespace PRESENTACION
             Empresa datos_de_la_empresa = new Empresa();
 
             datos_de_la_empresa.codigo = datos_de_la_empresa_globales[0].codigo;
-
-            MessageBox.Show("Codigo de la empresa actual : " + datos_de_la_empresa.codigo);
+            datos_de_la_empresa.nombre_de_la_empresa = datos_de_la_empresa_globales[0].nombre_de_la_empresa;
 
             //Funcion para poder ir a la interfaz de la reservacion     
             ClienteReservacion reserva = new ClienteReservacion();
             reserva.datos_de_conexion(datos_de_la_conexion_globales);
             reserva.datos_de_la_empresa(datos_de_la_empresa);
+            reserva.guardar_datos_de_la_reservacion();
+            reserva.odtener_datos_de_los_servcios_de_la_empresa();
             reserva.Show();
 
              //Cerrar interfaz actual

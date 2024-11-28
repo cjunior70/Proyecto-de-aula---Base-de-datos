@@ -16,9 +16,9 @@ using System.Windows.Forms;
 
 namespace PRESENTACION
 {
-    public partial class RegisUsuario : Form
+    public partial class interf : Form
     {
-        public RegisUsuario()
+        public interf()
         {
             InitializeComponent();
 

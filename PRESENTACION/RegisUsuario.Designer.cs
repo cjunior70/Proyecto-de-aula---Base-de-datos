@@ -1,6 +1,6 @@
 ﻿namespace PRESENTACION
 {
-    partial class RegisUsuario
+    partial class interf
     {
         /// <summary>
         /// Required designer variable.
@@ -688,7 +688,7 @@
             this.btClose.UseVisualStyleBackColor = false;
             this.btClose.Click += new System.EventHandler(this.btClose_Click);
             // 
-            // RegisUsuario
+            // interf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -698,7 +698,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "RegisUsuario";
+            this.Name = "interf";
             this.Text = "Form1";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

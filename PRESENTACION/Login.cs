@@ -17,6 +17,7 @@ namespace PRESENTACION
         public Login()
         {
             InitializeComponent();
+
         }
 
         private void Login_Load(object sender, EventArgs e)
@@ -38,6 +39,7 @@ namespace PRESENTACION
 
         private void lbEntrarB_Click(object sender, EventArgs e)
         {
+
             datos_de_conexion.usuario = txtUsuario.Text;
             datos_de_conexion.constraseña = txtContraseña.Text;
             datos_de_conexion.cedula_del_usuario = txtContraseña.Text;
@@ -65,7 +67,11 @@ namespace PRESENTACION
            }
            else
            {
-               consultar_quien_entra();
+
+                existencia = null;
+
+                consultar_quien_entra();
+
            } 
 
 
@@ -77,13 +83,14 @@ namespace PRESENTACION
             //Variable para la confirmacion de datos
             Boolean confirmacion;
 
-            datos_de_conexion.usuario = "cliente";
-            datos_de_conexion.constraseña = "cliente";  
+            datos_de_conexion.usuario = "admin";
+            datos_de_conexion.constraseña = "admin";  
 
             confirmacion =  buscar_existencia_del_cliente();
 
             if( confirmacion == true )
             {
+
                 //Si el datatatble no esta vacio entonces entro un cliente
                 datos_de_conexion.quien_esta = 'C';
 
@@ -92,13 +99,13 @@ namespace PRESENTACION
             }
             else
             {
-                datos_de_conexion.usuario = "empleado";
-                datos_de_conexion.constraseña = "empleado1";
 
                 confirmacion = buscar_existencia_del_usuario();
 
                 if( confirmacion == true )
                 {
+
+
                     //Si el datatatble no esta vacio entonces entro un cliente
                     datos_de_conexion.quien_esta = 'U';
 
@@ -107,6 +114,7 @@ namespace PRESENTACION
                 }
                 else
                 {
+
                     confirmacion = buscar_existencia_del_empleado();
 
                     if( confirmacion == true)
@@ -115,8 +123,7 @@ namespace PRESENTACION
                         datos_de_conexion.quien_esta = 'E';
 
                         //interfaz_principal_empleado();
-
-                        MessageBox.Show("Aun falta la interfaz del empleado");
+                        interfaz_principal_empleado();
                     }
                     else
                     {
@@ -139,6 +146,7 @@ namespace PRESENTACION
             Interfaz_del_cliente_principal.Show();
             Interfaz_del_cliente_principal.buscar_todas_las_empresa();
 
+
             //Para cerrar la interfaz actual
             this.Hide();
 
@@ -149,7 +157,7 @@ namespace PRESENTACION
         {
 
             //Funcion para entrar a la interfaz principal
-            PrincipalUsuario interfaz_del_usuario_principal = new PrincipalUsuario();
+            InterfazJefe interfaz_del_usuario_principal = new InterfazJefe();
             interfaz_del_usuario_principal.datos_de_conexion(datos_de_conexion);
             interfaz_del_usuario_principal.Show();
 
@@ -163,29 +171,37 @@ namespace PRESENTACION
         {
 
             //Funcion para entrar a la interfaz principal
-           
+            InterfazTrabajador interfaz_del_usuario_principal = new InterfazTrabajador();
+            interfaz_del_usuario_principal.Show();
+
+            //Para cerrar la interfaz actual
+            this.Hide();
 
         }
 
         //Funcion para buscar si los datos que se ingreso son de un cliente
         private Boolean buscar_existencia_del_cliente()
         {
-            Boolean confirmacion;
+             
+            Boolean confirmacion= new Boolean();
 
             Cliente datos_del_cliente = new Cliente();
             datos_del_cliente.cedula = datos_de_conexion.cedula_del_usuario;
 
+
             existencia = logica_De_Los_Clientes.consulta_De_datos_personales(datos_del_cliente, datos_de_conexion);
 
-
-            if( existencia == null )
+            if (existencia.Rows.Count == 0)
             {
                 confirmacion = false;
             }
             else
             {
+
                 confirmacion = true;
+
             }
+
 
             return confirmacion;
 
@@ -197,11 +213,11 @@ namespace PRESENTACION
             Boolean confirmacion;
 
             Usuario datos_del_usuario = new Usuario();
-            datos_del_usuario.cedula = datos_de_conexion.constraseña;
+            datos_del_usuario.cedula = datos_de_conexion.cedula_del_usuario;
 
             existencia = logica_De_Los_Usuarios.consulta_De_datos_personales(datos_del_usuario, datos_de_conexion);
 
-            if (existencia == null)
+            if (existencia.Rows.Count == 0)
             {
                 confirmacion = false;
             }
@@ -224,7 +240,7 @@ namespace PRESENTACION
 
             existencia = logica_De_Los_Empleados.consultar_datos_de_un_empleado(datos_del_empleado, datos_de_conexion);
 
-            if (existencia == null)
+            if (existencia.Rows.Count == 0)
             {
                 confirmacion = false;
             }
@@ -261,7 +277,7 @@ namespace PRESENTACION
             else if (result == DialogResult.Yes)
             {
                 // Lógica para la opción "Yes"
-                RegisUsuario regisUsuario = new RegisUsuario();
+                interf regisUsuario = new interf();
                 regisUsuario.datos_de_conexion(datos_de_la_conexion);
                 regisUsuario.Show();
 

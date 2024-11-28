@@ -244,7 +244,6 @@ namespace DAL
             OracleCommand comando = new OracleCommand("PK_BUSCAR_UN_CLIENTE", ora);
             comando.CommandType = System.Data.CommandType.StoredProcedure;
 
-
             comando.Parameters.Add("p_cedula", OracleDbType.Varchar2).Value = datos_del_cliente.cedula;
             comando.Parameters.Add("p_registro", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
 

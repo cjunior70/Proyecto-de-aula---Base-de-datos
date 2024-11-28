@@ -75,7 +75,7 @@ namespace DAL
         //Variable para poder guarda el listado de los servicios de la empresa
         DataTable Tabla_de_los_servicios_de_la_empresa = new DataTable();
         //Funcion para poder traer todos los usuarios existentes
-        public DataTable Consultar_servicios_de_un_empresa(Datos_login Conexion_del_Cliente)
+        public DataTable Consultar_servicios_y_empresas_relacionados(Datos_login Conexion_del_Cliente)
         {
 
             try
@@ -227,11 +227,11 @@ namespace DAL
         //Funcion privada para buscar en la base de dato al administrador
         private void traer_datos_del_servicio(Servicio_de_una_Empresa datos_del_servicio_de_la_empresa)
         {
-            OracleCommand comando = new OracleCommand("PK_BUSCAR_SERVICIOS_DE_UN_EMPLEADO", ora);
+            OracleCommand comando = new OracleCommand("PK_BUSCAR_SERVICIOS_DE_UNA_EMPRESA", ora);
             comando.CommandType = System.Data.CommandType.StoredProcedure;
 
 
-            comando.Parameters.Add("p_codigo", OracleDbType.Varchar2).Value = datos_del_servicio_de_la_empresa.codigo;
+            comando.Parameters.Add("p_codigo", OracleDbType.Varchar2).Value = datos_del_servicio_de_la_empresa.codigo_de_la_empresa;
             comando.Parameters.Add("p_registro", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
 
             OracleDataAdapter adaptador = new OracleDataAdapter();

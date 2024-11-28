@@ -47,6 +47,7 @@ namespace PRESENTACION
         {
             datos_de_la_conexion.usuario = datos_De_conexion.usuario;
             datos_de_la_conexion.constraseña = datos_De_conexion.constraseña;
+            datos_de_la_conexion.quien_esta = datos_De_conexion.quien_esta;
 
         }
 
