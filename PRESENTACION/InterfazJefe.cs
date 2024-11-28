@@ -42,5 +42,17 @@ namespace PRESENTACION
             //Para cerrar la interfaz actual
             this.Hide();
         }
+
+        private void btClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btVolver_Click(object sender, EventArgs e)
+        {
+            Login FrmLogin = new Login();
+            FrmLogin.Show();
+            this.Hide();
+        }
     }
 }

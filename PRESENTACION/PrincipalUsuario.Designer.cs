@@ -40,8 +40,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lbContactos = new System.Windows.Forms.Label();
             this.btnVolver = new System.Windows.Forms.Button();
+            this.lbContactos = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btClose = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -64,7 +64,6 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(365, 31);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(613, 525);
             this.panel1.TabIndex = 0;
@@ -85,7 +84,6 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(416, 273);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(148, 22);
             this.textBox1.TabIndex = 29;
@@ -94,7 +92,6 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(416, 351);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(148, 22);
             this.textBox2.TabIndex = 28;
@@ -189,18 +186,6 @@
             this.panel2.Size = new System.Drawing.Size(365, 100);
             this.panel2.TabIndex = 0;
             // 
-            // lbContactos
-            // 
-            this.lbContactos.AutoSize = true;
-            this.lbContactos.BackColor = System.Drawing.Color.Transparent;
-            this.lbContactos.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbContactos.ForeColor = System.Drawing.SystemColors.Control;
-            this.lbContactos.Location = new System.Drawing.Point(128, 32);
-            this.lbContactos.Name = "lbContactos";
-            this.lbContactos.Size = new System.Drawing.Size(121, 31);
-            this.lbContactos.TabIndex = 8;
-            this.lbContactos.Text = "Contactos";
-            // 
             // btnVolver
             // 
             this.btnVolver.BackColor = System.Drawing.Color.MediumBlue;
@@ -212,6 +197,19 @@
             this.btnVolver.Size = new System.Drawing.Size(73, 68);
             this.btnVolver.TabIndex = 26;
             this.btnVolver.UseVisualStyleBackColor = false;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
+            // lbContactos
+            // 
+            this.lbContactos.AutoSize = true;
+            this.lbContactos.BackColor = System.Drawing.Color.Transparent;
+            this.lbContactos.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbContactos.ForeColor = System.Drawing.SystemColors.Control;
+            this.lbContactos.Location = new System.Drawing.Point(128, 32);
+            this.lbContactos.Name = "lbContactos";
+            this.lbContactos.Size = new System.Drawing.Size(121, 31);
+            this.lbContactos.TabIndex = 8;
+            this.lbContactos.Text = "Contactos";
             // 
             // panel5
             // 
