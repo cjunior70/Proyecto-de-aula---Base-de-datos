@@ -210,5 +210,11 @@ namespace PRESENTACION
             pic3.Image = null; 
         }
 
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            ClienteReservacion Frmclienteserve = new ClienteReservacion();
+            Frmclienteserve.Show();
+            this.Hide();
+        }
     }
 }
