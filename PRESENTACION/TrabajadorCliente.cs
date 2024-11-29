@@ -212,8 +212,15 @@ namespace PRESENTACION
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            ClienteReservacion Frmclienteserve = new ClienteReservacion();
+            ClienteReservacion FrmClienteserve = new ClienteReservacion();
             Frmclienteserve.Show();
+            this.Hide();
+        }
+
+        private void btCancelarReservacion_Click(object sender, EventArgs e)
+        {
+            EmpresaCliente FrmEmpresaCl = new EmpresaCliente();
+            FrmEmpresaCl.Show();
             this.Hide();
         }
     }
