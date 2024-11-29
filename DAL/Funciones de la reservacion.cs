@@ -64,11 +64,11 @@ namespace DAL
             {
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
-              //  cmd.Parameters.Add("p_nombre", OracleDbType.Varchar2).Value = datos_de_la_reservacion.nombre_del_servicio;
-               // cmd.Parameters.Add("p_precio", OracleDbType.Int16).Value = datos_de_la_reservacion.precio;
-
-                //El tiempo toca descomponarlo en string para poder guardarlo como se debe
-                //cmd.Parameters.Add("p_tiempo", OracleDbType.Varchar2).Value = datos_de_la_reservacion.tiempo_promedio;
+                cmd.Parameters.Add("p_fecha_de_la_reservacion", OracleDbType.Date).Value = datos_de_la_reservacion.fecha_de_la_reservacion.Date ;
+                cmd.Parameters.Add("p_empresa_codigo", OracleDbType.Int16).Value = datos_de_la_reservacion.empresa.codigo;
+                cmd.Parameters.Add("p_cliente_codigo", OracleDbType.Int16).Value = datos_de_la_reservacion.Cliente.codigo;
+                cmd.Parameters.Add("p_estado", OracleDbType.Varchar2).Value = datos_de_la_reservacion.estado;
+                cmd.Parameters.Add("p_tiempo", OracleDbType.Varchar2).Value = datos_de_la_reservacion.hora;
 
                 cmd.ExecuteNonQuery();
             }
@@ -150,10 +150,12 @@ namespace DAL
             OracleCommand comando = new OracleCommand("PK_ACTUALIZAR_DATOS_DE_UNA_RESERVACION", ora);
             comando.CommandType = System.Data.CommandType.StoredProcedure;
 
-            comando.Parameters.Add("p_codigo", OracleDbType.Int16).Value = datos_de_la_reservacion.codigo;
-            //comando.Parameters.Add("p_nombre", OracleDbType.Varchar2).Value = datos_de_la_reservacion.nombre_del_servicio;
-            //comando.Parameters.Add("p_precio", OracleDbType.Double).Value = datos_de_la_reservacion.precio;
-            //comando.Parameters.Add("p_tiempo", OracleDbType.Varchar2).Value = datos_de_la_reservacion.tiempo_promedio;
+            comando.Parameters.Add("p_fecha_de_la_reservacion", OracleDbType.Date).Value = datos_de_la_reservacion.fecha_de_la_reservacion.Date;
+            comando.Parameters.Add("p_empresa_codigo", OracleDbType.Int16).Value = datos_de_la_reservacion.empresa.codigo;
+            comando.Parameters.Add("p_cliente_codigo", OracleDbType.Int16).Value = datos_de_la_reservacion.Cliente.codigo;
+            comando.Parameters.Add("p_estado", OracleDbType.Varchar2).Value = datos_de_la_reservacion.estado;
+            comando.Parameters.Add("p_tiempo", OracleDbType.Varchar2).Value = datos_de_la_reservacion.hora;
+
 
             comando.ExecuteNonQuery();
 

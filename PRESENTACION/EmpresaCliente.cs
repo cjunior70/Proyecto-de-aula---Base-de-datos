@@ -42,11 +42,19 @@ namespace PRESENTACION
         {
             datos_de_la_conexion_globales.usuario = datos_De_conexion.usuario;
             datos_de_la_conexion_globales.constraseña = datos_De_conexion.constraseña;
+            datos_de_la_conexion_globales.cedula_del_usuario = datos_De_conexion.cedula_del_usuario;
+            datos_de_la_conexion_globales.quien_esta = datos_De_conexion.quien_esta;
 
         }
 
         public void datos_de_la_empresa_seleccionada(int codigo_de_la_empresa_seleccionada)
         {
+
+            if (datos_de_la_conexion_globales.quien_esta == 'E')
+            {
+                btHReservacion.Visible = false;
+            }
+
             codigo_de_la_empresa_global = codigo_de_la_empresa_seleccionada;
 
             buscar_datos_de_la_empresa_seleccionada();
@@ -100,13 +108,23 @@ namespace PRESENTACION
 
         private void btHReservacion_Click(object sender, EventArgs e)
         {
-            
-              
-                ClienteReservacion reserva = new ClienteReservacion();
-                reserva.Show();
+            //Variable para poder guardar el codigo de la empresa y enviarla a la interfaz de la reservacion
+            Empresa datos_de_la_empresa = new Empresa();
 
-                this.Hide();
-            }
+            datos_de_la_empresa.codigo = datos_de_la_empresa_globales[0].codigo;
+            datos_de_la_empresa.nombre_de_la_empresa = datos_de_la_empresa_globales[0].nombre_de_la_empresa;
+
+            //Funcion para poder ir a la interfaz de la reservacion     
+            ClienteReservacion reserva = new ClienteReservacion();
+            reserva.datos_de_conexion(datos_de_la_conexion_globales);
+            reserva.datos_de_la_empresa(datos_de_la_empresa);
+            reserva.odtener_datos_de_los_servcios_de_la_empresa();
+            reserva.odtener_datos_de_los_empleados_de_una_empresa();
+            reserva.Show();
+
+             //Cerrar interfaz actual
+             this.Hide();
+         }
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
@@ -130,6 +148,22 @@ namespace PRESENTACION
 
             //Para cerrar la interfaz actual
             this.Hide();
+        }
+        
+        private void btClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        
+        private void IrAContantos(object sender, EventArgs e)
+        {
+            //Abiri la interfaz de contacos de la empresa
+            Contactos contactos = new Contactos();
+            contactos.Show();
+
+            //Cerrar la interfaz actual
+            this.Hide();
+
         }
     }
 }

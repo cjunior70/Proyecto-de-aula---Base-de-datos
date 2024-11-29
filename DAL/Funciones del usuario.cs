@@ -243,7 +243,7 @@ namespace DAL
         //Funcion privada para buscar en la base de dato al administrador
         private void traer_datos_de_un_administrador(Usuario datos_del_usuario)
         {
-            OracleCommand comando = new OracleCommand("PK_BUSCAR_UN_USUARIO", ora);
+            OracleCommand comando = new OracleCommand("PK_BUSCAR_UN_USUARIO_POR_SU_CEDULA", ora);
             comando.CommandType = System.Data.CommandType.StoredProcedure;
 
 

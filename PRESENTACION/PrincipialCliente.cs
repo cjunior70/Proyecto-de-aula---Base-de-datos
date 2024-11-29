@@ -47,6 +47,8 @@ namespace PRESENTACION
         {
             datos_de_la_conexion.usuario = datos_De_conexion.usuario;
             datos_de_la_conexion.constraseña = datos_De_conexion.constraseña;
+            datos_de_la_conexion.cedula_del_usuario = datos_De_conexion.cedula_del_usuario;
+            datos_de_la_conexion.quien_esta = datos_De_conexion.quien_esta;
 
         }
 
@@ -262,6 +264,12 @@ namespace PRESENTACION
 
             //Cerrar interfaz actual
             this.Hide();
+        }
+
+        private void btClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+
         }
     }
 }

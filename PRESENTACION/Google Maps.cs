@@ -51,6 +51,7 @@ namespace PRESENTACION
         {
             datos_de_la_conexion.usuario = datos_De_conexion.usuario;
             datos_de_la_conexion.constraseña = datos_De_conexion.constraseña;
+            datos_de_la_conexion.quien_esta = datos_De_conexion.quien_esta;
 
         }
 
@@ -202,7 +203,7 @@ namespace PRESENTACION
             confirmacion = logica_De_Las_Ubicaciones.registrar_una_ubicacion(datos_De_la_ubicacion, datos_de_la_conexion);
 
             //Logica para abiri la interfaz de login
-            RegisUsuario registro_usuario = new RegisUsuario();
+            interf registro_usuario = new interf();
             registro_usuario.guardar_datos_de_la_ubicacion(datos_De_la_ubicacion);
             registro_usuario.Show();
 
@@ -213,12 +214,82 @@ namespace PRESENTACION
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            //Logica para abiri la interfaz de login
-            RegisUsuario registro_usuario = new RegisUsuario();
-            registro_usuario.Show();
 
-            //Cerrar interfaz del mapa
-            this.Hide();
+            MessageBox.Show(datos_de_la_conexion.quien_esta.ToString());
+
+            if ( datos_de_la_conexion.quien_esta == ' ' )
+            {
+                //Logica para abiri la interfaz de login
+                interf registro_usuario = new interf();
+                registro_usuario.Show();
+
+                //Cerrar interfaz del mapa
+                this.Hide();
+            }
+            else
+            {
+                if(datos_de_la_conexion.quien_esta == 'A')
+                {
+                    //Logica para abiri la interfaz de login
+                    PrincipialCliente principal_cliente = new PrincipialCliente();
+                    principal_cliente.Show();
+                    principal_cliente.datos_de_conexion(datos_de_la_conexion);
+                    principal_cliente.buscar_todas_las_empresa();
+
+                    //Cerrar interfaz del mapa
+                    this.Hide();
+                }
+                else
+                {
+
+                    if (datos_de_la_conexion.quien_esta == 'C')
+                    {
+                        //Logica para abiri la interfaz de login
+                        PrincipialCliente principal_cliente = new PrincipialCliente();
+                        principal_cliente.Show();
+                        principal_cliente.datos_de_conexion(datos_de_la_conexion);
+                        principal_cliente.buscar_todas_las_empresa();
+
+                        //Cerrar interfaz del mapa
+                        this.Hide();
+                    }
+                    else
+                    {
+
+                        if (datos_de_la_conexion.quien_esta == 'U')
+                        {
+                            //Logica para abiri la interfaz de login
+                            InterfazJefe principal_jefe = new InterfazJefe();
+                            principal_jefe.Show();
+                            
+
+                            //Cerrar interfaz del mapa
+                            this.Hide();
+                        }
+                        else
+                        {
+
+                            if (datos_de_la_conexion.quien_esta == 'E')
+                            {
+                                //Logica para abiri la interfaz de login
+                                InterfazTrabajador principal_trabajador = new InterfazTrabajador();
+                                principal_trabajador.Show();
+
+                                //Cerrar interfaz del mapa
+                                this.Hide();
+                            }
+                        }
+
+                    }
+
+                }
+            }
+        }
+
+        private void btClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+
         }
     }
 }

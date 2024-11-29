@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Funcion de conexion.cs" />
+    <Compile Include="Logica de la reservacion de un cliente.cs" />
     <Compile Include="Logica de las empresas.cs" />
     <Compile Include="Logica de las reservaciones.cs" />
     <Compile Include="logica de las ubicaciones.cs" />

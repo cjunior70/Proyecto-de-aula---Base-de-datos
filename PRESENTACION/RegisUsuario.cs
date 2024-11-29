@@ -16,9 +16,9 @@ using System.Windows.Forms;
 
 namespace PRESENTACION
 {
-    public partial class RegisUsuario : Form
+    public partial class interf : Form
     {
-        public RegisUsuario()
+        public interf()
         {
             InitializeComponent();
 
@@ -294,6 +294,12 @@ namespace PRESENTACION
 
             //Codigo para cerrar la interfac actual
             this.Hide();
+        }
+
+        private void btClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+
         }
     }
 }

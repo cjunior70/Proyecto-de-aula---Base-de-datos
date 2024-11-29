@@ -31,13 +31,13 @@ namespace DLL
         {
             DataTable datos;
 
-            datos = funciones_Para_Agregar_Servicio_A_Una_Empresa.Consultar_servicios_de_un_empresa(datos_de_conexion);
+            datos = funciones_Para_Agregar_Servicio_A_Una_Empresa.Consultar_servicios_y_empresas_relacionados(datos_de_conexion);
 
             return datos;
         }
 
         //Funcion para traer los servicios de una empresa
-        public DataTable traer_los_servicios_de_una_empresa(Servicio_de_una_Empresa datos_de_la_reservacion)
+        public DataTable traer_los_servicios_de_una_empresa(Datos_login datos_de_conexion, Servicio_de_una_Empresa datos_de_la_reservacion)
         {
             DataTable datos;
 

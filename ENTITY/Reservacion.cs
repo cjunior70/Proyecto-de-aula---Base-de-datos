@@ -11,8 +11,13 @@ namespace ENTITY
 
         //Nombre del empleado
         public List<Empleados> Empleados=new List<Empleados>();
+
         //Nombre de la empresa
         public Empresa empresa { get; set; }
+
+        //Nombre del cliente
+        public Cliente Cliente { get; set; }
+
         //Lista de los servicos escogidos
         public List<Servicios> lista_de_serivicios_escogidos = new List<Servicios>();
 
@@ -20,8 +25,7 @@ namespace ENTITY
         public string codigo { get; set; }
         public DateTime creacion_de_la_reservacion { get; set; }
         public DateTime fecha_de_la_reservacion { get; set; }
-        public TimeSpan hora { get; set; }
-
+        public string hora { get; set; }
         public string estado { get; set; }
 
         //Constructor para la entrada a la clase
@@ -29,10 +33,11 @@ namespace ENTITY
         {
         }
 
-        public Reservacion(List<Empleados> empleados, Empresa empresa, List<Servicios> lista_de_serivicios_escogidos, string codigo, DateTime creacion_de_la_reservacion, DateTime fecha_de_la_reservacion, TimeSpan hora, string estado)
+        public Reservacion(List<Empleados> empleados, Empresa empresa, Cliente cliente, List<Servicios> lista_de_serivicios_escogidos, string codigo, DateTime creacion_de_la_reservacion, DateTime fecha_de_la_reservacion, string hora, string estado)
         {
             Empleados = empleados;
             this.empresa = empresa;
+            Cliente = cliente;
             this.lista_de_serivicios_escogidos = lista_de_serivicios_escogidos;
             this.codigo = codigo;
             this.creacion_de_la_reservacion = creacion_de_la_reservacion;

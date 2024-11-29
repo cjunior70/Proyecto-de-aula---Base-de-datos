@@ -12,15 +12,17 @@ namespace ENTITY
         //Lista de reservaciones echas por el cliente
         public List<Reservacion> lista_de_reservaciones = new List<Reservacion>();
 
+        public Reservacion reservacion = new Reservacion();
+
         //Constructor para acceso a la clase
         public Cliente()
         {
         }
 
-        //Construtor para la lisata de reservaciones echas
-        public Cliente(List<Reservacion> lista_de_resetvaciones)
+        public Cliente(List<Reservacion> lista_de_reservaciones, Reservacion datos_de_la_reservacion)
         {
-            this.lista_de_reservaciones = lista_de_resetvaciones;
+            this.lista_de_reservaciones = lista_de_reservaciones;
+            this.reservacion = datos_de_la_reservacion;
         }
 
         //Construtor para los datos personales de los clientes

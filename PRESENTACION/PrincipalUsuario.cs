@@ -32,5 +32,15 @@ namespace PRESENTACION
         {
 
         }
+
+        private void btClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
