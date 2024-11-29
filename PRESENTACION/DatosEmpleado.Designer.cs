@@ -50,6 +50,7 @@
             this.lbSegundoNombre = new System.Windows.Forms.Label();
             this.lbSexo = new System.Windows.Forms.Label();
             this.lbCorreoElec = new System.Windows.Forms.Label();
+            this.btGuardarDatosReservacion = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTrayctoria)).BeginInit();
@@ -299,11 +300,22 @@
             this.lbCorreoElec.TabIndex = 55;
             this.lbCorreoElec.Text = "label16";
             // 
+            // btGuardarDatosReservacion
+            // 
+            this.btGuardarDatosReservacion.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btGuardarDatosReservacion.Location = new System.Drawing.Point(666, 589);
+            this.btGuardarDatosReservacion.Name = "btGuardarDatosReservacion";
+            this.btGuardarDatosReservacion.Size = new System.Drawing.Size(514, 48);
+            this.btGuardarDatosReservacion.TabIndex = 47;
+            this.btGuardarDatosReservacion.Text = "Guardar datos en la reservacion";
+            this.btGuardarDatosReservacion.UseVisualStyleBackColor = true;
+            // 
             // DatosEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1209, 650);
+            this.Controls.Add(this.btGuardarDatosReservacion);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dataGridListaServiciosSeleccionado);
@@ -348,5 +360,6 @@
         private System.Windows.Forms.Label lbPrimerNombre;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lbCorreoElec;
+        private System.Windows.Forms.Button btGuardarDatosReservacion;
     }
 }
