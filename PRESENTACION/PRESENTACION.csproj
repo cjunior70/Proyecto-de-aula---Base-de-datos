@@ -55,6 +55,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarServicioEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarServicioEmpleados.Designer.cs">
+      <DependentUpon>AgregarServicioEmpleados.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClienteReservacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,11 +147,17 @@
     <Compile Include="TrabajadorUsuario.Designer.cs">
       <DependentUpon>TrabajadorUsuario.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AgregarServicioEmpleados.resx">
+      <DependentUpon>AgregarServicioEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ClienteReservacion.resx">
       <DependentUpon>ClienteReservacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Contactos.resx">
       <DependentUpon>Contactos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatosEmpleado.resx">
+      <DependentUpon>DatosEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmpresaCliente.resx">
       <DependentUpon>EmpresaCliente.cs</DependentUpon>
@@ -246,6 +258,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\grafico-diagramas.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fix-beard-home-diy-1-1600x900-1-1024x576.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Black-Owned-Barber-Shops-in-Orlando-768x536.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\young-hipster-female-barber-holding-sharp-razor-and-looking-at-camera-while-standing-in-barbershop-ADSF17153.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

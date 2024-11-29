@@ -29,29 +29,29 @@
         private void InitializeComponent()
         {
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btClose = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btRegisClient = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.picEmpleados = new System.Windows.Forms.PictureBox();
+            this.picTrayctoria = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btVolver = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridJefe = new System.Windows.Forms.DataGridView();
-            this.btVolver = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
-            this.btRegisClient = new System.Windows.Forms.Button();
-            this.picEmpleados = new System.Windows.Forms.PictureBox();
-            this.picTrayctoria = new System.Windows.Forms.PictureBox();
-            this.btClose = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picEmpleados)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picTrayctoria)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridJefe)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picEmpleados)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picTrayctoria)).BeginInit();
             this.SuspendLayout();
             // 
             // panel5
@@ -62,8 +62,22 @@
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1349, 52);
+            this.panel5.Size = new System.Drawing.Size(1349, 50);
             this.panel5.TabIndex = 38;
+            // 
+            // btClose
+            // 
+            this.btClose.BackColor = System.Drawing.Color.MediumBlue;
+            this.btClose.BackgroundImage = global::PRESENTACION.Properties.Resources.icons8_cerrar_ventana_48;
+            this.btClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btClose.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btClose.Location = new System.Drawing.Point(1298, 0);
+            this.btClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btClose.Name = "btClose";
+            this.btClose.Size = new System.Drawing.Size(51, 50);
+            this.btClose.TabIndex = 0;
+            this.btClose.UseVisualStyleBackColor = false;
+            this.btClose.Click += new System.EventHandler(this.btClose_Click);
             // 
             // panel2
             // 
@@ -75,6 +89,20 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(280, 601);
             this.panel2.TabIndex = 39;
+            // 
+            // btRegisClient
+            // 
+            this.btRegisClient.BackColor = System.Drawing.Color.DarkBlue;
+            this.btRegisClient.CausesValidation = false;
+            this.btRegisClient.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btRegisClient.Image = global::PRESENTACION.Properties.Resources.icons8_usuario_501;
+            this.btRegisClient.Location = new System.Drawing.Point(117, 25);
+            this.btRegisClient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btRegisClient.Name = "btRegisClient";
+            this.btRegisClient.Size = new System.Drawing.Size(61, 57);
+            this.btRegisClient.TabIndex = 27;
+            this.btRegisClient.UseVisualStyleBackColor = false;
+            this.btRegisClient.Click += new System.EventHandler(this.btRegisClient_Click);
             // 
             // panel3
             // 
@@ -89,6 +117,36 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(255, 481);
             this.panel3.TabIndex = 0;
+            // 
+            // picEmpleados
+            // 
+            this.picEmpleados.BackColor = System.Drawing.Color.DarkGray;
+            this.picEmpleados.BackgroundImage = global::PRESENTACION.Properties.Resources.clasificacion;
+            this.picEmpleados.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picEmpleados.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picEmpleados.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picEmpleados.Location = new System.Drawing.Point(40, 305);
+            this.picEmpleados.Margin = new System.Windows.Forms.Padding(4);
+            this.picEmpleados.Name = "picEmpleados";
+            this.picEmpleados.Size = new System.Drawing.Size(170, 148);
+            this.picEmpleados.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picEmpleados.TabIndex = 23;
+            this.picEmpleados.TabStop = false;
+            // 
+            // picTrayctoria
+            // 
+            this.picTrayctoria.BackColor = System.Drawing.Color.DarkBlue;
+            this.picTrayctoria.BackgroundImage = global::PRESENTACION.Properties.Resources.grafico_diagramas;
+            this.picTrayctoria.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picTrayctoria.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picTrayctoria.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picTrayctoria.Location = new System.Drawing.Point(40, 106);
+            this.picTrayctoria.Margin = new System.Windows.Forms.Padding(4);
+            this.picTrayctoria.Name = "picTrayctoria";
+            this.picTrayctoria.Size = new System.Drawing.Size(170, 148);
+            this.picTrayctoria.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picTrayctoria.TabIndex = 22;
+            this.picTrayctoria.TabStop = false;
             // 
             // label12
             // 
@@ -150,6 +208,20 @@
             this.panel4.Size = new System.Drawing.Size(1012, 548);
             this.panel4.TabIndex = 28;
             // 
+            // btVolver
+            // 
+            this.btVolver.BackColor = System.Drawing.Color.SteelBlue;
+            this.btVolver.CausesValidation = false;
+            this.btVolver.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btVolver.Image = global::PRESENTACION.Properties.Resources.icons8_regreso_50;
+            this.btVolver.Location = new System.Drawing.Point(3, 491);
+            this.btVolver.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btVolver.Name = "btVolver";
+            this.btVolver.Size = new System.Drawing.Size(61, 57);
+            this.btVolver.TabIndex = 28;
+            this.btVolver.UseVisualStyleBackColor = false;
+            this.btVolver.Click += new System.EventHandler(this.btVolver_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -173,20 +245,6 @@
             this.dataGridJefe.Size = new System.Drawing.Size(975, 395);
             this.dataGridJefe.TabIndex = 27;
             // 
-            // btVolver
-            // 
-            this.btVolver.BackColor = System.Drawing.Color.SteelBlue;
-            this.btVolver.CausesValidation = false;
-            this.btVolver.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btVolver.Image = global::PRESENTACION.Properties.Resources.icons8_regreso_50;
-            this.btVolver.Location = new System.Drawing.Point(3, 491);
-            this.btVolver.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btVolver.Name = "btVolver";
-            this.btVolver.Size = new System.Drawing.Size(61, 57);
-            this.btVolver.TabIndex = 28;
-            this.btVolver.UseVisualStyleBackColor = false;
-            this.btVolver.Click += new System.EventHandler(this.btVolver_Click);
-            // 
             // btnVolver
             // 
             this.btnVolver.BackColor = System.Drawing.Color.MidnightBlue;
@@ -198,64 +256,6 @@
             this.btnVolver.Size = new System.Drawing.Size(73, 68);
             this.btnVolver.TabIndex = 26;
             this.btnVolver.UseVisualStyleBackColor = false;
-            // 
-            // btRegisClient
-            // 
-            this.btRegisClient.BackColor = System.Drawing.Color.DarkBlue;
-            this.btRegisClient.CausesValidation = false;
-            this.btRegisClient.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btRegisClient.Image = global::PRESENTACION.Properties.Resources.icons8_usuario_501;
-            this.btRegisClient.Location = new System.Drawing.Point(117, 25);
-            this.btRegisClient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btRegisClient.Name = "btRegisClient";
-            this.btRegisClient.Size = new System.Drawing.Size(61, 57);
-            this.btRegisClient.TabIndex = 27;
-            this.btRegisClient.UseVisualStyleBackColor = false;
-            this.btRegisClient.Click += new System.EventHandler(this.btRegisClient_Click);
-            // 
-            // picEmpleados
-            // 
-            this.picEmpleados.BackColor = System.Drawing.Color.DarkGray;
-            this.picEmpleados.BackgroundImage = global::PRESENTACION.Properties.Resources.clasificacion;
-            this.picEmpleados.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picEmpleados.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picEmpleados.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picEmpleados.Location = new System.Drawing.Point(40, 305);
-            this.picEmpleados.Margin = new System.Windows.Forms.Padding(4);
-            this.picEmpleados.Name = "picEmpleados";
-            this.picEmpleados.Size = new System.Drawing.Size(170, 148);
-            this.picEmpleados.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picEmpleados.TabIndex = 23;
-            this.picEmpleados.TabStop = false;
-            // 
-            // picTrayctoria
-            // 
-            this.picTrayctoria.BackColor = System.Drawing.Color.DarkBlue;
-            this.picTrayctoria.BackgroundImage = global::PRESENTACION.Properties.Resources.grafico_diagramas;
-            this.picTrayctoria.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picTrayctoria.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picTrayctoria.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picTrayctoria.Location = new System.Drawing.Point(40, 106);
-            this.picTrayctoria.Margin = new System.Windows.Forms.Padding(4);
-            this.picTrayctoria.Name = "picTrayctoria";
-            this.picTrayctoria.Size = new System.Drawing.Size(170, 148);
-            this.picTrayctoria.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picTrayctoria.TabIndex = 22;
-            this.picTrayctoria.TabStop = false;
-            // 
-            // btClose
-            // 
-            this.btClose.BackColor = System.Drawing.Color.MediumBlue;
-            this.btClose.BackgroundImage = global::PRESENTACION.Properties.Resources.icons8_cerrar_ventana_48;
-            this.btClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btClose.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btClose.Location = new System.Drawing.Point(1298, 0);
-            this.btClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btClose.Name = "btClose";
-            this.btClose.Size = new System.Drawing.Size(51, 52);
-            this.btClose.TabIndex = 0;
-            this.btClose.UseVisualStyleBackColor = false;
-            this.btClose.Click += new System.EventHandler(this.btClose_Click);
             // 
             // InterfazJefe
             // 
@@ -273,12 +273,12 @@
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picEmpleados)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picTrayctoria)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridJefe)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picEmpleados)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picTrayctoria)).EndInit();
             this.ResumeLayout(false);
 
         }

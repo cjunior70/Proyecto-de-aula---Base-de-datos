@@ -63,6 +63,16 @@ namespace PRESENTACION.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Black_Owned_Barber_Shops_in_Orlando_768x536 {
+            get {
+                object obj = ResourceManager.GetObject("Black-Owned-Barber-Shops-in-Orlando-768x536", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Captura_de_pantalla_2024_11_02_104410 {
             get {
                 object obj = ResourceManager.GetObject("Captura de pantalla 2024-11-02 104410", resourceCulture);
@@ -106,6 +116,16 @@ namespace PRESENTACION.Properties {
         internal static System.Drawing.Bitmap Derecha {
             get {
                 object obj = ResourceManager.GetObject("Derecha", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fix_beard_home_diy_1_1600x900_1_1024x576 {
+            get {
+                object obj = ResourceManager.GetObject("fix-beard-home-diy-1-1600x900-1-1024x576", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -176,6 +196,17 @@ namespace PRESENTACION.Properties {
         internal static System.Drawing.Bitmap Izquierda {
             get {
                 object obj = ResourceManager.GetObject("Izquierda", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap young_hipster_female_barber_holding_sharp_razor_and_looking_at_camera_while_standing_in_barbershop_ADSF17153 {
+            get {
+                object obj = ResourceManager.GetObject("young-hipster-female-barber-holding-sharp-razor-and-looking-at-camera-while-stand" +
+                        "ing-in-barbershop-ADSF17153", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

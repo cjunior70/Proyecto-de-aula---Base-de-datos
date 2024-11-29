@@ -1,6 +1,6 @@
 ﻿namespace PRESENTACION
 {
-    partial class DatosEmpleado
+    partial class AgregarServicioEmpleados
     {
         /// <summary>
         /// Required designer variable.
@@ -42,7 +42,7 @@
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1350, 50);
-            this.panel5.TabIndex = 39;
+            this.panel5.TabIndex = 40;
             // 
             // btClose
             // 
@@ -58,15 +58,15 @@
             this.btClose.UseVisualStyleBackColor = false;
             this.btClose.Click += new System.EventHandler(this.btClose_Click);
             // 
-            // DatosEmpleado
+            // AgregarServicioEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1350, 650);
             this.Controls.Add(this.panel5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "DatosEmpleado";
-            this.Text = "DatosEmpleado";
+            this.Name = "AgregarServicioEmpleados";
+            this.Text = "AgregarServicioEmpleados";
             this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
