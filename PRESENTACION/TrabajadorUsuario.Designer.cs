@@ -31,6 +31,7 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnVolver = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnGuardarDatos = new System.Windows.Forms.Button();
             this.cbxGenero = new System.Windows.Forms.ComboBox();
             this.cbxCargo = new System.Windows.Forms.ComboBox();
             this.cbxEstado = new System.Windows.Forms.ComboBox();
@@ -63,7 +64,6 @@
             this.lblLimitePorDia = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btCerrar = new System.Windows.Forms.Button();
-            this.btnGuardarDatos = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -128,6 +128,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(627, 531);
             this.panel1.TabIndex = 1;
+            // 
+            // btnGuardarDatos
+            // 
+            this.btnGuardarDatos.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarDatos.Location = new System.Drawing.Point(458, 479);
+            this.btnGuardarDatos.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGuardarDatos.Name = "btnGuardarDatos";
+            this.btnGuardarDatos.Size = new System.Drawing.Size(152, 36);
+            this.btnGuardarDatos.TabIndex = 51;
+            this.btnGuardarDatos.Text = "Guardar Datos";
+            this.btnGuardarDatos.UseVisualStyleBackColor = true;
+            this.btnGuardarDatos.Click += new System.EventHandler(this.btnGuardarDatos_Click);
             // 
             // cbxGenero
             // 
@@ -229,7 +241,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.Control;
-            this.label12.Location = new System.Drawing.Point(397, 312);
+            this.label12.Location = new System.Drawing.Point(485, 312);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(114, 25);
@@ -460,17 +472,6 @@
             this.btCerrar.TabIndex = 0;
             this.btCerrar.UseVisualStyleBackColor = false;
             this.btCerrar.Click += new System.EventHandler(this.btCerrar_Click);
-            // 
-            // btnGuardarDatos
-            // 
-            this.btnGuardarDatos.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardarDatos.Location = new System.Drawing.Point(458, 479);
-            this.btnGuardarDatos.Margin = new System.Windows.Forms.Padding(2);
-            this.btnGuardarDatos.Name = "btnGuardarDatos";
-            this.btnGuardarDatos.Size = new System.Drawing.Size(152, 36);
-            this.btnGuardarDatos.TabIndex = 51;
-            this.btnGuardarDatos.Text = "Guardar Datos";
-            this.btnGuardarDatos.UseVisualStyleBackColor = true;
             // 
             // TrabajadorUsuario
             // 
