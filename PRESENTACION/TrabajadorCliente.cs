@@ -207,7 +207,7 @@ namespace PRESENTACION
 
             //Tercer panel
             lblNombre3.Text = " ";
-            pic3.Image = null;
+            pic3.Image = null; 
         }
 
     }
