@@ -121,6 +121,9 @@
   <data name="Izquierda" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Izquierda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="young-hipster-female-barber-holding-sharp-razor-and-looking-at-camera-while-standing-in-barbershop-ADSF17153" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\young-hipster-female-barber-holding-sharp-razor-and-looking-at-camera-while-standing-in-barbershop-ADSF17153.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Black-Owned-Barber-Shops-in-Orlando-768x536" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Black-Owned-Barber-Shops-in-Orlando-768x536.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -160,7 +163,7 @@
   <data name="clasificacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\clasificacion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="young-hipster-female-barber-holding-sharp-razor-and-looking-at-camera-while-standing-in-barbershop-ADSF17153" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\young-hipster-female-barber-holding-sharp-razor-and-looking-at-camera-while-standing-in-barbershop-ADSF17153.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="agregar-usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\agregar-usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

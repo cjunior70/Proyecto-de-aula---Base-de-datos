@@ -268,5 +268,8 @@
   <ItemGroup>
     <None Include="Resources\young-hipster-female-barber-holding-sharp-razor-and-looking-at-camera-while-standing-in-barbershop-ADSF17153.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar-usuario.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
