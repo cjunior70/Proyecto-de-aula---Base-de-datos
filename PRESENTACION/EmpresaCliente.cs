@@ -42,6 +42,7 @@ namespace PRESENTACION
         {
             datos_de_la_conexion_globales.usuario = datos_De_conexion.usuario;
             datos_de_la_conexion_globales.constraseña = datos_De_conexion.constraseña;
+            datos_de_la_conexion_globales.cedula_del_usuario = datos_De_conexion.cedula_del_usuario;
             datos_de_la_conexion_globales.quien_esta = datos_De_conexion.quien_esta;
 
         }
@@ -117,7 +118,6 @@ namespace PRESENTACION
             ClienteReservacion reserva = new ClienteReservacion();
             reserva.datos_de_conexion(datos_de_la_conexion_globales);
             reserva.datos_de_la_empresa(datos_de_la_empresa);
-            reserva.guardar_datos_de_la_reservacion();
             reserva.odtener_datos_de_los_servcios_de_la_empresa();
             reserva.odtener_datos_de_los_empleados_de_una_empresa();
             reserva.Show();

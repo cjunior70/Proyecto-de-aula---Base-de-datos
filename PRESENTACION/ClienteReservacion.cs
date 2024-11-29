@@ -65,6 +65,9 @@ namespace PRESENTACION
         //Logica de los empleados
         logica_de_los_empleados Logica_De_Los_Empleados = new logica_de_los_empleados();
 
+        //Datos del cliente
+        logica_de_los_clientes logica_De_Los_Clientes = new logica_de_los_clientes();
+
         //para poder llenar los datos 
         DataTable datos_de_los_servicos_de_la_empresa_selecionada;
 
@@ -76,6 +79,7 @@ namespace PRESENTACION
         {
             datos_de_la_conexion_globales.usuario = datos_De_conexion.usuario;
             datos_de_la_conexion_globales.constraseña = datos_De_conexion.constraseña;
+            datos_de_la_conexion_globales.cedula_del_usuario = datos_De_conexion.cedula_del_usuario;
             datos_de_la_conexion_globales.quien_esta = datos_De_conexion.quien_esta;
 
         }
@@ -92,9 +96,7 @@ namespace PRESENTACION
         //Funcion para poder guardar los datos de la reservacion del cliente
         public void guardar_datos_de_la_reservacion()
         {
-            //odtener_datos_de_la_reservacion();
-
-           // odtener_datos_de_los_servcios_de_la_empresa();
+            odtener_datos_de_la_reservacion();
 
         }
 
@@ -204,6 +206,9 @@ namespace PRESENTACION
 
         private void odtener_datos_de_la_reservacion()
         {
+
+            odtener_datos_del_cliente();
+
             int hora = Convert.ToInt32(cbxHora.SelectedItem);   // Hora seleccionada
             int minutos = Convert.ToInt32(cbxMinutos.SelectedItem); // Minutos seleccionados
             int segundos = Convert.ToInt32(cbxSegundos.SelectedItem); // Segundos seleccionados
@@ -216,11 +221,15 @@ namespace PRESENTACION
                 //Fecha para la reservacion 
                 datos_de_la_reservacion_globales.fecha_de_la_reservacion = dtpFechaSeleccionada.Value;
 
-                //Guardar la hora de la reservacion
-                datos_de_la_reservacion_globales.hora = hora_seleccionada;
+                datos_de_la_reservacion_globales.empresa.codigo = datos_de_la_empresa_globales.codigo;
+
+                datos_de_la_reservacion_globales.Cliente.codigo = datos_del_cliente_globales.codigo;
 
                 //Guardar el estado de esa reservacion
                 datos_de_la_reservacion_globales.estado = "Reservado";
+
+                //Guardar la hora de la reservacion
+                datos_de_la_reservacion_globales.hora = hora_seleccionada;
             }
             else
             {
@@ -230,6 +239,14 @@ namespace PRESENTACION
 
         private void odtener_datos_del_cliente()
         {
+
+            datos_del_cliente_globales.cedula = datos_de_la_conexion_globales.cedula_del_usuario;
+
+            DataTable datos_cliente;
+
+            datos_cliente = logica_De_Los_Clientes.consulta_De_datos_personales(datos_del_cliente_globales, datos_de_la_conexion_globales);
+
+            datos_del_cliente_globales.codigo = int.Parse(datos_cliente.Rows[0]["CODIGO"].ToString());
 
         }
 
