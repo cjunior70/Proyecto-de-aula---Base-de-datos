@@ -18,7 +18,7 @@ namespace DLL
         Funciones_de_la_reservacion funciones_De_La_Reservacion = new Funciones_de_la_reservacion();
 
         //Funcion para guardar una reservacion
-        public Boolean registrar_una_reservacion(Reservacion datos_de_una_reservacion)
+        public Boolean registrar_una_reservacion(Datos_login datos_de_conexion, Reservacion datos_de_una_reservacion)
         {
             
             Boolean existencia;
@@ -30,7 +30,7 @@ namespace DLL
         }
 
         //Funcion para buscar una reservacion
-        public DataTable buscar_una_reservacion(Reservacion datos_de_la_reservacion) 
+        public DataTable buscar_una_reservacion(Datos_login datos_de_conexion, Reservacion datos_de_la_reservacion) 
         {
             DataTable datos;
 
@@ -41,7 +41,7 @@ namespace DLL
         }
 
         //Funcion para actualizar una reservacion
-        public Boolean actualizar_reservacion(Reservacion datos_de_la_reservacion)
+        public Boolean actualizar_reservacion(Datos_login datos_de_conexion, Reservacion datos_de_la_reservacion)
         {
 
             Boolean confirmacion;
@@ -53,7 +53,7 @@ namespace DLL
         }
 
         //Funcion para traer todas las reservaciones
-        public DataTable todas_las_reservaciones()
+        public DataTable todas_las_reservaciones(Datos_login datos_de_conexion)
         {
             DataTable lista_de_reservaciones;
 
@@ -64,7 +64,7 @@ namespace DLL
         }
 
         //Funcion para eliminar una reservacion
-        public Boolean eliminar_reservacion(Reservacion datos_de_la_reservacion)
+        public Boolean eliminar_reservacion(Datos_login datos_de_conexion, Reservacion datos_de_la_reservacion)
         {
             Boolean confirmacion;
 

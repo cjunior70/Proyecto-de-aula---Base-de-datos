@@ -96,7 +96,21 @@ namespace PRESENTACION
         //Funcion para poder guardar los datos de la reservacion del cliente
         public void guardar_datos_de_la_reservacion()
         {
+            Boolean confirmacion;
+
             odtener_datos_de_la_reservacion();
+
+            confirmacion = Logica_De_Las_Reservaciones.registrar_una_reservacion(datos_de_la_conexion_globales, datos_de_la_reservacion_globales);
+
+            if ( confirmacion == true)
+            {
+                MessageBox.Show("Se Reservacion fue guardad con exito ");
+
+            }
+            else
+            {
+                MessageBox.Show("Error al hacer la reservaciones");
+            }
 
         }
 
@@ -213,7 +227,7 @@ namespace PRESENTACION
             int minutos = Convert.ToInt32(cbxMinutos.SelectedItem); // Minutos seleccionados
             int segundos = Convert.ToInt32(cbxSegundos.SelectedItem); // Segundos seleccionados
 
-            if ( hora > 7 && hora < 5 )
+            if ( hora > 7 && hora < 16 )
             {
                 // Guardar la hora a string
                 string hora_seleccionada = string.Format("{0:D2}:{1:D2}:{2:D2}", hora, minutos, segundos);
@@ -221,10 +235,12 @@ namespace PRESENTACION
                 //Fecha para la reservacion 
                 datos_de_la_reservacion_globales.fecha_de_la_reservacion = dtpFechaSeleccionada.Value;
 
-                datos_de_la_reservacion_globales.empresa.codigo = datos_de_la_empresa_globales.codigo;
+                MessageBox.Show("fecha : " + dtpFechaSeleccionada.Value);
 
-                datos_de_la_reservacion_globales.Cliente.codigo = datos_del_cliente_globales.codigo;
+                datos_de_la_reservacion_globales.empresa = datos_de_la_empresa_globales;
 
+                datos_de_la_reservacion_globales.Cliente = datos_del_cliente_globales;
+                
                 //Guardar el estado de esa reservacion
                 datos_de_la_reservacion_globales.estado = "Reservado";
 
