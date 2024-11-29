@@ -172,5 +172,43 @@ namespace PRESENTACION
             //Cerrar interfaz actual
             this.Hide();
         }
+
+        private void btnDerecha_Click(object sender, EventArgs e)
+        {
+            Fila_Actual++;
+
+            limpieza_de_datos();
+
+            mostrar_empleados_de_la_empresa();
+        }
+
+        private void btnIzquierda_Click(object sender, EventArgs e)
+        {
+            Fila_Actual = 0;
+
+            Primer_valor_de_las_filas = 0;
+            Segunda_valor_de_las_filas = 0;
+            Tercera_valor_de_las_filas = 0;
+
+            limpieza_de_datos();
+
+            mostrar_empleados_de_la_empresa();
+        }
+
+        private void limpieza_de_datos()
+        {
+            //Primer panel
+            lblNombre1.Text = " ";
+            pic1.Image = null;
+
+            //Segundo panel
+            lblNombre2.Text = " ";
+            pic2.Image = null;
+
+            //Tercer panel
+            lblNombre3.Text = " ";
+            pic3.Image = null;
+        }
+
     }
 }

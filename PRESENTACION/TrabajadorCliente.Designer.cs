@@ -45,6 +45,8 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.btSeleccionarEmple = new System.Windows.Forms.Button();
+            this.btnDerecha = new System.Windows.Forms.Button();
+            this.btnIzquierda = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnl3.SuspendLayout();
@@ -82,6 +84,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel2.Controls.Add(this.btnDerecha);
+            this.panel2.Controls.Add(this.btnIzquierda);
             this.panel2.Controls.Add(this.pnl3);
             this.panel2.Controls.Add(this.pnl2);
             this.panel2.Controls.Add(this.pnl1);
@@ -281,6 +285,30 @@
             this.btSeleccionarEmple.Text = "Seleccionar empleado";
             this.btSeleccionarEmple.UseVisualStyleBackColor = true;
             // 
+            // btnDerecha
+            // 
+            this.btnDerecha.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDerecha.Image = global::PRESENTACION.Properties.Resources.Derecha;
+            this.btnDerecha.Location = new System.Drawing.Point(455, 525);
+            this.btnDerecha.Name = "btnDerecha";
+            this.btnDerecha.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnDerecha.Size = new System.Drawing.Size(57, 34);
+            this.btnDerecha.TabIndex = 36;
+            this.btnDerecha.UseVisualStyleBackColor = true;
+            this.btnDerecha.Click += new System.EventHandler(this.btnDerecha_Click);
+            // 
+            // btnIzquierda
+            // 
+            this.btnIzquierda.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnIzquierda.Image = global::PRESENTACION.Properties.Resources.Izquierda;
+            this.btnIzquierda.Location = new System.Drawing.Point(392, 525);
+            this.btnIzquierda.Name = "btnIzquierda";
+            this.btnIzquierda.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnIzquierda.Size = new System.Drawing.Size(57, 34);
+            this.btnIzquierda.TabIndex = 37;
+            this.btnIzquierda.UseVisualStyleBackColor = true;
+            this.btnIzquierda.Click += new System.EventHandler(this.btnIzquierda_Click);
+            // 
             // TrabajadorCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -332,5 +360,7 @@
         private System.Windows.Forms.Label lblNombre2;
         private System.Windows.Forms.Panel pnl1;
         private System.Windows.Forms.PictureBox pic1;
+        private System.Windows.Forms.Button btnDerecha;
+        private System.Windows.Forms.Button btnIzquierda;
     }
 }
