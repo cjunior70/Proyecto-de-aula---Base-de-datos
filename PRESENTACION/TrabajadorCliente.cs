@@ -213,7 +213,7 @@ namespace PRESENTACION
         private void btnVolver_Click(object sender, EventArgs e)
         {
             ClienteReservacion FrmClienteserve = new ClienteReservacion();
-            Frmclienteserve.Show();
+            FrmClienteserve.Show();
             this.Hide();
         }
 
