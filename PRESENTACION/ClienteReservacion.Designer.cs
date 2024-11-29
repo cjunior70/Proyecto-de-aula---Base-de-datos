@@ -81,7 +81,7 @@
             this.lblDatosDeLaReservacion.BackColor = System.Drawing.Color.Transparent;
             this.lblDatosDeLaReservacion.Font = new System.Drawing.Font("Segoe UI", 18.2F, System.Drawing.FontStyle.Bold);
             this.lblDatosDeLaReservacion.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblDatosDeLaReservacion.Location = new System.Drawing.Point(197, 15);
+            this.lblDatosDeLaReservacion.Location = new System.Drawing.Point(162, 16);
             this.lblDatosDeLaReservacion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDatosDeLaReservacion.Name = "lblDatosDeLaReservacion";
             this.lblDatosDeLaReservacion.Size = new System.Drawing.Size(156, 35);
@@ -167,7 +167,7 @@
             // btnAgregarEmpleadoYSusServicios
             // 
             this.btnAgregarEmpleadoYSusServicios.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarEmpleadoYSusServicios.Location = new System.Drawing.Point(218, 348);
+            this.btnAgregarEmpleadoYSusServicios.Location = new System.Drawing.Point(223, 346);
             this.btnAgregarEmpleadoYSusServicios.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregarEmpleadoYSusServicios.Name = "btnAgregarEmpleadoYSusServicios";
             this.btnAgregarEmpleadoYSusServicios.Size = new System.Drawing.Size(171, 32);

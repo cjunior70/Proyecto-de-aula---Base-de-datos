@@ -47,9 +47,6 @@ namespace PRESENTACION
         //Logica de los servicios de uan empresa
         logica_de_los_servicios_de_una_empresa Logica_De_Los_Servicios_De_Una_Empresa = new logica_de_los_servicios_de_una_empresa();
 
-        //Datos de conexion
-        Datos_login datos_de_la_conexion_globales = new Datos_login();
-
         //Datos de la empresa seleccionda
         Empresa datos_de_la_empresa_globales = new Empresa();
 
@@ -73,6 +70,9 @@ namespace PRESENTACION
 
         //para poder llenar los datos 
         DataTable datos_de_los_empleados_de_la_empresa_selecionada;
+
+        //Datos de conexion
+        Datos_login datos_de_la_conexion_globales = new Datos_login();
 
         //Funcion para guardar los datos de conexion
         public void datos_de_conexion(Datos_login datos_De_conexion)
@@ -270,6 +270,9 @@ namespace PRESENTACION
         {
             //Mostrar la interfaz de los empleados deseados y que tiene la empresa
             TrabajadorCliente TrabajadorCli = new TrabajadorCliente();
+            TrabajadorCli.datos_de_conexion(datos_de_la_conexion_globales);
+            TrabajadorCli.datos_de_la_empresa(datos_de_la_empresa_globales);
+            TrabajadorCli.buscar_todos_los_empleado_de_la_empreesa();
             TrabajadorCli.Show();
 
             //Cerrar la interfaz actual
