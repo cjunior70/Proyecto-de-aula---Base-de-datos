@@ -50,6 +50,9 @@ namespace PRESENTACION
         //Datos de la empresa seleccionda
         Empresa datos_de_la_empresa_globales = new Empresa();
 
+        //Datos del empleado
+        Empleados datos_del_empleado_gloables=new Empleados();
+
         //Datos del cliente
         Cliente datos_del_cliente_globales = new Cliente();
 
@@ -68,6 +71,9 @@ namespace PRESENTACION
         //para poder llenar los datos 
         DataTable datos_de_los_servicos_de_la_empresa_selecionada;
 
+        //para poder llenar los datos
+        DataTable datos_del_cliente;
+
         //para poder llenar los datos 
         DataTable datos_de_los_empleados_de_la_empresa_selecionada;
 
@@ -82,6 +88,8 @@ namespace PRESENTACION
             datos_de_la_conexion_globales.cedula_del_usuario = datos_De_conexion.cedula_del_usuario;
             datos_de_la_conexion_globales.quien_esta = datos_De_conexion.quien_esta;
 
+            datos_del_cliente_globales.cedula = datos_De_conexion.cedula_del_usuario;
+
         }
 
         //Funcion para guardar el codigo de la empresa seleccionada
@@ -93,10 +101,19 @@ namespace PRESENTACION
 
         }
 
+        //Funcion para guardar la lista de los servicios queridos
+        public void lista_de_servicios_queridos(DataTable lista_de_servicios_de_interes)
+        {
+            dgEmpleadosSeleccionados.DataSource = lista_de_servicios_de_interes;
+        }
+
+
         //Funcion para poder guardar los datos de la reservacion del cliente
         public void guardar_datos_de_la_reservacion()
         {
             Boolean confirmacion;
+
+            DataTable datos_de_reservacion_de_la_base;
 
             odtener_datos_de_la_reservacion();
 
@@ -104,8 +121,20 @@ namespace PRESENTACION
 
             if ( confirmacion == true)
             {
-                MessageBox.Show("Se Reservacion fue guardad con exito ");
 
+                datos_del_cliente = logica_De_Los_Clientes.consulta_De_datos_personales(datos_del_cliente_globales, datos_de_la_conexion_globales);
+
+                datos_de_reservacion_de_la_base = Logica_De_Las_Reservaciones.buscar_una_reservacion(datos_de_la_conexion_globales, datos_de_la_reservacion_globales);
+
+                datos_de_la_reservacion_globales.empresa.codigo = datos_de_la_empresa_globales.codigo;
+
+                datos_de_la_reservacion_globales.Cliente.codigo = Convert.ToInt16( datos_del_cliente.Rows[0]["codigo"] );
+
+                datos_de_la_reservacion_globales.codigo = Convert.ToString( datos_de_reservacion_de_la_base.Rows[0]["codigo"] );
+
+                guardar_datos_del_empleado_de_la_reservacion();
+                guardar_datos_del_cliente_de_la_reservacion();
+                guardar_datos_del_servicio_de_la_reservacion();
             }
             else
             {
@@ -114,6 +143,61 @@ namespace PRESENTACION
 
         }
 
+
+        private void guardar_datos_del_empleado_de_la_reservacion()
+        {
+            logica_de_los_empleados_de_una_reservacion logica_De_Los_Empleados_De_Una_Reservacion = new logica_de_los_empleados_de_una_reservacion();
+
+            Boolean confirmacion;
+
+            Empleados_de_una_reservacion empleados_De_Una_Reservacion = new Empleados_de_una_reservacion();
+
+            // empleados_De_Una_Reservacion.codigo_de_reservacion = Convert.ToInt16( datos_de_la_reservacion_globales.codigo );
+            empleados_De_Una_Reservacion.codigo_de_reservacion = 3;
+            empleados_De_Una_Reservacion.codigo_de_empleado = datos_del_empleado_gloables.codigo;
+
+            confirmacion = logica_De_Los_Empleados_De_Una_Reservacion.registrar_un_empleado_a_una_reservacion(empleados_De_Una_Reservacion, datos_de_la_conexion_globales);
+
+            
+        }
+
+        private void guardar_datos_del_cliente_de_la_reservacion()
+        {
+            Logica_de_la_reservacion_de_un_cliente logica_De_La_Reservacion_De_Un_Cliente = new Logica_de_la_reservacion_de_un_cliente();
+
+            Boolean confirmacion;
+
+            Reservacion datos_del_cliente = new Reservacion();
+
+            datos_del_cliente_globales.codigo = 8;
+
+            datos_del_cliente.Cliente = datos_del_cliente_globales; //datos_del_cliente_globales.codigo;
+            datos_del_cliente.codigo = "3" ;
+
+            confirmacion = logica_De_La_Reservacion_De_Un_Cliente.registrar_un_empleado_a_una_reservacion(datos_de_la_conexion_globales, datos_del_cliente);
+
+            MessageBox.Show("Estado : " + confirmacion);
+        }
+
+        private void guardar_datos_del_servicio_de_la_reservacion()
+        {
+            logica_De_los_servicios_de_una_reservacion logica_De_Los_Servicios_De_Una_Reservacion = new logica_De_los_servicios_de_una_reservacion();
+
+            Boolean confirmacion;
+
+            Reservacion datos_del_cliente = new Reservacion();
+
+            datos_del_cliente_globales.codigo = 8;
+
+            Servicio_de_una_reservacion servicio_De_Una_Reservacion = new Servicio_de_una_reservacion();
+
+            servicio_De_Una_Reservacion.codigo_de_reservacion = 8;
+
+          //  servicio_De_Una_Reservacion.
+
+            //confirmacion = logica_De_Los_Servicios_De_Una_Reservacion.registrar_servicio_a_una_reservacion(datos_de_la_conexion_globales)
+
+        }
 
         //Datos de los servicios de la empresa
         public void odtener_datos_de_los_servcios_de_la_empresa()
@@ -127,7 +211,6 @@ namespace PRESENTACION
 
             //Mostrar los servicios de la empresa registrados
             dtgServiciosDisponibles.DataSource = datos_de_los_servicos_de_la_empresa_selecionada;
-
 
             modificarcion_del_datagrip_de_los_servicios_disponibles();
         }
@@ -263,6 +346,12 @@ namespace PRESENTACION
             datos_cliente = logica_De_Los_Clientes.consulta_De_datos_personales(datos_del_cliente_globales, datos_de_la_conexion_globales);
 
             datos_del_cliente_globales.codigo = int.Parse(datos_cliente.Rows[0]["CODIGO"].ToString());
+
+        }
+
+        public void guardar_datos_del_empleado(Empleados datos_del_empleado)
+        {
+            datos_del_empleado_gloables = datos_del_empleado;
 
         }
 

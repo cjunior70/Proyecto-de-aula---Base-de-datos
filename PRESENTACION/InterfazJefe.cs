@@ -1,4 +1,5 @@
-﻿using ENTITY;
+﻿using DLL;
+using ENTITY;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -43,6 +44,26 @@ namespace PRESENTACION
             this.Hide();
         }
 
+        public void mostrar_empleados_disponibles()
+        {
+            logica_de_los_empleados datos_del_empleados = new logica_de_los_empleados();
+
+            Empresa datos =new  Empresa();
+
+            datos.codigo = 40;
+
+            DataTable datos_del_empleado;
+
+            datos_de_conexion_globales.usuario = "admin";
+            datos_de_conexion_globales.constraseña = "admin";
+
+            datos_del_empleado =  datos_del_empleados.consultar_todos_los_empleados_de_una_empresa(datos_de_conexion_globales, datos);
+
+            dataempleados.DataSource = datos_del_empleado;
+
+        }
+        
+
         private void btClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -53,6 +74,11 @@ namespace PRESENTACION
             Login FrmLogin = new Login();
             FrmLogin.Show();
             this.Hide();
+        }
+
+        private void VerEmpleados(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -239,7 +239,9 @@ namespace DAL
             comando.CommandType = System.Data.CommandType.StoredProcedure;
 
 
-            comando.Parameters.Add("p_codigo", OracleDbType.Varchar2).Value = datos_del_servicio.codigo;
+            comando.Parameters.Add("p_cliente_codigo", OracleDbType.Int16).Value = datos_del_servicio.Cliente.codigo;
+            comando.Parameters.Add("p_empresa_codigo", OracleDbType.Int16).Value = datos_del_servicio.empresa.codigo;
+            comando.Parameters.Add("p_fecha", OracleDbType.Date).Value = datos_del_servicio.fecha_de_la_reservacion;
             comando.Parameters.Add("p_registro", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
 
             OracleDataAdapter adaptador = new OracleDataAdapter();

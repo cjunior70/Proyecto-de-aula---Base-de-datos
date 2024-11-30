@@ -70,7 +70,7 @@ namespace DAL
                 cmd.Parameters.Add("p.segundo_apellido", OracleDbType.Varchar2).Value = datos_del_cliente.Segundo_apellido;
                 cmd.Parameters.Add("p.telefono", OracleDbType.Varchar2).Value = datos_del_cliente.telefono;
                 cmd.Parameters.Add("p.correo", OracleDbType.Varchar2).Value = datos_del_cliente.correo_electronico;
-                cmd.Parameters.Add("p.foto", OracleDbType.Blob).Value = datos_del_cliente.Foto;
+                cmd.Parameters.Add("p_foto", OracleDbType.Blob).Value = datos_del_cliente.Foto;
                 cmd.Parameters.Add("p.sexo", OracleDbType.Char).Value = datos_del_cliente.sexo;
 
                 cmd.ExecuteNonQuery();

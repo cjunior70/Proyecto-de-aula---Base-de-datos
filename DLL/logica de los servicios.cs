@@ -27,7 +27,7 @@ namespace DLL
         }
 
         //Funcion para consultar todos los servicios disponibles
-        public DataTable funcion_para_consultar_todos_los_servicios(Servicios datos_del_servico)
+        public DataTable funcion_para_consultar_todos_los_servicios(Datos_login datos_de_conexion)
         {
             DataTable datos;
 

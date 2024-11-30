@@ -229,9 +229,9 @@
             this.lblEmpleadoDeseadosYServiciosDisponibles.Location = new System.Drawing.Point(22, 138);
             this.lblEmpleadoDeseadosYServiciosDisponibles.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEmpleadoDeseadosYServiciosDisponibles.Name = "lblEmpleadoDeseadosYServiciosDisponibles";
-            this.lblEmpleadoDeseadosYServiciosDisponibles.Size = new System.Drawing.Size(372, 30);
+            this.lblEmpleadoDeseadosYServiciosDisponibles.Size = new System.Drawing.Size(362, 30);
             this.lblEmpleadoDeseadosYServiciosDisponibles.TabIndex = 5;
-            this.lblEmpleadoDeseadosYServiciosDisponibles.Text = "Empleado deseados y sus servicos ";
+            this.lblEmpleadoDeseadosYServiciosDisponibles.Text = "Empleado deseado y sus servicos ";
             // 
             // label3
             // 

@@ -26,6 +26,18 @@ namespace DLL
 
         }
 
+        //Funcion para guardar la foto un empleado
+        public Boolean guardar_foto(Empleados datos_empleado, Datos_login datos_de_conexion)
+        {
+
+            Boolean confirmacion;
+
+            confirmacion = funciones_Del_Empleado.actualizar_foto(datos_de_conexion, datos_empleado);
+
+            return confirmacion;
+
+        }
+
         //Funcion para consultar todos los empleados
         public DataTable consultar_todos_los_empleados_de_una_empresa(Datos_login datos_de_conexion, Empresa datos_de_la_empresa)
         {
@@ -68,7 +80,7 @@ namespace DLL
                 datos.Segundo_apellido = datos_de_todos_los_empleados_globales.Rows[i]["SEGUNDO_APELLIDO"].ToString();
                 datos.telefono = datos_de_todos_los_empleados_globales.Rows[i]["TELEFONO"].ToString();
                 datos.correo_electronico = datos_de_todos_los_empleados_globales.Rows[i]["CORREO_ELECTRONICO"].ToString();
-                //datos.Foto = (byte []) (datos_de_todos_los_empleados_globales.Rows[i]["FOTO"]);
+                datos.Foto = (byte []) (datos_de_todos_los_empleados_globales.Rows[i]["FOTO"]);
                 datos.cupos_disponibles = Convert.ToInt16( datos_de_todos_los_empleados_globales.Rows[i]["CUPOS_DISPONIBLES_POR_DIA"]);
                 datos.fecha_de_inicio = Convert.ToDateTime( datos_de_todos_los_empleados_globales.Rows[i]["FECHA_DE_INICIO"]) ;
                 datos.fecha_de_final = Convert.ToDateTime(datos_de_todos_los_empleados_globales.Rows[i]["FECHA_FINAL"]);

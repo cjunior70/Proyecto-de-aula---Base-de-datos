@@ -17,7 +17,7 @@ namespace DLL
         Funciones_para_agregar_un_empleado_a_una_reservacion funciones_Para_Agregar_Empleado_A_Una_Reservacion = new Funciones_para_agregar_un_empleado_a_una_reservacion();
 
         //Funcion para poder registraar un empleado a una reservacion
-        public Boolean registrar_un_empleado_a_una_reservacion(Empleados_de_una_reservacion datos_del_servicio)
+        public Boolean registrar_un_empleado_a_una_reservacion(Empleados_de_una_reservacion datos_del_servicio, Datos_login datos_de_conexion)
         {
             Boolean confirmacion;
 

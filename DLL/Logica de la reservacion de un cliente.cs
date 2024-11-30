@@ -17,7 +17,7 @@ namespace DLL
         Funciones_para_agregar_una_reservacion_de_un_cliente funciones_Para_Agregar_una_reservacion_de_un_cliente = new Funciones_para_agregar_una_reservacion_de_un_cliente();
 
         //Funcion para poder registraar un empleado a una reservacion
-        public Boolean registrar_un_empleado_a_una_reservacion(Cliente datos_del_servicio)
+        public Boolean registrar_un_empleado_a_una_reservacion(Datos_login datos_de_conexion, Reservacion datos_del_servicio)
         {
             Boolean confirmacion;
 

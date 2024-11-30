@@ -23,8 +23,6 @@ namespace DLL
 
            confirmacion = funciones_Del_Cliente.Ingresar_Un_Cliente(datos_de_conexion, datos_de_cliente);
 
-           Console.WriteLine("situacion : " + confirmacion);
-
             return confirmacion;
 
         }

@@ -26,7 +26,7 @@ namespace DAL
         }
 
         //Funcion para poder regirtar un servicio a una reservacion
-        public Boolean Ingresar_Una_reservacion_de_un_cliente(Datos_login Conexion_del_cliente, Cliente datos_de_la_reservacion_y_el_cliente)
+        public Boolean Ingresar_Una_reservacion_de_un_cliente(Datos_login Conexion_del_cliente, Reservacion datos_de_la_reservacion_y_el_cliente)
         {
 
             try
@@ -57,15 +57,15 @@ namespace DAL
         }
 
         //Funcion privada para registrar los datos de una reservacion a un  cliente
-        private void Enviar_Datos(Cliente datos_de_la_reservacion_del_cliente)
+        private void Enviar_Datos(Reservacion datos_de_la_reservacion_del_cliente)
         {
             //Intancia para poder entrar a la funcion
             using (OracleCommand cmd = new OracleCommand("PK_REGISTRAR_UNA_RESERVACION_DE_UN_CLIENTE", ora))
             {
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
-                cmd.Parameters.Add("p_reservacion_codigo", OracleDbType.Int32).Value = datos_de_la_reservacion_del_cliente.reservacion.codigo ;
-                cmd.Parameters.Add("p_cliente_codigo", OracleDbType.Int32).Value = datos_de_la_reservacion_del_cliente.cedula;
+                cmd.Parameters.Add("p_reservacion_codigo", OracleDbType.Int32).Value = datos_de_la_reservacion_del_cliente.codigo ;
+                cmd.Parameters.Add("p_cliente_codigo", OracleDbType.Int32).Value = datos_de_la_reservacion_del_cliente.Cliente.codigo;
 
                 cmd.ExecuteNonQuery();
             }

@@ -58,16 +58,17 @@
             this.lblPrimerApellido = new System.Windows.Forms.Label();
             this.lblSegundoApellido = new System.Windows.Forms.Label();
             this.lblCedula = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picFoto = new System.Windows.Forms.PictureBox();
             this.btAsignarServiciosAUnEmpleado = new System.Windows.Forms.Button();
             this.lbl = new System.Windows.Forms.Label();
             this.lblLimitePorDia = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btCerrar = new System.Windows.Forms.Button();
+            this.btnSeleccionar = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFoto)).BeginInit();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -96,6 +97,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel1.Controls.Add(this.btnSeleccionar);
             this.panel1.Controls.Add(this.btnGuardarDatos);
             this.panel1.Controls.Add(this.cbxGenero);
             this.panel1.Controls.Add(this.cbxCargo);
@@ -119,7 +121,7 @@
             this.panel1.Controls.Add(this.lblPrimerApellido);
             this.panel1.Controls.Add(this.lblSegundoApellido);
             this.panel1.Controls.Add(this.lblCedula);
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.picFoto);
             this.panel1.Controls.Add(this.btAsignarServiciosAUnEmpleado);
             this.panel1.Controls.Add(this.lbl);
             this.panel1.Controls.Add(this.lblLimitePorDia);
@@ -403,13 +405,14 @@
             this.lblCedula.TabIndex = 22;
             this.lblCedula.Text = "Cedula";
             // 
-            // pictureBox1
+            // picFoto
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(402, 58);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(208, 199);
-            this.pictureBox1.TabIndex = 21;
-            this.pictureBox1.TabStop = false;
+            this.picFoto.Location = new System.Drawing.Point(402, 45);
+            this.picFoto.Name = "picFoto";
+            this.picFoto.Size = new System.Drawing.Size(208, 199);
+            this.picFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picFoto.TabIndex = 21;
+            this.picFoto.TabStop = false;
             // 
             // btAsignarServiciosAUnEmpleado
             // 
@@ -473,12 +476,22 @@
             this.btCerrar.UseVisualStyleBackColor = false;
             this.btCerrar.Click += new System.EventHandler(this.btCerrar_Click);
             // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.Location = new System.Drawing.Point(402, 255);
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Size = new System.Drawing.Size(208, 30);
+            this.btnSeleccionar.TabIndex = 52;
+            this.btnSeleccionar.Text = "Seleccionar Imagen";
+            this.btnSeleccionar.UseVisualStyleBackColor = true;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
+            // 
             // TrabajadorUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(742, 612);
+            this.ClientSize = new System.Drawing.Size(744, 612);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.flowLayoutPanel1);
@@ -491,7 +504,7 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFoto)).EndInit();
             this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -507,7 +520,7 @@
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btCerrar;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picFoto;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblSexo;
         private System.Windows.Forms.Label lblCorreo;
@@ -535,5 +548,6 @@
         private System.Windows.Forms.ComboBox cbxEstado;
         private System.Windows.Forms.ComboBox cbxLimiteDeCuposPorDia;
         private System.Windows.Forms.Button btnGuardarDatos;
+        private System.Windows.Forms.Button btnSeleccionar;
     }
 }

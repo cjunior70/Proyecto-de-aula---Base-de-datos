@@ -194,7 +194,7 @@ namespace DAL
         }
 
         //Variable para traer los servicios de un empleado
-        DataTable servicio_de_un_empleado = new DataTable();
+        DataTable servicios_de_un_empleado = new DataTable();
         //Funcion para poder traer todos los usuario existentes
         public DataTable Consultar_Un_Servicio_de_un_Empleado(Datos_login Conexion_del_Cliente, Servicio_de_un_empleado datos_del_servicio_del_empleado)
         {
@@ -211,7 +211,7 @@ namespace DAL
                 //Cerrar conexion
                 ora.Close();
 
-                return servicio_de_un_empleado;
+                return servicios_de_un_empleado;
 
             }
             catch (Exception)
@@ -231,12 +231,15 @@ namespace DAL
             comando.CommandType = System.Data.CommandType.StoredProcedure;
 
 
-            comando.Parameters.Add("p_codigo", OracleDbType.Varchar2).Value = datos_del_servicio_del_empleado.codigo;
+            comando.Parameters.Add("p_codigo", OracleDbType.Varchar2).Value = datos_del_servicio_del_empleado.codigo_del_empleado;
+
+            Console.WriteLine("codigo del empleado : " + datos_del_servicio_del_empleado.codigo_del_empleado);
+
             comando.Parameters.Add("p_registro", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
 
             OracleDataAdapter adaptador = new OracleDataAdapter();
             adaptador.SelectCommand = comando;
-            adaptador.Fill(servicio_de_un_empleado);
+            adaptador.Fill(servicios_de_un_empleado);
         }
 
     }

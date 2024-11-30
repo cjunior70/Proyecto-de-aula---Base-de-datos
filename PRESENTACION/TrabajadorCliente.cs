@@ -58,6 +58,11 @@ namespace PRESENTACION
             datos_de_la_conexion_globales.cedula_del_usuario = datos_De_conexion.cedula_del_usuario;
             datos_de_la_conexion_globales.quien_esta = datos_De_conexion.quien_esta;
 
+            if (datos_de_la_conexion_globales.quien_esta == 'C')
+            {
+                btAgregarEmpleados.Visible = false;
+                lblAgregarEmpleado.Visible = false;
+            }
         }
 
         public void datos_de_la_empresa(Empresa datos_de_la_empresa)
@@ -68,8 +73,6 @@ namespace PRESENTACION
         public void buscar_todos_los_empleado_de_la_empreesa()
         {
             lista_de_los_empleados_de_la_empresa_globales = Logica_De_Los_Empleados.consultar_todos_los_empleados_de_una_empresa_y_devolver_una_lista(datos_de_la_conexion_globales, datos_de_la_empresa_globales);
-
-            MessageBox.Show("empleados : " + lista_de_los_empleados_de_la_empresa_globales.Count);
 
             mostrar_empleados_de_la_empresa();
         }
@@ -86,38 +89,49 @@ namespace PRESENTACION
             if( Fila_Actual <= lista_de_los_empleados_de_la_empresa_globales.Count -1 )
             {
                 var empleado = lista_de_los_empleados_de_la_empresa_globales[Fila_Actual];
-
+                
                 lblNombre1.Text = empleado.Primer_nombre + "  " +  empleado.Primer_apellido;
 
                 Primer_valor_de_las_filas = Fila_Actual;
 
                 Fila_Actual++;
 
-                
+                using (MemoryStream ms = new MemoryStream(empleado.Foto))
+                {
+                    pic1.Image = Image.FromStream(ms); // Convertir el byte[] a una imagen y asignarlo al PictureBox
+                }
 
-                if(Fila_Actual <= lista_de_los_empleados_de_la_empresa_globales.Count - 1 && empleado.Primer_nombre != null)
+
+                if (Fila_Actual <= lista_de_los_empleados_de_la_empresa_globales.Count - 1 && empleado.Primer_nombre != null)
                 {
                     var empleado2 = lista_de_los_empleados_de_la_empresa_globales[Fila_Actual];
 
                     lblNombre2.Text = empleado.Primer_nombre + "  " + empleado.Primer_apellido;
 
-                    Primer_valor_de_las_filas = Fila_Actual;
+                    Segunda_valor_de_las_filas = Fila_Actual;
 
                     Fila_Actual++;
 
-                    
+                    using (MemoryStream ms = new MemoryStream(empleado2.Foto))
+                    {
+                        pic2.Image = Image.FromStream(ms); // Convertir el byte[] a una imagen y asignarlo al PictureBox
+                    }
 
-                    if(Fila_Actual <= lista_de_los_empleados_de_la_empresa_globales.Count - 1 && empleado.Primer_nombre != null)
+                    if (Fila_Actual <= lista_de_los_empleados_de_la_empresa_globales.Count - 1 && empleado.Primer_nombre != null)
                     {
                         var empleado3 = lista_de_los_empleados_de_la_empresa_globales[Fila_Actual];
 
                         lblNombre3.Text = empleado.Primer_nombre + "  " + empleado.Primer_apellido;
 
-                        Primer_valor_de_las_filas = Fila_Actual;
+                        Tercera_valor_de_las_filas = Fila_Actual;
 
                         Fila_Actual++;
 
-                       
+                        using (MemoryStream ms = new MemoryStream(empleado3.Foto))
+                        {
+                            pic3.Image = Image.FromStream(ms); // Convertir el byte[] a una imagen y asignarlo al PictureBox
+                        }
+
                     }
                     else
                     {
@@ -147,6 +161,11 @@ namespace PRESENTACION
         {
             //Abre la interfez de datosempleado
             DatosEmpleado datosEmpleado=new DatosEmpleado();
+            datosEmpleado.datos_de_conexion(datos_de_la_conexion_globales);
+            datosEmpleado.datos_de_la_empresa(datos_de_la_empresa_globales);
+            datosEmpleado.datos_del_empleado(lista_de_los_empleados_de_la_empresa_globales[Primer_valor_de_las_filas]);
+            datosEmpleado.mostrar_datos_del_empleado();
+            datosEmpleado.mostrar_los_servicios_de_ese_empleado();
             datosEmpleado.Show();
 
             //Cerrar interfaz actual
@@ -157,6 +176,11 @@ namespace PRESENTACION
         {
             //Abre la interfez de datosempleado
             DatosEmpleado datosEmpleado = new DatosEmpleado();
+            datosEmpleado.datos_de_conexion(datos_de_la_conexion_globales);
+            datosEmpleado.datos_de_la_empresa(datos_de_la_empresa_globales);
+            datosEmpleado.datos_del_empleado(lista_de_los_empleados_de_la_empresa_globales[Segunda_valor_de_las_filas]);
+            datosEmpleado.mostrar_datos_del_empleado();
+            datosEmpleado.mostrar_los_servicios_de_ese_empleado();
             datosEmpleado.Show();
 
             //Cerrar interfaz actual
@@ -167,6 +191,11 @@ namespace PRESENTACION
         {
             //Abre la interfez de datosempleado
             DatosEmpleado datosEmpleado = new DatosEmpleado();
+            datosEmpleado.datos_de_conexion(datos_de_la_conexion_globales);
+            datosEmpleado.datos_de_la_empresa(datos_de_la_empresa_globales);
+            datosEmpleado.datos_del_empleado(lista_de_los_empleados_de_la_empresa_globales[Tercera_valor_de_las_filas]);
+            datosEmpleado.mostrar_datos_del_empleado();
+            datosEmpleado.mostrar_los_servicios_de_ese_empleado();
             datosEmpleado.Show();
 
             //Cerrar interfaz actual
@@ -221,6 +250,16 @@ namespace PRESENTACION
         {
             EmpresaCliente FrmEmpresaCl = new EmpresaCliente();
             FrmEmpresaCl.Show();
+            this.Hide();
+        }
+
+        private void btAgregarEmpleados_Click(object sender, EventArgs e)
+        {
+            TrabajadorUsuario interfaz=new TrabajadorUsuario();
+            interfaz.datos_de_conexion(datos_de_la_conexion_globales);
+            interfaz.guardar_datos_de_la_empresa(datos_de_la_empresa_globales);
+            interfaz.Show();
+
             this.Hide();
         }
     }

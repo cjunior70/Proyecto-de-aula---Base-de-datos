@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -37,9 +38,7 @@ namespace DAL
                 //Abirir conexion
                 ora.Open();
 
-
                 Enviar_Datos(datos_del_empleado);
-
 
                 //Cerrar conexion
                 ora.Close();
@@ -66,23 +65,68 @@ namespace DAL
 
                 cmd.Parameters.Add("p_cedula", OracleDbType.Varchar2).Value = datos_empleado.cedula;
                 cmd.Parameters.Add("p_primer_nombre", OracleDbType.Varchar2).Value = datos_empleado.Primer_nombre;
-                cmd.Parameters.Add("p.segundo_nombre", OracleDbType.Varchar2).Value = datos_empleado.Segundo_nombre;
-                cmd.Parameters.Add("p.primer_apellido", OracleDbType.Varchar2).Value = datos_empleado.Primer_apellido;
-                cmd.Parameters.Add("p.segundo_apellido", OracleDbType.Varchar2).Value = datos_empleado.Segundo_apellido;
-                cmd.Parameters.Add("p.telefono", OracleDbType.Varchar2).Value = datos_empleado.telefono;
-                cmd.Parameters.Add("p.correo", OracleDbType.Varchar2).Value = datos_empleado.correo_electronico;
-                cmd.Parameters.Add("p.foto", OracleDbType.Blob).Value = datos_empleado.Foto;
+                cmd.Parameters.Add("p_segundo_nombre", OracleDbType.Varchar2).Value = datos_empleado.Segundo_nombre;
+                cmd.Parameters.Add("p_primer_apellido", OracleDbType.Varchar2).Value = datos_empleado.Primer_apellido;
+                cmd.Parameters.Add("p_segundo_apellido", OracleDbType.Varchar2).Value = datos_empleado.Segundo_apellido;
+                cmd.Parameters.Add("p_telefono", OracleDbType.Varchar2).Value = datos_empleado.telefono;
+                cmd.Parameters.Add("p_correo_electronico", OracleDbType.Varchar2).Value = datos_empleado.correo_electronico;
+                cmd.Parameters.Add("p_foto", OracleDbType.Blob).Value = datos_empleado.Foto;
                 cmd.Parameters.Add("p_cupos_disponibles", OracleDbType.Int16).Value = datos_empleado.cupos_disponibles;
                 cmd.Parameters.Add("p_fecha_de_inicio", OracleDbType.Date).Value = datos_empleado.fecha_de_inicio;
                 cmd.Parameters.Add("p_fecha_final", OracleDbType.Date).Value = datos_empleado.fecha_de_final;
                 cmd.Parameters.Add("p_estado", OracleDbType.Varchar2).Value = datos_empleado.estado;
                 cmd.Parameters.Add("p_cargo", OracleDbType.Varchar2).Value = datos_empleado.cargo;
-                cmd.Parameters.Add("p_Codigo_empresa", OracleDbType.Varchar2).Value = datos_empleado.codigo_empresa;
-                cmd.Parameters.Add("p.sexo", OracleDbType.Char).Value = datos_empleado.sexo;
+                cmd.Parameters.Add("p_Codigo_empresa", OracleDbType.Int16).Value = datos_empleado.codigo_empresa;
+                cmd.Parameters.Add("p.sexo", OracleDbType.Varchar2).Value = datos_empleado.sexo;
 
                 cmd.ExecuteNonQuery();
             }
 
+
+        }
+
+        //Funcion para poder guarda la foto un empleado
+        public Boolean actualizar_foto(Datos_login Conexion_del_usuario, Empleados datos_del_empleado)
+        {
+
+            try
+            {
+
+                conexion(Conexion_del_usuario);
+
+                //Abirir conexion
+                ora.Open();
+
+                guardar_foto(datos_del_empleado);
+
+                //Cerrar conexion
+                ora.Close();
+                return true;
+
+            }
+            catch (Exception)
+            {
+                //Cerrar conexion
+                ora.Close();
+
+                return false;
+            }
+
+        }
+
+        private void guardar_foto(Empleados datos_empleado)
+        {
+            //Intancia para poder entrar a la funcion
+            using (OracleCommand cmd = new OracleCommand("PK_INGRESAR_FOTO_DEL_EMPLEADO", ora))
+            {
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                cmd.Parameters.Add("p_cedula", OracleDbType.Varchar2).Value = datos_empleado.cedula;
+
+                cmd.Parameters.Add("p_foto", OracleDbType.LongRaw).Value = datos_empleado.Foto;
+
+                cmd.ExecuteNonQuery();
+            }
         }
 
         //Variable para poder guarda el listado de los empleados guardados
